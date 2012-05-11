@@ -1,0 +1,142 @@
+package com.dmitrikuznetsov.ttu.taxagent;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.TimeZone;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+/**
+ * Basic requests that are available and translated to JSON objects
+ * @author dmitrikuznetsov
+ *
+ */
+public class Engine 
+{
+	private static JSONObject createBase(String action, Object data) throws JSONException
+	{	
+		JSONObject object = new JSONObject();
+		object.put("data", data);
+		object.put("action", action );
+		
+		return object;
+	}
+	
+	public static JSONObject testConnection() throws JSONException
+	{
+		return createBase("Admin.TestConnection" , 1);
+	}
+	
+	
+	public static JSONObject testJSON() throws JSONException
+	{
+		/*
+		var testConJSON1 = {
+				number: 12345,
+				text: 'Text',
+				bool: true,
+				date : new Date(2012,21,12,23,59,59,0) , //ms not supported!
+				array: ['value1', 'value2', 'value3' ],
+				objArray: [ {name: "Frank", age: 57, relation: "father"},
+							{name: "Tina", age: 26, relation: "sister"}]
+				}
+		
+		*/
+		
+		JSONObject object = new JSONObject();
+		
+		//Normal objects
+		object.put("number", 12345);
+		object.put("text", "Text" );
+		object.put("bool", true);
+		DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+		
+		Calendar cal = new GregorianCalendar();
+		cal.set(2012, Calendar.DECEMBER, 21,23,59,59);
+		Date date = cal.getTime();
+		String text = formatter.format(date);
+		
+		object.put("date", text );
+		
+		//Strings array:
+		JSONArray array = new JSONArray();
+		array.put("value1");
+		array.put("value2");
+		array.put("value3");
+		
+		object.put("array", array );
+		
+		JSONObject object1 = new JSONObject();
+		object1.put("name", "Frank");
+		object1.put("age", 37 );
+		object1.put("relation", "father");
+		
+		
+		JSONObject object2 = new JSONObject();
+		object2.put("name", "Tina");
+		object2.put("age", 26 );
+		object2.put("relation", "sister");
+		
+		//Objects array:
+		JSONArray array2 = new JSONArray();
+		array2.put( object1 );
+		array2.put( object2 );
+		
+		object.put( "objArray" , array2 );
+		
+		return createBase("Admin.TestJSON" , object);
+	}
+	
+	
+	/**
+	 * Used for login operation
+	 * @param code
+	 * @return
+	 * @throws JSONException
+	 */
+	public static JSONObject login(String code) throws JSONException
+	{
+
+		JSONObject object = new JSONObject();
+		
+		//Normal objects
+		object.put("Code", code);
+		
+		return createBase("Admin.Login" , object);
+
+	}
+	
+	/**
+	 * Retrieves tax payer info by id
+	 * @param id	ID of tax payer to retrieve values from
+	 * @return
+	 * @throws JSONException
+	 */
+	public static JSONObject getTaxPayerInfo(int id) throws JSONException
+	{
+
+		JSONObject object = new JSONObject();
+		
+		//Normal objects
+		object.put("ID", id);
+		
+		return createBase("TaxPayer.GetInfo" , object);
+
+	}
+
+	/**
+	 * Retrieves tax program grid associated with this specific payer
+	 * @param taxPayerID 
+	 * @return array of programs
+	 */
+	public static JSONArray TaxProgramGrid(int taxPayerID) 
+	{
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

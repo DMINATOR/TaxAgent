@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Shows the Application title and version -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/default_activity_title_layout"
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" 
+    >
+    
+
+	<LinearLayout 
+		android:orientation="vertical"
+		android:id="@+id/layout_header1" 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content">	
+ 	
+    	<TextView 
+			android:id="@+id/textview_stats_id" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:text="ID"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:padding="5px">
+		</TextView>
+	
+    	<TextView 
+			android:id="@+id/textview_stats_id_value" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:text="ID"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_gravity="center">
+		</TextView>
+
+		
+	</LinearLayout>
+
+	<LinearLayout 
+		android:orientation="horizontal"
+		android:id="@+id/layout_header2" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+
+		android:paddingLeft="5px" android:paddingBottom="5px" android:paddingTop="5px" android:paddingRight="9px">	
+		
+		<!--  Progress info  -->
+		<LinearLayout
+  			xmlns:android="http://schemas.android.com/apk/res/android"
+ 			android:layout_width="fill_parent"
+  			android:layout_height="wrap_content"
+  			android:orientation="vertical"
+  			>
+  			
+  			<!--  Header -->
+  			<LinearLayout
+  				xmlns:android="http://schemas.android.com/apk/res/android"
+  				android:layout_width="fill_parent"
+  				android:layout_height="wrap_content"
+  				android:orientation="horizontal"
+  			>
+
+  				<TextView 
+  					android:text="ProgramName" 
+  					android:id="@+id/textview_stats_programname" 
+  					android:layout_height="wrap_content"
+  					android:layout_width="wrap_content"
+					android:textAppearance="?android:attr/textAppearanceLarge"
+  					>
+  				</TextView>
+  		
+  				
+
+  			</LinearLayout>
+  			
+  			<TextView 
+  					android:text="InstitutionName" 
+  					android:id="@+id/textview_stats_institutionname" 
+  					android:layout_height="wrap_content"
+  					android:layout_width="wrap_content"
+					android:textAppearance="?android:attr/textAppearanceMedium"
+  					>
+  			</TextView>
+  
+  
+    		<!--  STATUS - SIZE -->
+			
+			<LinearLayout
+  					xmlns:android="http://schemas.android.com/apk/res/android"
+  					android:layout_width="fill_parent"
+  					android:layout_height="wrap_content"
+  					android:orientation="horizontal"
+  					android:layout_marginTop="5px"
+  				>
+
+				<TextView 
+  					android:text="Years required" 
+  					android:id="@+id/textview_stats_yearsrequired" 
+  					android:layout_height="wrap_content"
+  					android:layout_width="wrap_content">
+  				</TextView> 
+  				
+  				<TextView 
+  					android:text="Percent" 
+  					android:id="@+id/textview_percent" 
+  					android:layout_height="wrap_content"
+  					android:gravity="right" 
+  					android:layout_width="fill_parent">
+  				</TextView> 
+ 
+  			</LinearLayout>
+  			
+			<LinearLayout
+  					xmlns:android="http://schemas.android.com/apk/res/android"
+  					android:layout_width="fill_parent"
+  					android:layout_height="wrap_content"
+  					android:orientation="horizontal"
+  					android:layout_marginTop="5px"
+  				>
+
+				<TextView 
+  					android:text="Size" 
+  					android:id="@+id/textview_stats_minimumyears" 
+  					android:layout_height="wrap_content"
+  					android:layout_width="wrap_content">
+  				</TextView> 
+  				
+  				<TextView 
+  					android:text="Percent" 
+  					android:id="@+id/textview_percent" 
+  					android:layout_height="wrap_content"
+  					android:gravity="right" 
+  					android:layout_width="fill_parent">
+  				</TextView> 
+ 
+  			</LinearLayout>
+  			
+  		</LinearLayout>
+	
+	
+	</LinearLayout>
+
+</LinearLayout>

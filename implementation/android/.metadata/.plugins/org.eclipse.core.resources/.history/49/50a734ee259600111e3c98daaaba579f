@@ -1,0 +1,364 @@
+package com.dmitrikuznetsov.ttu.taxagent;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
+import android.widget.ListView;
+import android.widget.TableLayout;
+import android.widget.TextView;
+
+import com.dmitrikuznetsov.dklib.tools.localization.Translate;
+import com.dmitrikuznetsov.dklib.tools.log.LogWriter;
+import com.dmitrikuznetsov.dklib.ui.base.DKActivityBase;
+import com.dmitrikuznetsov.dklib.ui.base.DKDialog;
+
+
+/**
+ * Shows stats for the selected tax year
+ * 
+ * @author dmitrikuznetsov
+ *
+ */
+public class TaxYearStatsActivity  extends DKActivityBase
+{
+	
+	public static final String 	EXTRA_INT_TAX_PAYER_ID			=	"EXTRA_INT_TAX_PAYER_ID";
+	public static final String 	EXTRA_INT_TAX_YEAR_ID			=	"EXTRA_INT_TAX_YEAR_ID";
+	public static final String 	EXTRA_INT_TAX_YEAR_VALUE		=	"EXTRA_INT_TAX_YEAR_VALUE";
+	
+	/**
+	 * ID of tax payer, passed
+	 */
+	public int TaxPayerID = -1;
+	
+	/**
+	 * ID of tax year
+	 */
+	public int TaxYearID = -1;
+	
+	
+	/**
+	 * Found year value
+	 */
+	public int YearValue = -1;
+	
+	/**
+	 * Storage for storing settings
+	 */
+	SharedStorage storage = null;
+	
+	//Array of tax years
+	JSONArray array = null;
+	
+	
+	TextView tbTaxYearIncome = null;
+	TextView tbTaxYearStats = null;
+	TextView tbTaxYearTax = null;
+	ListView tableTaxProgramStats = null;
+	
+	/**
+	 * Indicates that this activity was opened first
+	 */
+	boolean	firstRun = true;
+	
+	@Override 
+	public int getDefaultLayout() 
+	{
+		return R.layout.taxyearstatslayout;
+	}
+	
+	
+	/**
+	 * Called when activity is created
+	 */
+	public void onCreated()
+	{
+		try 
+		{
+			//find ui elements on the form:
+			tbTaxYearIncome 		= (TextView)this.getElementById(R.id.tbTaxYearIncome);
+			tbTaxYearStats 			= (TextView)this.getElementById(R.id.tbTaxYearStats);
+			tbTaxYearTax 			= (TextView)this.getElementById(R.id.tbTaxYearTax);
+			tableTaxProgramStats	= (ListView)this.getElementById(R.id.listViewTaxPayerProgramStats);
+			
+			//tbTaxYearIncome				= (ListView)this.getElementById(R.id.listViewTaxPayerYears);
+	
+			//lvTaxYearGrid.setOnItemClickListener( clickListener );
+			
+			TaxPayerID = getIntent().getExtras().getInt( TaxYearStatsActivity.EXTRA_INT_TAX_PAYER_ID );
+			TaxYearID = getIntent().getExtras().getInt( TaxYearStatsActivity.EXTRA_INT_TAX_YEAR_ID );
+			YearValue = getIntent().getExtras().getInt( TaxYearStatsActivity.EXTRA_INT_TAX_YEAR_VALUE );
+
+			
+			//specify changes
+			//lv.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items ));
+		
+			
+			tbTaxYearStats.setText("Stats for year: " + YearValue);
+		} 
+		catch (Exception e)
+		{
+			DKDialog.ShowMessage(this,
+					Translate.translate("Error") , 
+					Translate.translate("Loading default activitiy failed!"),
+					Translate.translate("OK"),
+					Translate.translate("Cancel"));
+			
+			LogWriter.writeException(this, e.getMessage(), e);
+		}
+	}
+	
+	
+	protected void onPause() 
+	{
+	    super.onPause();
+	    	
+	    //destroy storage
+	    storage = null;
+	}
+	
+	
+	protected void onResume() 
+	{
+	    	super.onResume();
+	    	
+	    	try
+	    	{
+	    		storage = new SharedStorage(this);
+	    		
+	    		//populate data but only for the first time !
+	    		if( firstRun )
+	    		{
+	    			//populate with the values
+	    			loadInfo();	
+	    			
+	    			firstRun = false;
+	    		
+	    		}
+	    		
+	    	}
+	    	catch(Exception ex)
+	    	{
+	    		DKDialog.ShowMessage(this,
+						Translate.translate("Error") , 
+						Translate.translate("Reading settings activitiy failed!"),
+						Translate.translate("OK"),
+						Translate.translate("Cancel"));
+				
+				LogWriter.writeException(this, ex.getMessage(), ex);
+	    	}
+
+	 }
+	
+	
+	/**
+	 * Loads detailed tax payer info
+	 */
+	public void loadInfo()
+	{
+		//try to connect
+    	try
+    	{	
+    		
+    		HTTPConnection connection = new HTTPConnection(  storage.getServerURL() );
+    		JSONObject response = connection.connectJSON( Engine.TaxProgramStatsGrid( TaxYearID, TaxPayerID ) );
+    		storage.setLastServerResponse( response.toString() );
+    		
+    		//retrieve the array of items
+    		array = response.getJSONArray("data");
+    		
+    		//TODO: Calculate tax rate average from these programs
+    		
+    		//only after array is loaded - show the list
+    		adapter = new TaxYearProgramsAdapter(this);
+			tableTaxProgramStats.setAdapter(adapter );
+
+    	}
+    	catch(Exception ex)
+    	{
+    		DKDialog.ShowMessage( this,
+					Translate.translate("Error") , 
+					Translate.translate("Connection failed: " + ex.getMessage()),
+					Translate.translate("OK"),
+					Translate.translate("Cancel"));
+			
+			LogWriter.writeException( this, ex.getMessage(), ex);
+			
+			storage.setLastServerResponse( ex.toString() );
+		
+    	}
+	}
+	
+	
+	 /**
+	  * Adapter used for showing list of programs and their stats
+	  */
+	TaxYearProgramsAdapter adapter = null;
+	
+	/**
+	  * Adapter class for showing result of selected programs
+	  * 
+	  * @author Dmitri Kuznetsov
+	  *
+	  */
+	 private class TaxYearProgramsAdapter extends BaseAdapter 
+	 {
+	
+		/**
+		 * Context that owns this adapter
+		 */
+		private Context _context = null;
+
+		/**
+		 * View that is inflated from XML
+		 */
+		LayoutInflater _inflater = null;
+
+		public TaxYearProgramsAdapter(Context context) throws Exception
+		{
+			_context 	= context;
+			
+			_inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+			
+			if( _inflater == null )
+			{
+				throw new Exception("Couldn't create layout inflater!");
+			}
+			
+		}
+
+		public int getCount()
+		{
+			return array.length();
+		}
+
+		@Override
+		public boolean areAllItemsEnabled()
+		{
+			return false;
+		}
+
+		public Object getItem(int position)
+		{
+			try 
+			{
+				return array.get(position);
+			} catch (JSONException ex) 
+			{
+				LogWriter.writeException(_context, "Failed to get Item!", ex);
+				return null;
+			}
+		}
+
+		public long getItemId(int position)
+		{
+			return position;
+		}
+
+		public View getView(int position, View convertView, ViewGroup parent)
+		{
+			if ( (array == null) || (array.length() == 0) || (position >= array.length()))
+			{
+				TextView tv = new TextView(_context);
+				tv.setText("No items.");
+
+				return tv;
+			}
+			else
+			{
+
+					JSONObject currentObject = (JSONObject)getItem(position);
+				
+					View _inflatedView = _inflater.inflate( R.layout.statsgridlayout, null);
+					
+					TextView tvID			= (TextView) _inflatedView.findViewById( R.id.textview_stats_id_value);
+					TextView tvInstitution	= (TextView) _inflatedView.findViewById( R.id.textview_stats_institutionname);
+					TextView tvInstitution	= (TextView) _inflatedView.findViewById( R.id.textview_stats_institutionname);
+					
+					
+					return _inflatedView;
+					/*
+				 //create new layout
+					LinearLayout layout = new LinearLayout(_context);
+					layout.setOrientation(LinearLayout.VERTICAL);
+					
+					View _inflatedView = _inflater.inflate( R.layout.taxyearstatslayout, null);
+					
+					//find values that we need to change
+					TextView left 	= (TextView) _inflatedView.findViewById( R.id.debug_file_manager_left);
+					TextView right 	= (TextView) _inflatedView.findViewById( R.id.debug_file_manager_right);
+					
+					if( file == null )
+					{
+						left.setText( "/" );
+					}
+					else
+					{
+						left.setText( currentFile.getName() );					
+					}
+					
+					//by the color notify the user
+					if( currentFile.canRead() )
+					{
+						
+						if( currentFile.canWrite())
+						{
+							//WRITE/READ
+							left.setTextColor(Color.GREEN);
+						}
+						else
+						{
+							//READ
+							left.setTextColor(Color.YELLOW);
+						}
+					}
+					else
+					{
+						//Not allowed!
+						left.setTextColor(Color.RED);
+					}
+					
+					//now write the values
+					if( currentFile.isDirectory() )
+	    		 	{
+	    		 		right.setText( "->" ); //write symbol that it is a dir
+	    		 	}
+	    		 	else
+	    		 	{
+	    		 		//write file size:
+	    		 		
+	    		 		//depending on the size select the right choice
+	    		 		if( currentFile.length() <= 1024 )
+	    		 		{
+	    		 			right.setText( currentFile.length()  + " Bytes"  ); 
+	    		 		}
+	    		 		else
+	    		 		{
+		    		 		right.setText( (currentFile.length() >> 10 ) + " KB"  ); //write file size in KB
+	    		 		}
+
+	    		 	}
+					
+					//add view to the main view
+					layout.addView( _inflatedView, new LinearLayout.LayoutParams(LayoutParams.FILL_PARENT,
+							LayoutParams.WRAP_CONTENT));
+					
+					*/
+	         		//return layout;
+				
+			}
+
+		}
+	 }
+	
+}
