@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<p>Program selection for year 2013 (&lt;-- Use <strong>[Admin.TaxYearShow]</strong> for year details )</p>
+<p>(User can select the programs that he want, some of them are selected already if they were selected last year )</p>
+<p>Select programs that you want to choose for this year ( &lt;-- Show list of programs to select from this year and programs that are mandatory from previos years <strong>[TaxPayer.TaxProgramGrid] </strong>)</p>
+<table width="873" height="179" border="1">
+  <tr>
+    <th width="84" height="25" scope="col">Institution</th>
+    <th width="83" scope="col">Program</th>
+    <th width="120" scope="col">Years</th>
+    <th width="100" scope="col">Choose </th>
+    <th width="452" scope="col">Tax Rate, per year</th>
+  </tr>
+  <tr>
+    <td height="40">Social ministry</td>
+    <td>Free basic education</td>
+    <td>5</td>
+    <td><label>
+      <input type="checkbox" name="tbSelect" id="tbSelect" />
+    </label></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="44">Social ministry</td>
+    <td>Free higher education</td>
+    <td>5</td>
+    <td><input name="tbSelect2" type="checkbox" id="tbSelect2" checked="checked" />
+    (If <strong>[TaxPayer.TaxProgramGrid.IsSelected == 1] )</strong></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="38">Ministry of defense</td>
+    <td>Defense</td>
+    <td>4 left (how many years are remaining)</td>
+    <td><input name="tbSelect3" type="checkbox" disabled="disabled" id="tbSelect3" checked="checked" /> 
+    (cannot be unselected <strong>[TaxPayer.TaxProgramGrid.IsSelected == 2] </strong>)</td>
+    <td>%4 (This one comes from previos year automatically (however it is 2 times cheaper now))</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table width="712" border="1">
+  <tr>
+    <td width="702" height="495" bgcolor="#99FF99"><p>(Whe popup is opened, submit results to <strong>[TaxPayer.TaxProgramSubmit]</strong> and start waiting - show spinner)</p>
+      <p>(This Popup window is shown with progress results, when agent is activated, once agent fixed working, the result will be shown for the user to confirm)</p>
+    <p>The following programs are selected for this tax year by your agent:</p>
+    <table width="669" height="117" border="1">
+      <tr>
+        <th width="101" height="25" scope="col">Institution</th>
+        <th width="126" scope="col">Program</th>
+        <th width="51" scope="col">Years</th>
+        <th width="296" scope="col">Tax Rate, per year</th>
+      </tr>
+      <tr>
+        <td height="44">Social ministry</td>
+        <td>Free higher education</td>
+        <td>5</td>
+        <td>%2 - First year (next years only 1%)</td>
+      </tr>
+      <tr>
+        <td height="38">Ministry of defense</td>
+        <td>Defense</td>
+        <td>4 left </td>
+        <td>%4 - Calculated based on your previous contract</td>
+      </tr>
+    </table>
+    <p>Your total tax rate for this year 6% of your income per year (This is calculated on client side based on the Tax Rate results)</p>
+    <p>1500  (6%) = 90 &#8364;</p>
+    <p>per month</p>
+    <p>90 / 12 = 7.5 &#8364;</p>
+    <p>
+      <label>
+        <input type="submit" name="btnBack" id="btnBack" value="Back" />
+       </label>
+      <input type="submit" name="btnBack2" id="btnBack2" value="Accept!" />
+    (The back button can be used to return back and change details, Accept - accepts results and confirms selected programs <strong>[TaxPayer.TaxProgramConfirm] </strong>)</p></td>
+  </tr>
+</table>
+<p>
+  <label>
+    <input type="submit" name="btnSubmit" id="btnSubmit" value="Submit" />
+  </label>
+(Click this button to open up the green popup)</p>
+<p>&nbsp;</p>
+</body>
+</html>

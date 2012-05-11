@@ -1,0 +1,160 @@
+13:45:57 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.000Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(54) "104595487.103898233.1334496497.1334496497.1334503090.2"
+  ["__utmz"]=>
+  string(70) "104595487.1334496497.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+13:45:57 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.000Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+13:45:57 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(20) "2013-10-12T20:59:59Z"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+13:46:00 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(48) "{\"action\":\"Admin.TestConnection\",\"data\":1}"
+  ["__utma"]=>
+  string(54) "104595487.103898233.1334496497.1334496497.1334503090.2"
+  ["__utmz"]=>
+  string(70) "104595487.1334496497.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+13:46:00 (engine) [JSON (Admin.TestConnection)]->int(1)
+
+13:46:00 (engine) [SQL]->asdasbase:
+13:46:00 (engine) [SQL]->Connecting to database:
+13:46:00 (engine) [SQL]->Connection OK!
+13:46:00 (engine) test 
+13:46:00 (engine) [SQL]->Exec:CREATE TABLE IF NOT EXISTS `test_table` (
+							  `id` int(11) NOT NULL AUTO_INCREMENT,
+							  `test` varchar(255) NOT NULL,
+							  PRIMARY KEY (`id`)
+							) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
+13:46:00 (engine) [SQL]->Exec [Done]:1
+13:46:00 (engine) [SQL]->Exec:INSERT INTO `test_table` VALUES ('', 'dbtest');
+13:46:00 (engine) [SQL]->Exec [Done]:1
+13:46:00 (engine) [SQL]->Exec:DROP TABLE `test_table`
+13:46:00 (engine) [SQL]->Exec [Done]:1
+13:46:00 (engine) [RESPONSE (Admin.TestConnection)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  int(1)
+}
+
+13:46:45 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(45) "{\"action\":\"Admin.CreateWorld\",\"data\":1}"
+  ["__utma"]=>
+  string(54) "104595487.103898233.1334496497.1334496497.1334503090.2"
+  ["__utmz"]=>
+  string(70) "104595487.1334496497.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+13:46:45 (engine) [JSON (Admin.CreateWorld)]->int(1)
+
+13:46:45 (engine) [SQL]->Connecting to database:
+13:46:45 (engine) [SQL]->Connection OK!
+13:46:45 (engine) test 
+13:46:45 (engine) [SQL]->Exec:insert into SystemTable (ID, Date) Values
+			(1, STR_TO_DATE('Jan/01/2012', '%M/%d/%Y'));
+13:46:45 (engine) [SQL]->Exec [Done]:
+13:46:45 (engine) [SQL]->Exec:insert into InstitutionTable (Name, Code) VALUES ('Ministry of education', 'I00001');
+13:46:45 (engine) [SQL]->Exec [Done]:1
+13:46:45 (engine) [SQL]->Exec:insert into InstitutionTable (Name, Code) VALUES ('Social Ministry', 'I00002');
+13:46:45 (engine) [SQL]->Exec [Done]:1
+13:46:45 (engine) [SQL]->Exec:insert into InstitutionTable (Name, Code) VALUES ('Ministry of the defence', 'I00003');
+13:46:45 (engine) [SQL]->Exec [Done]:1
+13:46:45 (engine) [SQL]->Exec:insert into InstitutionTable (Name, Code) VALUES ('Ministry of the interior', 'I00004');
+13:46:45 (engine) [SQL]->Exec [Done]:1
+13:46:45 (engine) [RESPONSE (Admin.CreateWorld)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+

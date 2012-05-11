@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<p>Page of tax payer (this can be either individual or business)( call <strong>[TaxPayer.GetInfo]</strong> To get tax payer info )</p>
+<p>(Shows the years selected for payment and tax plan details <strong>[TaxPayer.TaxYearGrid]</strong>)</p>
+<table width="729" border="1">
+  <tr>
+    <td width="245">&nbsp;</td>
+    <td width="34">Year</td>
+    <td width="428">&nbsp;</td>
+  </tr>
+  <tr>
+    <td><p><a href="void">X</a> (delete <strong>[TaxPayer.TaxProgramDelete]</strong> )</p>
+    <p>- Only visible if tax year proposal is not confirmed <strong>(TaxPayer.TaxYearGrid[].State &lt; Activated)</strong></p></td>
+    <td>2013</td>
+    <td><a href="manage.html">manage</a> (Only shown if year is submitted)<strong>(TaxPayer.TaxYearGrid[].State &lt; Expired)</strong></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>2012</td>
+    <td><a href="stats.html"> </a><a href="stats.html">stats</a> &lt;- Shows &quot;stats&quot; for this year <strong>(TaxPayer.TaxYearGrid[].State &gt;= Expired)</strong></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>2011</td>
+    <td><a href="stats.html">stats</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>2010</td>
+    <td><a href="stats.html">stats</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>2009</td>
+    <td><a href="stats.html">stats</a></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p></p>
+<script type="text/javascript">
+<!--
+var TabbedPanels1 = new Spry.Widget.TabbedPanels("TabbedPanels1");
+//-->
+</script>
+</body>
+</html>

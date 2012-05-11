@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:orientation="vertical"
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content">
+ 
+		<!--  Server URL  -->
+		<TextView 
+			android:text="Server URL:" 
+			android:id="@+id/TextView01" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content">
+		</TextView>
+		
+		<EditText 
+			android:text="" 
+			android:id="@+id/text_view_server_url" 
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content">
+		</EditText>
+	
+	
+	    <!--  Connection interval  -->
+		
+		 <!--  GPS interval  -->
+		
+		
+		 <!--  Phone number  -->
+		
+		<LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content">
+        
+			<!-- Button to SAVE changes  -->
+			<Button 
+				android:text="Save" 
+				android:id="@+id/btn_save" 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content" android:layout_gravity="right">
+			</Button>
+			
+			<!-- Button to test registration with a server  -->
+			<Button 
+				android:text="Test" 
+				android:id="@+id/btn_test" 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content" android:layout_gravity="right">
+			</Button>
+			
+			<!-- Button to test JSON implementation with a server  -->
+			<Button 
+				android:text="Test JSON" 
+				android:id="@+id/btn_test_json" 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content" android:layout_gravity="right">
+			</Button>
+		
+		</LinearLayout>
+		
+		 <!--  Optional server info:  -->
+		 <TextView 
+			android:text="Last respsonse:" 
+			android:id="@+id/TextView01" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content">
+		</TextView>
+		
+		<TextView  
+			android:text="No response" 
+			android:id="@+id/text_view_last_server_response" 
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content">
+		</TextView>
+	    
+    </LinearLayout>
+</ScrollView>

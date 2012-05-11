@@ -1,0 +1,337 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Sample test</title>
+<script type="text/javascript" src="js/json2.js"></script>
+<script type="text/javascript" src="js/rfc3339date.js"></script>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">
+// Load jQuery
+google.load("jquery", "1.3");
+</script>
+<script language="javascript">
+
+	function countProps(obj) {
+	  var count = 0;
+	  for (k in obj) {
+		  if (obj.hasOwnProperty(k)) {
+			  count++;
+		  }
+	  }
+	  return count;
+  	};
+	
+		//Json text that needs to work with engine properly for this to work
+	//The response should be exactly the same and parseable
+	var testConJSON1 = {
+		number: 12345,
+		text: 'Text',
+		bool: true,
+		date : new Date(2012,21,12,23,59,59,0) , //ms not supported!
+		array: ['value1', 'value2', 'value3' ],
+		objArray: [ {name: "Frank", age: 57, relation: "father"},
+					{name: "Tina", age: 26, relation: "sister"}]
+		}
+  
+ 	function objectEquals(v1, v2) {
+  
+	  if (typeof(v1) !== typeof(v2)) {
+		  return false;
+	  }
+  
+	  if (typeof(v1) === "function") {
+		  return v1.toString() === v2.toString();
+	  }
+  
+	  if (v1 instanceof Object && v2 instanceof Object) {
+		  if (countProps(v1) !== countProps(v2)) {
+			  return false;
+		  }
+		  var r = true;
+		  for (k in v1) {
+			  r = objectEquals(v1[k], v2[k]);
+			  if (!r) {
+				  return false;
+			  }
+		  }
+		  return true;
+	  } else {
+		  return v1 === v2;
+	  }
+  	}
+
+			
+	function testJSON(){
+		var request = { 
+			action : 'Admin.TestJSON' , 
+			data : testConJSON1 
+		};
+		
+		$.post("backend/engine.php",  { json : JSON.stringify(   request ) } ,function(data) 
+			{
+			   var jsonData;
+			   jsonData = JSON.parse( data );
+			   
+			   
+			  //check if server returned json data is correct
+			  
+			  if( jsonData.result == 'OK' )
+			  {
+				  
+				  //Warning JSON Doesn't have standard date time it needs to be converted manually!
+				  jsonData.data.date = Date.parseRFC3339( jsonData.data.date );
+				  
+				  //compare other values
+				  if( objectEquals( testConJSON1 , jsonData.data ) )
+				  {
+					   alert('Objects are the same! JSON Validator works!');
+				  }
+				  else
+				  {
+					   alert('Objects are different!');
+				  }
+			  }
+			  else
+			  {
+				  //something is wrong
+				  alert('Server returned error!\n' + data); //data is plain text in this case
+			  }
+			  
+			})
+		.error(function() { 
+		    alert('Server returned error!\n' + data); //data is plain text in this case
+		});
+		
+		}
+		
+	function sendRequest( request, data )
+	{
+		var request = { 
+			action : request ,
+			data : data
+		};
+		
+		var jsonRequest = JSON.stringify(   request );
+		
+		$.post("backend/engine.php",  { json : jsonRequest } ,function(data) 
+			{
+			   var jsonData;
+			   
+			   $("#divRequest")[0].innerHTML = jsonRequest;
+			   $("#divResponse")[0].innerHTML = data;
+	
+			   try
+			   {
+				  eval("jsonData="+data);
+			   
+				  //check if server returned json data is correct
+				  
+				  if( jsonData.result == 'OK' )
+				  {
+					   alert('All OK!');
+				  }
+				  else
+				  {
+					  //something is wrong
+					  alert('Server returned error!\n' + data); //data is plain text in this case
+				  }
+			   }
+			   catch(exception)
+			   {
+				     alert('Server returned error!\n' + data); 
+			   }
+			
+		}).error(function() { 
+		    alert('Server returned error!\n' + data); //data is plain text in this case
+		});
+	}
+		
+	function testConnection(){	
+		sendRequest('Admin.TestConnection', 1 );
+	}
+	
+	function clearDatabase(){
+		sendRequest('Admin.ClearDatabase', 1 );
+	}
+	
+	function createWorld(){
+		sendRequest('Admin.CreateWorld', 1 );
+	}
+	
+	function addTestData(){
+		sendRequest('Admin.CreateTestData', 1 );
+	}
+	
+	
+	var newDate = new Date(2012,12,21,23,59,59,0);
+	function changeDate(){
+		sendRequest('Admin.ChangeDate', newDate );
+	}
+	
+	function GetDate(){
+		sendRequest('Admin.GetDate', 1 );
+	}
+	
+	var testTaxYear = {
+		Year: 2012,
+		SubmitDate : new Date(2012,12,21,23,59,59,0) ,
+		StartDate : new Date(2011,01,01,0,0,0,0) ,
+		EndDate : new Date(2012,12,21,23,59,59,0)
+		}
+		
+	function createTaxYear(){
+		sendRequest('Admin.TaxYearCreate', testTaxYear );
+	}
+	
+	function deleteTaxYear(){
+		sendRequest('Admin.TaxYearDelete', 1 );
+	}
+	
+	
+	var testTaxYearGrid = {
+		ItemsPerPage: 10,
+		ItemsOffset: 0
+		}
+		
+	function getTaxYearGrid(){
+		sendRequest('Admin.TaxYearGrid', testTaxYearGrid );
+	}
+	
+	
+	var testTaxPayerSearchGrid = {
+		Name: 'Quis',
+		Type: 0,
+		ItemsPerPage: 20,
+		ItemsOffset: 0
+		}
+		
+	function SearchTaxPayerGrid(){
+		sendRequest('Admin.SearchGrid', testTaxPayerSearchGrid );
+	}
+	
+	var taxYear =2012;
+	
+	function TaxYearShow(){
+		sendRequest('Admin.TaxYearShow', taxYear);
+	}
+	
+	var instID = 3;
+	function getInstitutionByID(){
+		sendRequest('Institution.GetInfo', instID);
+	}
+	
+	var taxYearBudget = {
+		Year: 2012,
+		InstitutionID : 3
+		}
+	function createTaxYearBudget(){
+		sendRequest('Institution.TaxYearBudgetCreate', taxYearBudget);
+	}
+	
+	var taxYearBudgetGridData = {
+		instID: 3,
+		ItemsPerPage: 20,
+		ItemsOffset: 0
+		}
+	function TaxYearBudgetGrid(){
+		sendRequest('Institution.TaxYearBudgetGrid', taxYearBudgetGridData);
+	}
+	
+	var progrID = 7;
+	function TaxProgramDelete(){
+		sendRequest('Institution.TaxProgramDelete', progrID);
+	}
+	
+	var budgID = 7;
+	function TaxYearBudgetDelete(){
+		sendRequest('Institution.TaxYearBudgetDelete', budgID);
+	}
+	
+	var instBudgID = 11;
+	function TaxProgramGenerate(){
+		sendRequest('Institution.TaxProgramGenerate', instBudgID);
+	}
+	
+	var instBudgID = 2;
+	function GetTaxYearBudgetStats(){
+		sendRequest('Institution.GetTaxYearBudgetStats', instBudgID);
+	}
+	
+	var taxYearBudgetProgramsData = {
+		instBudgID: 2,
+		ItemsPerPage: 20,
+		ItemsOffset: 0
+		}
+	function GetTaxYearBudgetPrograms(){
+		sendRequest('Institution.GetTaxYearBudgetProgramsGrid', taxYearBudgetProgramsData);
+	}
+	
+	var taxProgramUsersData = {
+		ID: 2,
+		Type: 0,
+		ItemsPerPage: 20,
+		ItemsOffset: 0
+		}
+	function GetTaxProgramUsers(){
+		sendRequest('Institution.GetTaxProgramUsersGrid', taxProgramUsersData);
+	}
+	
+	var taxPayerYearsData = {
+		ID: 1,
+		ItemsPerPage: 20,
+		ItemsOffset: 0
+		}
+	function TaxYearGrid(){
+		sendRequest('TaxPayer.TaxYearGrid', taxPayerYearsData);
+	}
+	
+</script>
+</head>
+
+<body>
+<p>Sample test page:</p>
+<p>JSON send examples:</p>
+<form id="form1" name="form1" method="post" action="">
+  <p>
+    <label>
+      <input type="button" name="btnSendData" id="btnSendData" onclick="testJSON()" value="Test JSON1" />
+      <input type="button" name="btnTestConnection" id="btnTestConnection" onclick="testConnection()" value="Test Connection" />
+    </label>
+  </p>
+  <p>Database:</p>
+  <p>
+    <input type="button" name="btnClearDatabase" id="btnClearDatabase" onclick="clearDatabase()" value="Clear database" />
+	<input type="button" name="btnCreateWorld" id="btnCreateWorld" onclick="createWorld()" value="Create world" />
+    <input type="button" name="btnAddTestData" id="btnAddTestData" onclick="addTestData()" value="Add test data" />
+	<input type="button" name="btnChDate" id="btnChDate" onclick="changeDate()" value="change date" />
+	<input type="button" name="btnTaxYear" id="btnTaxYear" onclick="createTaxYear()" value="create tax year" />
+	<input type="button" name="btnTaxYear" id="btnTaxYear" onclick="deleteTaxYear()" value="delete tax year" />
+    <input type="button" name="btnTaxYear" id="btnTaxYearGrid" onclick="getTaxYearGrid()" value="get tax year grid" />
+    <input type="button" name="btnSearchGrid" id="btnSearchGrid" onclick="SearchTaxPayerGrid()" value="search tax payer grid" />
+	<input type="button" name="btnGetTaxYear" id="btnGetTaxYear" onclick="TaxYearShow()" value="show tax year" />
+	<input type="button" name="btnGetDate" id="btnGeDate" onclick="GetDate()" value="get date" />
+	<br/>
+	<input type="button" name="btnInstitutionInfo" id="btnGetInstitutionInfo" onclick="getInstitutionByID()" value="get institution info" />
+    <input type="button" name="btnCrTaxYearBudget" id="btnCrTaxYearBudget" onclick="createTaxYearBudget()" value="create TaxYearBudget" />
+	<input type="button" name="btnTaxYearBudgetGrid" id="btnTaxYearBudgetGrid" onclick="TaxYearBudgetGrid()" value="TaxYearBudget Grid" />
+	<input type="button" name="btnBudgetDelete" id="btnBudgetDelete" onclick="TaxYearBudgetDelete()" value="delete budget" />
+	<input type="button" name="btnTaxProgramDelete" id="btnTaxProgramDelete" onclick="TaxProgramDelete()" value="delete taxProgram" />
+	<input type="button" name="btnTaxProgramGenerate" id="btnTaxProgramGenerate" onclick="TaxProgramGenerate()" value="generate taxProgram" />
+	<input type="button" name="btnTaxYearBudgetStats" id="btnTaxYearBudgetStats" onclick="GetTaxYearBudgetStats()" value="GetTaxYearBudget Stats" />
+	<input type="button" name="btnTaxYearBudgetProgr" id="btnTaxYearBudgetProgr" onclick="GetTaxYearBudgetPrograms()" value="GetTaxYearBudgetPrograms grid" />
+    <input type="button" name="btnTaxProgramUsers" id="btnTaxProgramUsers" onclick="GetTaxProgramUsers()" value="TaxProgramUsers grid" />
+	<br/>
+	<input type="button" name="btnTaxPayerYears" id="btnTaxPayerYears" onclick="TaxYearGrid()" value="taxPayers years grid" />
+    <br/>
+    <br/>
+    Request:
+    <div id="divRequest"></div>
+    <br/>
+    Response:
+    <div id="divResponse"></div>
+  </p>
+</form>
+<p>&nbsp;</p>
+</body>
+</html>

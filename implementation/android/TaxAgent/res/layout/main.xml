@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  >
+  
+  
+	<!-- TOP - CONTENT -->
+
+	<LinearLayout
+	    xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="1.0"
+	    android:orientation="vertical" >
+
+	    <!-- LABEL -->
+
+	    <TextView
+	        android:id="@+id/tv_general_label"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="2px"
+	        android:text="Please enter your code:"
+	        android:textAppearance="?android:attr/textAppearanceMedium" >
+	    </TextView>
+
+	    <LinearLayout
+	        xmlns:android="http://schemas.android.com/apk/res/android"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content" >
+	    </LinearLayout>
+
+	    <!-- Radio buttons are added here ! -->
+
+	    <ScrollView
+	        android:id="@+id/scrollview"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_weight="0.93" >
+
+	        <RadioGroup
+	            android:id="@+id/rb_items_group"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_horizontal"
+	            android:orientation="vertical" >
+
+	            <EditText
+	                android:id="@+id/editTextCode"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:ems="10" >
+
+	                <requestFocus />
+	            </EditText>
+
+	            <Button
+	                android:id="@+id/btn_login"
+	                android:layout_width="152dp"
+	                android:layout_height="wrap_content"
+	                android:layout_margin="10px"
+	                android:text="Login" />
+	        </RadioGroup>
+	    </ScrollView>
+	</LinearLayout>
+	
+	<!--  BOTTOM FOOTER -->
+
+	<LinearLayout
+	    xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal" >
+
+  	 	<Button
+  	 	    android:id="@+id/btn_settings"
+  	 	    android:layout_width="wrap_content"
+  	 	    android:layout_height="wrap_content"
+  	 	    android:layout_margin="10px"
+  	 	    android:layout_weight="0.47"
+  	 	    android:text="Settings" >
+
+  	 	</Button>
+  	 	
+  	</LinearLayout>
+  	
+
+</LinearLayout>

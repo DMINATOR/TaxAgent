@@ -1,0 +1,112 @@
+<html>
+<head>
+<title>Taxpayer Panel</title>
+<!-- CSS files -->
+<link rel="stylesheet" type="text/css" href="style.css"> 
+<link rel="stylesheet" type="text/css" href="ext-3.4.0/resources/css/ext-all.css"> 
+<link rel="stylesheet" type="text/css" href="ext-3.4.0/resources/css/calendar.css" />
+<!-- Scripts -->   
+<script type="text/javascript" src="ext-3.4.0/adapter/ext/ext-base.js"></script>
+<script type="text/javascript" src="ext-3.4.0/ext-all.js"></script>
+<script type="text/javascript" src="ext-3.4.0/calendar-all.js"></script>
+<script type="text/javascript" src="js/json2.js"></script>
+<script type="text/javascript" src="js/rfc3339date.js"></script>
+<script type="text/javascript" src="utils.js"></script>
+</head>
+<body>
+<div id="mainArea"></div>
+<div id="tab1"></div>
+<script>
+var taxPayerId = 1;
+var tabs = new Ext.TabPanel({
+    renderTo: 'mainArea',
+    activeTab: 0,
+    items:[
+        {contentEl:'tab1', title:'Info'}
+    ]
+});
+
+var tab1panel = new Ext.Panel({
+	layout: 'vbox',
+	border: false,
+	cls: 'tabPanel',
+	width: 1000,
+	height: 600,
+	renderTo: 'tab1'
+});
+var infoPanel = new Ext.Panel({
+		layout: 'vbox',
+		border: false,
+		cls: 'marginLeft20',
+		width: 500,
+		height: 200
+	});
+tab1panel.add(infoPanel);
+var parentLabel;
+var createTaxPayerInfoPanel = function(data){
+	var jsonData = Ext.util.JSON.decode(data.responseText);
+	var idLabel = createLabel("ID: " + jsonData.data[0].ID);
+	var nameLabel = createLabel("Name: " + jsonData.data[0].Name);
+	var codeLabel = createLabel("Code: " + jsonData.data[0].Code);
+	var incomeLabel = createLabel("Income: " + jsonData.data[0].Income);
+	parentLabel = createLabel("Parent: -");
+	var creationLabel = createLabel("Created:" + jsonData.data[0].DateOfCreation);
+	var typeLabel = createLabel("Type: " + jsonData.data[0].Type);
+	infoPanel.add(idLabel);
+	infoPanel.add(nameLabel);
+	infoPanel.add(codeLabel);
+	infoPanel.add(incomeLabel);
+	infoPanel.add(parentLabel);
+	infoPanel.add(creationLabel);
+	infoPanel.add(typeLabel);
+	infoPanel.doLayout();
+	if (null != jsonData.data[0].ParentID) {
+		sendAjaxRequest('TaxPayer.GetInfo', {'ID': jsonData.data[0].ParentID}, function(data) {
+			var jsonData = Ext.util.JSON.decode(data.responseText);
+			parentLabel.setText("Parent: " + jsonData.data[0].Name);
+		});
+	}
+}
+
+sendAjaxRequest('TaxPayer.GetInfo', {'ID': taxPayerId}, createTaxPayerInfoPanel);
+
+//Year grid
+var taxYearGridJsonKey = [
+	{name: 'ID'},
+	{name: 'Year'},
+	{name: 'ConfirmedDate'},
+	{name: 'State'}     
+];
+var taxYearGridColumns = [
+	{header: "ID", width: 30, dataIndex: 'ID', sortable: true},
+    {header: "Year", dataIndex: 'Year', sortable: true},
+    {header: "ConfirmedDate", dataIndex: 'ConfirmedDate', sortable: true},
+    {header: "State", width: 70,renderer: function(state){
+		if ( 0 == state) {
+			return 'Waiting for submition';
+		} else if (1 == state) {
+			return 'Submitted';
+		} else if (2 == state) {
+			return 'Activated';
+		} else if (3 == state) {
+			return 'Expired';
+		} else {
+			return 'Unknown';
+		}
+	}, dataIndex: 'State', sortable: true}
+];
+
+var gridTaxPayerYear = createDataGrid('TaxPayer.TaxYearGrid', taxYearGridColumns, taxYearGridJsonKey, null, null, null, null, function(){
+	return {ID: taxPayerId};
+}, null);
+tab1panel.add(gridTaxPayerYear[0]);
+//
+
+
+
+tab1panel.doLayout();
+tabs.doLayout();
+tabs.setActiveTab(0);
+</script>
+<body>
+</html>

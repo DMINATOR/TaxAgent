@@ -1,0 +1,820 @@
+package com.dmitrikuznetsov.ttu.taxagent;
+
+import java.text.DecimalFormat;
+import java.util.ArrayList;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.app.Dialog;
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.View.OnClickListener;
+import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import com.dmitrikuznetsov.dklib.tools.localization.Translate;
+import com.dmitrikuznetsov.dklib.tools.log.LogWriter;
+import com.dmitrikuznetsov.dklib.ui.base.DKActivityBase;
+import com.dmitrikuznetsov.dklib.ui.base.DKDialog;
+import android.widget.CompoundButton.OnCheckedChangeListener;
+
+public class TaxProgramsManageActivity  extends DKActivityBase
+{
+	
+	public static final String 	EXTRA_INT_TAX_PAYER_ID			=	"EXTRA_INT_TAX_PAYER_ID";
+	public static final String 	EXTRA_INT_TAX_YEAR_ID			=	"EXTRA_INT_TAX_YEAR_ID";
+	public static final String 	EXTRA_INT_TAX_YEAR_VALUE		=	"EXTRA_INT_TAX_YEAR_VALUE";
+	
+	/**
+	 * ID of tax payer, passed
+	 */
+	public int TaxPayerID = -1;
+	
+	/**
+	 * ID of tax year
+	 */
+	public int TaxYearID = -1;
+	
+	/**
+	 * Found year value
+	 */
+	public int YearValue = -1;
+	
+	/**
+	 * Income of this tax payer
+	 */
+	public double TaxIncome = 0;
+	
+	/**
+	 * Storage for storing settings
+	 */
+	SharedStorage storage = null;
+	
+	//Array of tax programs
+	JSONArray array = null;
+
+	/**
+	 * Indicates that this activity was opened first
+	 */
+	boolean	firstRun = true;
+	
+	
+	TextView tbTaxYearIncome = null;
+	TextView tbTaxYearStats = null;
+	TextView tbTaxYearTax = null;
+	ListView tableTaxProgramManage = null;
+	
+	Button	btnCancel = null;
+	Button	btnSubmit = null;
+	
+	ArrayList<Integer> selected = null;
+	
+	ProgressThread progThread;
+    ProgressDialog progDialog;
+    int typeBar;                     // Determines type progress bar: 0 = spinner, 1 = horizontal
+    
+    
+	int delay = 40;                  // Milliseconds of delay in the update loop
+    int maxBarValue = 200;           // Maximum value of horizontal progress bar
+	
+	@Override 
+	public int getDefaultLayout() 
+	{
+		return R.layout.taxyearmanagelayout;
+	}
+	
+	
+	/**
+	 * Called when activity is created
+	 */
+	public void onCreated()
+	{
+		try 
+		{
+			//find ui elements on the form:
+			tbTaxYearIncome 		= (TextView)this.getElementById(R.id.tbTaxYearIncome);
+			tbTaxYearStats 			= (TextView)this.getElementById(R.id.tbTaxYearStats);
+			tbTaxYearTax 			= (TextView)this.getElementById(R.id.tbTaxYearTax);
+			tableTaxProgramManage	= (ListView)this.getElementById(R.id.listViewTaxPayerProgramManage);
+			
+			btnCancel = (Button)this.getElementById(R.id.btnCancel);
+			btnSubmit = (Button)this.getElementById(R.id.btnSubmit);
+			
+			btnCancel.setVisibility( View.GONE ); //only when it was submitted first time
+			btnSubmit.setVisibility( View.GONE ); //only when there is anything to submit
+			
+			btnSubmit.setOnClickListener( submitClicked );
+			
+			//tbTaxYearIncome				= (ListView)this.getElementById(R.id.listViewTaxPayerYears);
+	
+			//lvTaxYearGrid.setOnItemClickListener( clickListener );
+			
+			TaxPayerID = getIntent().getExtras().getInt( TaxYearStatsActivity.EXTRA_INT_TAX_PAYER_ID );
+			TaxYearID = getIntent().getExtras().getInt( TaxYearStatsActivity.EXTRA_INT_TAX_YEAR_ID );
+			YearValue = getIntent().getExtras().getInt( TaxYearStatsActivity.EXTRA_INT_TAX_YEAR_VALUE );
+
+			
+			//specify changes
+			//lv.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items ));
+		
+			
+			tbTaxYearStats.setText("Manage year: " + YearValue);
+		} 
+		catch (Exception e)
+		{
+			DKDialog.ShowMessage(this,
+					Translate.translate("Error") , 
+					Translate.translate("Loading default activitiy failed!"),
+					Translate.translate("OK"),
+					Translate.translate("Cancel"));
+			
+			LogWriter.writeException(this, e.getMessage(), e);
+		}
+	}
+	
+	/*
+     * Listener called when Login button was clicked
+     */
+    OnClickListener submitClicked = new OnClickListener()
+    {
+
+		public void onClick(View arg0) 
+		{
+
+			selected = new ArrayList<Integer>();
+			
+			try
+			{
+	
+				for (int i = 0; i < array.length(); i++) {
+					
+					JSONObject object = array.getJSONObject(i);
+					
+					
+					if( object.getInt("IsSelected") > 0 )
+					{
+						selected.add( object.getInt("ID"));
+					}
+					else
+					{
+						//clear the price
+						object.put("TaxRate", 0.0);
+					}
+				}
+				
+				if( selected.size() == 0 )
+				{
+					DKDialog.ShowMessage(TaxProgramsManageActivity.this,
+							Translate.translate("Error") , 
+							Translate.translate("Nothing to submit, no programs selected!"),
+							Translate.translate("OK"),
+							Translate.translate("Cancel"));
+				}
+				else
+				{
+					/*
+					//Get TaxPayer Income first:
+		    		HTTPConnection connection = new HTTPConnection(  storage.getServerURL() );
+		    		
+		    		JSONObject response = connection.connectJSON( Engine.TaxProgramSubmit( TaxYearID, TaxPayerID, selected) );
+					storage.setLastServerResponse( response.toString() );
+					
+					if( !response.getString("result").equals("OK") )
+					{
+						throw new Exception("Invalid response from server = " + response.getString("data") );
+					}
+					
+					//read results
+					JSONObject data = response.getJSONArray("data").getJSONObject(0);*/
+					
+					//Show dialog and start working
+					
+					typeBar = 1;
+                    showDialog(typeBar);
+				}
+			}
+			catch(Exception ex)
+			{
+				DKDialog.ShowMessage(TaxProgramsManageActivity.this,
+						Translate.translate("Error") , 
+						Translate.translate("Failed to count selected values! " + ex.getMessage()),
+						Translate.translate("OK"),
+						Translate.translate("Cancel"));
+				
+				LogWriter.writeException(TaxProgramsManageActivity.this, ex.getMessage(), ex);
+			}
+		}
+    	
+    };
+	
+	protected void onPause() 
+	{
+	    super.onPause();
+	    	
+	    //destroy storage
+	    storage = null;
+	}
+	
+	
+	protected void onResume() 
+	{
+	    	super.onResume();
+	    	
+	    	try
+	    	{
+	    		storage = new SharedStorage(this);
+	    		
+	    		//populate data but only for the first time !
+	    		if( firstRun )
+	    		{
+	    			//populate with the values
+	    			loadInfo();	
+	    			
+	    			firstRun = false;
+	    		
+	    		}
+	    		
+	    	}
+	    	catch(Exception ex)
+	    	{
+	    		DKDialog.ShowMessage(this,
+						Translate.translate("Error") , 
+						Translate.translate("Reading settings activitiy failed!"),
+						Translate.translate("OK"),
+						Translate.translate("Cancel"));
+				
+				LogWriter.writeException(this, ex.getMessage(), ex);
+	    	}
+
+	 }
+	
+	public void setProgramPrice(int programID, double price) throws JSONException
+	{
+		for(int i = 0; i < array.length(); i++ )
+		{
+			JSONObject obj = array.getJSONObject(i);
+			
+			if( obj.getInt("ID") == programID )
+			{
+				//found this program - set the price for this
+				obj.put("TaxRate", price);
+			}
+		}
+	}
+	
+	
+	/**
+	 * Loads detailed tax payer info
+	 */
+	public void loadInfo()
+	{
+		//try to connect
+    	try
+    	{	
+    		
+    		//Get TaxPayer Income first:
+    		HTTPConnection connection = new HTTPConnection(  storage.getServerURL() );
+    		
+    		JSONObject response = connection.connectJSON( Engine.getTaxPayerInfo( TaxPayerID ) );
+			storage.setLastServerResponse( response.toString() );
+			
+			if( !response.getString("result").equals("OK") )
+			{
+				throw new Exception("Invalid response from server = " + response.getString("data") );
+			}
+			
+			//read results
+			JSONObject data = response.getJSONArray("data").getJSONObject(0);
+			
+			//Fill the activity with results
+			TaxIncome = data.getDouble("Income");
+			tbTaxYearIncome.setText( String.valueOf(TaxIncome) + " \u20AC" );
+			//Get Tax stats:
+			
+    		
+    		response = connection.connectJSON( Engine.TaxProgramGrid( TaxYearID, TaxPayerID ) );
+    		storage.setLastServerResponse( response.toString() );
+    		
+    		//retrieve the array of items
+    		array = response.getJSONArray("data");
+    		
+    		recalculateTaxRate();
+    		
+    		//only after array is loaded - show the list
+    		adapter = new TaxYearProgramsAdapter(this);
+    		tableTaxProgramManage.setAdapter(adapter );
+			
+    	}
+    	catch(Exception ex)
+    	{
+    		DKDialog.ShowMessage( this,
+					Translate.translate("Error") , 
+					Translate.translate("Connection failed: " + ex.getMessage()),
+					Translate.translate("OK"),
+					Translate.translate("Cancel"));
+			
+			LogWriter.writeException( this, ex.getMessage(), ex);
+			
+			storage.setLastServerResponse( ex.toString() );
+		
+    	}
+	}
+	
+	
+	public void recalculateTaxRate() throws JSONException
+	{
+		double totalTaxRate = 0;
+		
+		for(int i = 0; i < array.length(); i++)
+		{
+			JSONObject obj = array.getJSONObject(i);
+			
+			totalTaxRate += obj.getDouble("TaxRate"); 
+		}
+		
+		if( array.length() > 0 )
+		{
+			btnSubmit.setVisibility( View.VISIBLE );
+		}
+		
+		DecimalFormat df = new DecimalFormat("#.##");
+
+		double taxRatePercent = (totalTaxRate / TaxIncome ) * 100; ;
+		
+		//show result
+		tbTaxYearTax.setText( df.format(taxRatePercent) + " % (" +  df.format(totalTaxRate) + " \u20AC )" );
+	}
+
+	 /**
+	  * Adapter used for showing list of programs and their stats
+	  */
+	TaxYearProgramsAdapter adapter = null;
+	
+	/**
+	  * Adapter class for showing result of selected programs
+	  * 
+	  * @author Dmitri Kuznetsov
+	  *
+	  */
+	 private class TaxYearProgramsAdapter extends BaseAdapter 
+	 {
+	
+		/**
+		 * Context that owns this adapter
+		 */
+		private Context _context = null;
+
+		/**
+		 * View that is inflated from XML
+		 */
+		LayoutInflater _inflater = null;
+
+		public TaxYearProgramsAdapter(Context context) throws Exception
+		{
+			_context 	= context;
+			
+			_inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+			
+			if( _inflater == null )
+			{
+				throw new Exception("Couldn't create layout inflater!");
+			}
+			
+		}
+
+		public int getCount()
+		{
+			return array.length();
+		}
+
+		@Override
+		public boolean areAllItemsEnabled()
+		{
+			return false;
+		}
+
+		public Object getItem(int position)
+		{
+			try 
+			{
+				return array.get(position);
+			} catch (JSONException ex) 
+			{
+				LogWriter.writeException(_context, "Failed to get Item!", ex);
+				return null;
+			}
+		}
+
+		public long getItemId(int position)
+		{
+			return position;
+		}
+
+		public View getView(int position, View convertView, ViewGroup parent)
+		{
+			if ( (array == null) || (array.length() == 0) || (position >= array.length()))
+			{
+				TextView tv = new TextView(_context);
+				tv.setText("No items.");
+
+				return tv;
+			}
+			else
+			{
+
+					final JSONObject currentObject = (JSONObject)getItem(position);
+				
+					View _inflatedView = _inflater.inflate( R.layout.managegridlayout, null);
+					
+					TextView tvID			= (TextView) _inflatedView.findViewById( R.id.textview_stats_id_value);
+					TextView tvInstitution	= (TextView) _inflatedView.findViewById( R.id.textview_stats_institutionname);
+					TextView tvProgram		= (TextView) _inflatedView.findViewById( R.id.textview_stats_programname);
+					TextView tvMinYears		= (TextView) _inflatedView.findViewById( R.id.textview_stats_minimumyears_value);
+					TextView tvYearsLeft	= (TextView) _inflatedView.findViewById( R.id.textview_stats_yearsremaining_value);	
+					TextView tvYearsTaxRate	= (TextView) _inflatedView.findViewById( R.id.textview_stats_taxrate_value);	
+					
+					
+					
+					try
+					{
+						CheckBox cbSelect = (CheckBox)  _inflatedView.findViewById( R.id.checkbox_taxprogram_select);
+
+						tvID.setText( currentObject.getString("ID")  );
+						tvInstitution.setText( currentObject.getString("Institution")  );
+						tvProgram.setText( currentObject.getString("Name")  );
+						tvYearsLeft.setText( currentObject.getString("YearsLeft")  );
+						tvMinYears.setText( currentObject.getString("MinimumYears")  );
+						
+						int isSelected = currentObject.getInt("IsSelected");
+						
+						switch( isSelected )
+						{
+						case 0: //do nothing - it is not selected
+							break;
+							
+						case 1: //it is selected and can be unselected
+							cbSelect.setChecked(true);
+							break;
+							
+						case 2: //it is selected and cannot be unselected
+							cbSelect.setChecked(true);
+							cbSelect.setEnabled(false);
+							break;
+							
+						default:
+							throw new Exception("Unknown IsSelected = " + String.valueOf( isSelected ) );
+						
+						}
+						
+						
+						cbSelect.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+							   public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+								try {
+									currentObject.put("IsSelected", isChecked == true ? 1 : 0);
+								} catch (JSONException ex) {
+									LogWriter.writeException(_context, "Failed to set checkbox!", ex);
+								}
+							   }
+						});
+						
+						if(  btnCancel.getVisibility() == View.VISIBLE )
+						{
+							cbSelect.setEnabled(false);
+						}
+						else
+						{
+							cbSelect.setEnabled(true);
+						}
+						
+						double taxAmount = currentObject.getDouble("TaxRate");
+						double percent = (taxAmount / TaxIncome ) * 100;
+						
+						DecimalFormat df = new DecimalFormat("#.##");
+
+						
+						tvYearsTaxRate.setText( df.format(percent) + " % (" +  df.format(taxAmount) + " \u20AC )" );
+					}
+					catch(Exception ex)
+					{
+						LogWriter.writeException(_context, "Failed to show Item!", ex);
+					}
+					
+					
+					return _inflatedView;
+				
+			}
+
+		}
+	 }
+	 
+	 
+	 public void cancelResults()
+	 {
+		 
+	 }
+	 
+	 public void presentResults()
+	 {
+		 btnCancel.setVisibility( View.VISIBLE );
+		 btnSubmit.setText("Confirm");
+	 }
+
+	  // Handler on the main (UI) thread that will receive messages from the 
+     // second thread and update the progress.
+     
+     final Handler handler = new Handler() {
+         public void handleMessage(Message msg) 
+         {
+        	 Bundle data = msg.getData();
+        	 
+        	 if( data.containsKey("error"))
+        	 {
+        		 //error has occured - show it:
+        		DKDialog.ShowMessage( TaxProgramsManageActivity.this,
+         					Translate.translate("Error") , 
+         					Translate.translate( data.getString("error")),
+         					Translate.translate("OK"),
+         					Translate.translate("Cancel"));
+        			
+        		 removeDialog(typeBar);
+                 progThread.setState(ProgressThread.DONE);
+        	 }
+        	 else
+        	 {
+        		  // Get the current value of the variable total from the message data
+                 // and update the progress bar.
+                 int total = data.getInt("total");
+                 progDialog.setProgress(total);
+                 if (total >= (maxBarValue-2))
+                 {
+                     removeDialog(typeBar);
+                     progThread.setState(ProgressThread.DONE);
+                     
+                     presentResults();
+                     
+                     //refresh adapter prices:
+                     adapter.notifyDataSetChanged();
+                     tableTaxProgramManage.refreshDrawableState();
+                     
+                   
+                     
+                     try 
+                     {
+						recalculateTaxRate();
+					 } catch (JSONException e) {
+						 DKDialog.ShowMessage( TaxProgramsManageActivity.this,
+		         					Translate.translate("Error") , 
+		         					Translate.translate( "Failed to recalculate tax rate!"),
+		         					Translate.translate("OK"),
+		         					Translate.translate("Cancel"));
+					 }
+                 }
+        	 }
+        	 
+           
+         }
+     };
+     
+     
+    // Method to create a progress bar dialog of either spinner or horizontal type
+     @Override
+     protected Dialog onCreateDialog(int id) {
+    	 
+    	 maxBarValue = selected.size();
+         switch(id) {
+         case 0:                      // Spinner
+             progDialog = new ProgressDialog(this);
+             progDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+             progDialog.setMessage("Loading...");
+             progThread = new ProgressThread(handler, TaxPayerID, TaxYearID, selected);
+             progThread.start();
+             return progDialog;
+         case 1:                      // Horizontal
+             progDialog = new ProgressDialog(this);
+             progDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+             progDialog.setMax(maxBarValue);
+             progDialog.setMessage("Negotiating with Institution agents:");
+             progThread = new ProgressThread(handler, TaxPayerID, TaxYearID , selected);
+             progThread.start();
+             return progDialog;
+         default:
+             return null;
+         }
+     }
+	 
+	 // Inner class that performs progress calculations on a second thread.  Implement
+     // the thread by subclassing Thread and overriding its run() method.  Also provide
+     // a setState(state) method to stop the thread gracefully.
+     
+     private class ProgressThread extends Thread {	
+         
+         // Class constants defining state of the thread
+         final static int DONE = 0;
+         final static int RUNNING = 1;
+         
+         Handler mHandler;
+         int mState;
+         int total;
+         
+     	/**
+     	 * ID of tax payer, passed
+     	 */
+     	public int _taxPayerID = -1;
+     	
+     	/**
+     	 * ID of tax year
+     	 */
+     	public int _taxYearID = -1;
+         
+     	ArrayList<Integer> _selected = null;
+     
+         // Constructor with an argument that specifies Handler on main thread
+         // to which messages will be sent by this thread.
+         
+         ProgressThread(Handler h, int taxPayerID, int taxYearID, ArrayList<Integer> selected) {
+             mHandler = h;
+             _selected 		= selected;
+             _taxPayerID 	= taxPayerID;
+             _taxYearID 	= taxYearID;
+         }
+         
+         // Override the run() method that will be invoked automatically when 
+         // the Thread starts.  Do the work required to update the progress bar on this
+         // thread but send a message to the Handler on the main UI thread to actually
+         // change the visual representation of the progress. In this example we count
+         // the index total down to zero, so the horizontal progress bar will start full and
+         // count down.
+         
+         @Override
+         public void run() {
+             mState = RUNNING;   
+             total = 0;
+             while (mState == RUNNING) {
+                 // The method Thread.sleep throws an InterruptedException if Thread.interrupt() 
+                 // were to be issued while thread is sleeping; the exception must be caught.
+                 try {
+                     // Control speed of update (but precision of delay not guaranteed)
+                     Thread.sleep(delay);
+                 } catch (InterruptedException e) {
+                	 LogWriter.writeException( TaxProgramsManageActivity.this, "Thread was Interrupted", e);
+                 }
+                 
+                 // Send message (with current value of  total as data) to Handler on UI thread
+                 // so that it can update the progress bar.
+                 //proceed one institution at a time
+                 work();
+                 
+                 Message msg = mHandler.obtainMessage();
+                 Bundle b = new Bundle();
+                 b.putInt("total", total);
+                 msg.setData(b);
+                 mHandler.sendMessage(msg);
+                 
+                 total++;    // Count up
+             }
+         }
+         
+         public void work()
+         {
+        	 //get the first institution
+        	 int id = _selected.get(total);
+        	 
+        	 double firstPrice = 0;
+        	 double currentPrice = 0;
+        	 double avgPriceForProgram = (TaxIncome / _selected.size()) * 0.2; //this is a price that is calculate for programs, average 20% of income
+      
+        	 //start negotiating
+        	 try
+        	 {
+        		//Get initial price of program
+        		LogWriter.writeInfo( "Agent -> Get program price: avgPerProgram = " + avgPriceForProgram +", program ID = " + id ); 
+        		
+         		HTTPConnection connection = new HTTPConnection(  storage.getServerURL() );
+         		
+         		JSONObject response = connection.connectJSON( Engine.AgentRequestProgramPrice( _taxYearID, _taxPayerID, id ) );
+     			storage.setLastServerResponse( response.toString() );
+     			
+     			if( !response.getString("result").equals("OK") )
+     			{
+     				throw new Exception("Invalid response from server = " + response.getString("data") );
+     			}
+     			
+     			//read results
+     			JSONObject data = response.getJSONObject("data");
+     			
+     			int type = data.getInt("Type");
+     			currentPrice = data.getDouble("Price");
+     			firstPrice = currentPrice;
+     			double lowestPrice = firstPrice;
+     			double newPrice = 0;
+     			
+     			if( type == 1 )
+     			{
+     				//this is final offer - we need to set the result - and offer to client
+     	       		LogWriter.writeInfo( "Agent -> Final offer = "+currentPrice+" program ID = " + id ); 
+     				setProgramPrice( id , currentPrice );
+     			}
+     			else
+     			{
+     				double tries = 0.5;
+     				
+     				while( true )
+     				{
+     					if( type == 1 )
+     	     			{
+     	     				//this is final offer - we need to set the result - and offer to client
+     						LogWriter.writeInfo( "Agent -> Final offer = "+currentPrice+" program ID = " + id ); 
+     						setProgramPrice( id , currentPrice );
+     						break;
+     	     			}
+     					
+     					//we can try to continue more - to get a better deal if it is more than we want
+     					if( newPrice > firstPrice )
+     					{
+     						//obiously we cannot get betterp rice
+     	     	       		LogWriter.writeInfo( "Agent -> Cannot go higher = "+lowestPrice+" program ID = " + id ); 
+     	     				setProgramPrice( id , lowestPrice );
+     	     				break;
+     					}
+     					else
+         				if( currentPrice > avgPriceForProgram )
+         				{
+
+         					
+         					//Get initial price of program
+         	         		connection = new HTTPConnection(  storage.getServerURL() );
+         	         		
+         	         		newPrice = avgPriceForProgram * 0.1 + avgPriceForProgram * ( tries) ;
+         	         		
+         	         		LogWriter.writeInfo( "Agent -> Askin better price = "+newPrice+" program ID = " + id );
+         	         		
+         	         		//lowe the price by 90%
+         	         		response = connection.connectJSON( Engine.AgentRequestProgramLowerPrice( _taxYearID, _taxPayerID, id , newPrice) );
+         	     			storage.setLastServerResponse( response.toString() );
+         	     			
+         	     			if( !response.getString("result").equals("OK") )
+         	     			{
+         	     				throw new Exception("Invalid response from server = " + response.getString("data") );
+         	     			}
+         	     			
+         	     			//read results
+         	     			data = response.getJSONObject("data");
+         	     			
+         	     			type = data.getInt("Type");
+         	     			currentPrice = data.getDouble("Price");
+         	     			
+         	     			LogWriter.writeInfo( "Agent -> currentPrice = "+currentPrice+" lowestPrice = " + lowestPrice +  " program ID = " + id );
+                	         
+         	     			if( currentPrice < lowestPrice )
+         	     			{
+         	     				lowestPrice = currentPrice;
+         	     			}
+         	     			
+         	     			tries += 0.1;
+         				}
+         				else
+         				{
+         					//this is ok, we can accept that
+         					LogWriter.writeInfo( "Agent -> Best offer = "+currentPrice+" program ID = " + id ); 
+         					setProgramPrice( id , currentPrice );
+         					break;
+         				}
+     				}
+     			
+     				
+     			}
+     			
+        	 }
+        	 catch(Exception ex)
+        	 {
+        		//this will exit
+        		
+        	    Message msg = mHandler.obtainMessage();
+        		Bundle b = new Bundle();
+                   b.putString("error", "Connection failed: " + ex.getMessage());
+                   msg.setData(b);
+                   mHandler.sendMessage(msg);
+                   
+     			LogWriter.writeException( TaxProgramsManageActivity.this, ex.getMessage(), ex); 
+        	 }
+         }
+         
+         // Set current state of thread (use state=ProgressThread.DONE to stop thread)
+         public void setState(int state) {
+             mState = state;
+         }
+     }
+
+}

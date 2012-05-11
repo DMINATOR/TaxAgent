@@ -1,0 +1,8062 @@
+00:03:55 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:03:55 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:03:56 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:03:56 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:03:57 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:03:57 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:03:57 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:03:57 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:04:11 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:04:11 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:04:11 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:04:11 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:04:12 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:04:12 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:05:41 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:05:41 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:05:42 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:05:42 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:05:42 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:05:42 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:05:43 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:05:43 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:05:43 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:05:43 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:05:43 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:05:43 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:05:43 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:05:43 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:05:44 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:05:44 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:06:21 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:06:21 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:06:21 (engine) [SQL]->Connecting to database:
+00:06:21 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+00:08:33 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:08:33 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:08:33 (engine) [SQL]->Connecting to database:
+00:08:33 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+00:08:44 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:08:44 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:10:09 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:10:09 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:10:10 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:10:10 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:10:10 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:10:10 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:10:11 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:10:11 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:10:11 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:10:11 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:10:11 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:10:11 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:10:11 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:10:11 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:10:11 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:10:11 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:10:11 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:10:11 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:12:11 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:12:11 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:12:12 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:12:12 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:12:12 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:12:12 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:12:12 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:12:12 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:12:12 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:12:12 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:12:13 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:12:13 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:12:13 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:12:13 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:12:13 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:12:13 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:12:13 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:12:13 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:12:13 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:12:13 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:12:13 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:12:13 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:14:54 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:14:54 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:14:54 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:14:54 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:14:54 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:14:54 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:14:55 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:14:55 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:14:55 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:14:55 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:14:55 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:14:55 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:14:55 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:14:55 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:16:26 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:16:26 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:16:38 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:16:38 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:18:08 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:18:08 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:18:09 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:18:09 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:20:06 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:20:06 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:20:07 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:20:07 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:20:08 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:20:08 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:20:08 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:20:08 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:20:08 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:20:08 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:20:08 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:20:08 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:20:08 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:20:08 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:20:09 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:20:09 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:20:09 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:20:09 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:20:10 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:20:10 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:20:10 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:20:10 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:20:10 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:20:10 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:20:10 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:20:10 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:20:27 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:20:27 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:20:27 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:20:27 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:20:28 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:20:28 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:20:28 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:20:28 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:20:28 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:20:28 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:20:28 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:20:28 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:20:28 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:20:28 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:20:28 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:20:28 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:20:31 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:20:31 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:21:00 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:21:00 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:21:02 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:21:02 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:21:02 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:21:02 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:23:14 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(262) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:23:14 (engine) [JSON (Admin.TestJSON)]->array(5) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+00:23:14 (engine) Connecting to database:
+00:23:14 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+00:23:50 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(48) "{\"action\":\"Admin.TestConnection\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:23:50 (engine) [JSON (Admin.TestConnection)]->int(1)
+
+00:23:50 (engine) [SQL]->asdasbase:
+00:23:52 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(48) "{\"action\":\"Admin.TestConnection\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:23:52 (engine) [JSON (Admin.TestConnection)]->int(1)
+
+00:23:52 (engine) [SQL]->asdasbase:
+00:23:53 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(48) "{\"action\":\"Admin.TestConnection\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:23:53 (engine) [JSON (Admin.TestConnection)]->int(1)
+
+00:23:53 (engine) [SQL]->asdasbase:
+00:25:02 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(48) "{\"action\":\"Admin.TestConnection\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:25:02 (engine) [JSON (Admin.TestConnection)]->int(1)
+
+00:25:02 (engine) [SQL]->asdasbase:
+00:25:02 (engine) [SQL]->Connecting to database:
+00:25:04 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(48) "{\"action\":\"Admin.TestConnection\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:25:04 (engine) [JSON (Admin.TestConnection)]->int(1)
+
+00:25:04 (engine) [SQL]->asdasbase:
+00:25:04 (engine) [SQL]->Connecting to database:
+00:25:49 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(48) "{\"action\":\"Admin.TestConnection\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:25:49 (engine) [JSON (Admin.TestConnection)]->int(1)
+
+00:25:49 (engine) [SQL]->asdasbase:
+00:25:49 (engine) [SQL]->Connecting to database:
+00:25:49 (engine) [SQL]->Connection OK!
+00:25:49 (engine) test 
+00:25:49 (engine) [SQL]->Exec:CREATE TABLE IF NOT EXISTS `test_table` (
+							  `id` int(11) NOT NULL AUTO_INCREMENT,
+							  `test` varchar(255) NOT NULL,
+							  PRIMARY KEY (`id`)
+							) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
+00:25:49 (engine) [SQL]->Exec [Done]:1
+00:25:49 (engine) [SQL]->Exec:INSERT INTO `test_table` VALUES ('', 'dbtest');
+00:25:49 (engine) [SQL]->Exec [Done]:1
+00:25:49 (engine) [SQL]->Exec:DROP TABLE `test_table`
+00:25:49 (engine) [SQL]->Exec [Done]:1
+00:25:49 (engine) [RESPONSE (Admin.TestConnection)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+00:25:56 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(48) "{\"action\":\"Admin.TestConnection\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:25:56 (engine) [JSON (Admin.TestConnection)]->int(1)
+
+00:25:56 (engine) [SQL]->asdasbase:
+00:25:56 (engine) [SQL]->Connecting to database:
+00:25:56 (engine) [SQL]->Connection OK!
+00:25:56 (engine) test 
+00:25:56 (engine) [SQL]->Exec:CREATE TABLE IF NOT EXISTS `test_table` (
+							  `id` int(11) NOT NULL AUTO_INCREMENT,
+							  `test` varchar(255) NOT NULL,
+							  PRIMARY KEY (`id`)
+							) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
+00:25:56 (engine) [SQL]->Exec [Done]:1
+00:25:56 (engine) [SQL]->Exec:INSERT INTO `test_table` VALUES ('', 'dbtest');
+00:25:56 (engine) [SQL]->Exec [Done]:1
+00:25:56 (engine) [SQL]->Exec:DROP TABLE `test_table`
+00:25:56 (engine) [SQL]->Exec [Done]:1
+00:25:56 (engine) [RESPONSE (Admin.TestConnection)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+00:25:59 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(48) "{\"action\":\"Admin.TestConnection\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+00:25:59 (engine) [JSON (Admin.TestConnection)]->int(1)
+
+00:25:59 (engine) [SQL]->asdasbase:
+00:25:59 (engine) [SQL]->Connecting to database:
+00:25:59 (engine) [SQL]->Connection OK!
+00:25:59 (engine) test 
+00:25:59 (engine) [SQL]->Exec:CREATE TABLE IF NOT EXISTS `test_table` (
+							  `id` int(11) NOT NULL AUTO_INCREMENT,
+							  `test` varchar(255) NOT NULL,
+							  PRIMARY KEY (`id`)
+							) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
+00:25:59 (engine) [SQL]->Exec [Done]:1
+00:25:59 (engine) [SQL]->Exec:INSERT INTO `test_table` VALUES ('', 'dbtest');
+00:25:59 (engine) [SQL]->Exec [Done]:1
+00:25:59 (engine) [SQL]->Exec:DROP TABLE `test_table`
+00:25:59 (engine) [SQL]->Exec [Done]:1
+00:25:59 (engine) [RESPONSE (Admin.TestConnection)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+10:35:57 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.001Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+10:35:57 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.001Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+10:35:57 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(24) "2013-10-12T20:59:59.001Z"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+10:37:08 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.001Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+10:37:08 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.001Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+10:37:08 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(24) "2013-10-12T20:59:59.001Z"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+10:44:41 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.001Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+10:44:41 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.001Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+10:44:41 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(10) "1970-01-01"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+10:46:33 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.001Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+10:46:33 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.001Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+10:46:43 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.001Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+10:46:43 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.001Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+10:46:48 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.001Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+10:46:48 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.001Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+10:46:48 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.001Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+10:46:48 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.001Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+10:46:48 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.001Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+10:46:48 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.001Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+10:49:44 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.001Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+10:49:44 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.001Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+10:49:44 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(10) "1970-01-01"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+10:50:42 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.001Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+10:50:42 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.001Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+10:50:42 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    bool(false)
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+10:52:12 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.001Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+10:52:12 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.001Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+10:52:12 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    int(1381611599)
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+10:53:33 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.001Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+10:53:33 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.001Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+10:53:33 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(19) "2013-10-12 20:59:59"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+10:54:14 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.001Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+10:54:14 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.001Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+10:54:14 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(21) "2013-10-12GMT20:59:59"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+10:55:07 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.001Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+10:55:07 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.001Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+10:55:07 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(20) "2013-10-12T20:59:59Z"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+10:56:53 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.001Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+10:56:53 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.001Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+10:56:53 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(27) "2013-10-12T20:59:59.000000Z"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+10:58:18 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.000Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+10:58:18 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.000Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+10:58:18 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(20) "2013-10-12T20:59:59Z"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+10:58:40 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.000Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+10:58:40 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.000Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+10:58:40 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(20) "2013-10-12T20:59:59Z"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+10:58:57 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.000Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+10:58:57 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.000Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+10:58:57 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(20) "2013-10-12T20:59:59Z"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+11:09:10 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.000Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+11:09:10 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.000Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+11:09:10 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(20) "2013-10-12T20:59:59Z"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+11:09:25 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.000Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+11:09:25 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.000Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+11:09:25 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(20) "2013-10-12T20:59:59Z"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+11:09:47 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.000Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+11:09:47 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.000Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+11:09:47 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(20) "2013-10-12T20:59:59Z"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+11:11:47 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.000Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+11:11:47 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.000Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+11:11:47 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(20) "2013-10-12T20:59:59Z"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+11:12:01 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.000Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+11:12:01 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.000Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+11:12:01 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(20) "2013-10-12T20:59:59Z"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+11:12:11 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.000Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+11:12:11 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.000Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+11:12:11 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(20) "2013-10-12T20:59:59Z"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+11:17:35 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.000Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+11:17:35 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.000Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+11:17:35 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(20) "2013-10-12T20:59:59Z"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+11:17:53 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.000Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+11:17:53 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.000Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+11:17:53 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(20) "2013-10-12T20:59:59Z"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+11:20:09 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.000Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+11:20:09 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.000Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+11:20:09 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(20) "2013-10-12T20:59:59Z"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+11:21:34 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.000Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+11:21:34 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.000Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+11:21:34 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(20) "2013-10-12T20:59:59Z"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+11:22:11 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.000Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+11:22:11 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.000Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+11:22:11 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(20) "2013-10-12T20:59:59Z"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+11:56:10 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.000Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+11:56:10 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.000Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+11:56:10 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(20) "2013-10-12T20:59:59Z"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+12:01:43 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.000Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+12:01:43 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.000Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+12:01:43 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(20) "2013-10-12T20:59:59Z"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+12:07:14 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.000Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+12:07:14 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.000Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+12:07:14 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(20) "2013-10-12T20:59:59Z"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+12:07:36 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.000Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+12:07:36 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.000Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+12:07:36 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(20) "2013-10-12T20:59:59Z"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+12:09:31 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.000Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+12:09:31 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.000Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+12:09:31 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(20) "2013-10-12T20:59:59Z"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+12:17:27 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.000Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+12:17:27 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.000Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+12:17:27 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(20) "2013-10-12T20:59:59Z"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+12:17:49 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.000Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+12:17:49 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.000Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+12:17:49 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(20) "2013-10-12T20:59:59Z"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+12:19:40 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.000Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+12:19:40 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.000Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+12:19:40 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(20) "2013-10-12T20:59:59Z"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+12:24:39 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.000Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+12:24:39 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.000Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+12:24:39 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(20) "2013-10-12T20:59:59Z"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+12:26:49 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.000Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+12:26:49 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.000Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+12:26:49 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(20) "2013-10-12T20:59:59Z"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+12:35:24 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.000Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+12:35:24 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.000Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+12:35:24 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(20) "2013-10-12T20:59:59Z"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+13:08:29 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.000Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+13:08:29 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.000Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+13:08:29 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(20) "2013-10-12T20:59:59Z"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+13:10:13 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(48) "{\"action\":\"Admin.TestConnection\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+13:10:13 (engine) [JSON (Admin.TestConnection)]->int(1)
+
+13:10:13 (engine) [SQL]->asdasbase:
+13:10:13 (engine) [SQL]->Connecting to database:
+13:10:13 (engine) [SQL]->Connection OK!
+13:10:13 (engine) test 
+13:10:13 (engine) [SQL]->Exec:CREATE TABLE IF NOT EXISTS `test_table` (
+							  `id` int(11) NOT NULL AUTO_INCREMENT,
+							  `test` varchar(255) NOT NULL,
+							  PRIMARY KEY (`id`)
+							) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
+13:10:13 (engine) [SQL]->Exec [Done]:1
+13:10:13 (engine) [SQL]->Exec:INSERT INTO `test_table` VALUES ('', 'dbtest');
+13:10:13 (engine) [SQL]->Exec [Done]:1
+13:10:13 (engine) [SQL]->Exec:DROP TABLE `test_table`
+13:10:13 (engine) [SQL]->Exec [Done]:1
+13:10:13 (engine) [RESPONSE (Admin.TestConnection)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+14:48:54 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(48) "{\"action\":\"Admin.TestConnection\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+14:48:54 (engine) [JSON (Admin.TestConnection)]->int(1)
+
+14:48:54 (engine) [SQL]->asdasbase:
+14:48:54 (engine) [SQL]->Connecting to database:
+14:48:54 (engine) [SQL]->Connection OK!
+14:48:54 (engine) test 
+14:48:54 (engine) [SQL]->Exec:CREATE TABLE IF NOT EXISTS `test_table` (
+							  `id` int(11) NOT NULL AUTO_INCREMENT,
+							  `test` varchar(255) NOT NULL,
+							  PRIMARY KEY (`id`)
+							) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
+14:48:54 (engine) [SQL]->Exec [Done]:1
+14:48:54 (engine) [SQL]->Exec:INSERT INTO `test_table` VALUES ('', 'dbtest');
+14:48:54 (engine) [SQL]->Exec [Done]:1
+14:48:54 (engine) [SQL]->Exec:DROP TABLE `test_table`
+14:48:54 (engine) [SQL]->Exec [Done]:1
+14:48:54 (engine) [RESPONSE (Admin.TestConnection)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+19:04:01 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.000Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+19:04:01 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.000Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+19:04:01 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(20) "2013-10-12T20:59:59Z"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+19:04:04 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(48) "{\"action\":\"Admin.TestConnection\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+19:04:04 (engine) [JSON (Admin.TestConnection)]->int(1)
+
+19:04:04 (engine) [SQL]->asdasbase:
+19:04:04 (engine) [SQL]->Connecting to database:
+19:04:04 (engine) [SQL]->Connection OK!
+19:04:04 (engine) test 
+19:04:04 (engine) [SQL]->Exec:CREATE TABLE IF NOT EXISTS `test_table` (
+							  `id` int(11) NOT NULL AUTO_INCREMENT,
+							  `test` varchar(255) NOT NULL,
+							  PRIMARY KEY (`id`)
+							) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
+19:04:04 (engine) [SQL]->Exec [Done]:1
+19:04:04 (engine) [SQL]->Exec:INSERT INTO `test_table` VALUES ('', 'dbtest');
+19:04:04 (engine) [SQL]->Exec [Done]:1
+19:04:04 (engine) [SQL]->Exec:DROP TABLE `test_table`
+19:04:04 (engine) [SQL]->Exec [Done]:1
+19:04:04 (engine) [RESPONSE (Admin.TestConnection)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  int(1)
+}
+
+19:04:07 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(47) "{\"action\":\"Admin.ClearDatabase\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+19:04:07 (engine) [JSON (Admin.ClearDatabase)]->int(1)
+
+19:05:42 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(47) "{\"action\":\"Admin.ClearDatabase\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+19:05:42 (engine) [JSON (Admin.ClearDatabase)]->int(1)
+
+19:05:42 (engine) [RESPONSE (Admin.ClearDatabase)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+19:05:58 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(47) "{\"action\":\"Admin.ClearDatabase\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+19:05:58 (engine) [JSON (Admin.ClearDatabase)]->int(1)
+
+19:05:58 (engine) [RESPONSE (Admin.ClearDatabase)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+19:06:09 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(47) "{\"action\":\"Admin.ClearDatabase\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+19:06:09 (engine) [JSON (Admin.ClearDatabase)]->int(1)
+
+19:06:09 (engine) [RESPONSE (Admin.ClearDatabase)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+19:06:34 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(47) "{\"action\":\"Admin.ClearDatabase\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+19:06:34 (engine) [JSON (Admin.ClearDatabase)]->int(1)
+
+19:06:34 (engine) [RESPONSE (Admin.ClearDatabase)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+19:06:39 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(47) "{\"action\":\"Admin.ClearDatabase\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+19:06:39 (engine) [JSON (Admin.ClearDatabase)]->int(1)
+
+19:06:39 (engine) [RESPONSE (Admin.ClearDatabase)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+22:29:02 (engine) [REQUEST]<-array(1) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.000Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+}
+
+22:29:02 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.000Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+22:29:02 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(20) "2013-10-12T20:59:59Z"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+22:29:07 (engine) [REQUEST]<-array(1) {
+  ["json"]=>
+  string(48) "{\"action\":\"Admin.TestConnection\",\"data\":1}"
+}
+
+22:29:07 (engine) [JSON (Admin.TestConnection)]->int(1)
+
+22:29:07 (engine) [SQL]->asdasbase:
+22:29:07 (engine) [SQL]->Connecting to database:
+22:29:07 (engine) [REQUEST]<-array(1) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.000Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+}
+
+22:29:07 (engine) [SQL]->Connection OK!
+22:29:07 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.000Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+22:29:07 (engine) test 
+22:29:07 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(20) "2013-10-12T20:59:59Z"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+22:29:07 (engine) [SQL]->Exec:CREATE TABLE IF NOT EXISTS `test_table` (
+							  `id` int(11) NOT NULL AUTO_INCREMENT,
+							  `test` varchar(255) NOT NULL,
+							  PRIMARY KEY (`id`)
+							) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
+22:29:07 (engine) [SQL]->Exec [Done]:1
+22:29:07 (engine) [SQL]->Exec:INSERT INTO `test_table` VALUES ('', 'dbtest');
+22:29:07 (engine) [SQL]->Exec [Done]:1
+22:29:07 (engine) [SQL]->Exec:DROP TABLE `test_table`
+22:29:07 (engine) [SQL]->Exec [Done]:1
+22:29:07 (engine) [RESPONSE (Admin.TestConnection)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  int(1)
+}
+
+23:24:41 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.000Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+23:24:41 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.000Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+23:24:41 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(20) "2013-10-12T20:59:59Z"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+23:28:40 (engine) [REQUEST]<-array(4) {
+  ["json"]=>
+  string(48) "{\"action\":\"Admin.TestConnection\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1992494945.1334777532.1334777532.1334777532.1"
+  ["__utmc"]=>
+  string(9) "104595487"
+  ["__utmz"]=>
+  string(70) "104595487.1334777532.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+23:28:40 (engine) [REQUEST]<-array(4) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.000Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1992494945.1334777532.1334777532.1334777532.1"
+  ["__utmc"]=>
+  string(9) "104595487"
+  ["__utmz"]=>
+  string(70) "104595487.1334777532.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+23:28:40 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.000Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+23:28:40 (engine) [JSON (Admin.TestConnection)]->int(1)
+
+23:28:40 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(20) "2013-10-12T20:59:59Z"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+23:28:40 (engine) [SQL]->asdasbase:
+23:28:40 (engine) [SQL]->Connecting to database:
+23:28:40 (engine) [SQL]->Connection OK!
+23:28:40 (engine) test 
+23:28:40 (engine) [SQL]->Exec:CREATE TABLE IF NOT EXISTS `test_table` (
+							  `id` int(11) NOT NULL AUTO_INCREMENT,
+							  `test` varchar(255) NOT NULL,
+							  PRIMARY KEY (`id`)
+							) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
+23:28:40 (engine) [SQL]->Exec [Done]:1
+23:28:40 (engine) [SQL]->Exec:INSERT INTO `test_table` VALUES ('', 'dbtest');
+23:28:41 (engine) [SQL]->Exec [Done]:1
+23:28:41 (engine) [SQL]->Exec:DROP TABLE `test_table`
+23:28:41 (engine) [SQL]->Exec [Done]:1
+23:28:41 (engine) [RESPONSE (Admin.TestConnection)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  int(1)
+}
+

@@ -1,0 +1,1642 @@
+19:26:31 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(47) "{\"action\":\"Admin.ClearDatabase\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1992494945.1334777532.1334777532.1334777532.1"
+  ["__utmz"]=>
+  string(70) "104595487.1334777532.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+19:26:31 (engine) [JSON (Admin.ClearDatabase)]->int(1)
+
+19:26:31 (engine) [RESPONSE (Admin.ClearDatabase)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+21:51:43 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(47) "{\"action\":\"Admin.ClearDatabase\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1992494945.1334777532.1334777532.1334777532.1"
+  ["__utmz"]=>
+  string(70) "104595487.1334777532.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+21:51:43 (engine) [JSON (Admin.ClearDatabase)]->int(1)
+
+21:51:43 (engine) [RESPONSE (Admin.ClearDatabase)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+21:51:47 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(48) "{\"action\":\"Admin.TestConnection\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1992494945.1334777532.1334777532.1334777532.1"
+  ["__utmz"]=>
+  string(70) "104595487.1334777532.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+21:51:47 (engine) [JSON (Admin.TestConnection)]->int(1)
+
+21:51:47 (engine) [SQL]->asdasbase:
+21:51:47 (engine) [SQL]->Connecting to database:
+21:51:47 (engine) [SQL]->Connection OK!
+21:51:47 (engine) test 
+21:51:47 (engine) [SQL]->Exec:CREATE TABLE IF NOT EXISTS `test_table` (
+							  `id` int(11) NOT NULL AUTO_INCREMENT,
+							  `test` varchar(255) NOT NULL,
+							  PRIMARY KEY (`id`)
+							) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
+21:51:47 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.000Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(55) "104595487.1992494945.1334777532.1334777532.1334777532.1"
+  ["__utmz"]=>
+  string(70) "104595487.1334777532.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+21:51:47 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.000Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+21:51:47 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(20) "2013-10-12T20:59:59Z"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+21:51:47 (engine) [SQL]->Exec [Done]:1
+21:51:47 (engine) [SQL]->Exec:INSERT INTO `test_table` VALUES ('', 'dbtest');
+21:51:47 (engine) [SQL]->Exec [Done]:1
+21:51:47 (engine) [SQL]->Exec:DROP TABLE `test_table`
+21:51:47 (engine) [SQL]->Exec [Done]:1
+21:51:47 (engine) [RESPONSE (Admin.TestConnection)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  int(1)
+}
+
+21:51:52 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(47) "{\"action\":\"Admin.ClearDatabase\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1992494945.1334777532.1334777532.1334777532.1"
+  ["__utmz"]=>
+  string(70) "104595487.1334777532.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+21:51:52 (engine) [JSON (Admin.ClearDatabase)]->int(1)
+
+21:51:52 (engine) [RESPONSE (Admin.ClearDatabase)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+22:27:42 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(47) "{\"action\":\"Admin.ClearDatabase\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1992494945.1334777532.1334777532.1334777532.1"
+  ["__utmz"]=>
+  string(70) "104595487.1334777532.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+22:27:42 (engine) [JSON (Admin.ClearDatabase)]->int(1)
+
+22:27:47 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(47) "{\"action\":\"Admin.ClearDatabase\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1992494945.1334777532.1334777532.1334777532.1"
+  ["__utmz"]=>
+  string(70) "104595487.1334777532.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+22:27:47 (engine) [JSON (Admin.ClearDatabase)]->int(1)
+
+22:27:53 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(47) "{\"action\":\"Admin.ClearDatabase\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1992494945.1334777532.1334777532.1334777532.1"
+  ["__utmz"]=>
+  string(70) "104595487.1334777532.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+22:27:53 (engine) [JSON (Admin.ClearDatabase)]->int(1)
+
+22:27:53 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(47) "{\"action\":\"Admin.ClearDatabase\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1992494945.1334777532.1334777532.1334777532.1"
+  ["__utmz"]=>
+  string(70) "104595487.1334777532.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+22:27:53 (engine) [JSON (Admin.ClearDatabase)]->int(1)
+
+22:27:54 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(47) "{\"action\":\"Admin.ClearDatabase\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1992494945.1334777532.1334777532.1334777532.1"
+  ["__utmz"]=>
+  string(70) "104595487.1334777532.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+22:27:54 (engine) [JSON (Admin.ClearDatabase)]->int(1)
+
+22:28:54 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(47) "{\"action\":\"Admin.ClearDatabase\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1992494945.1334777532.1334777532.1334777532.1"
+  ["__utmz"]=>
+  string(70) "104595487.1334777532.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+22:28:54 (engine) [JSON (Admin.ClearDatabase)]->int(1)
+
+22:30:05 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(47) "{\"action\":\"Admin.ClearDatabase\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1992494945.1334777532.1334777532.1334777532.1"
+  ["__utmz"]=>
+  string(70) "104595487.1334777532.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+22:30:05 (engine) [JSON (Admin.ClearDatabase)]->int(1)
+
+22:30:05 (engine) [SQL]->Connecting to database:
+22:30:05 (engine) [SQL]->Connection OK!
+22:30:05 (engine) test 
+22:30:05 (engine) [SQL]->Exec:DROP TABLE IF EXISTS `InstitutionBudgetTable` ,
+			`InstitutionTable` ,
+			`SystemTable` ,
+			`TaxPayerProgramTable` ,
+			`TaxPayerTable` ,
+			`TaxProgramTable` ,
+			`TaxYearTable` ;
+		
+22:30:05 (engine) [SQL]->Exec [Done]:1
+22:30:05 (engine) [SQL]->Exec:
+		-- Table structure for table `InstitutionBudgetTable`
+		--
+
+		CREATE TABLE IF NOT EXISTS `InstitutionBudgetTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `TaxYearID` int(11) NOT NULL,
+		  `InstitutionID` int(11) NOT NULL,
+		  `CinfirmedDate` date NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `TaxYearID` (`TaxYearID`),
+		  KEY `InstitutionID` (`InstitutionID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		-- --------------------------------------------------------
+
+		--
+		-- Table structure for table `InstitutionTable`
+		--
+
+		CREATE TABLE IF NOT EXISTS `InstitutionTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Name` text NOT NULL,
+		  `Code` text NOT NULL,
+		  PRIMARY KEY (`ID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		-- --------------------------------------------------------
+
+		--
+		-- Table structure for table `SystemTable`
+		--
+
+		CREATE TABLE IF NOT EXISTS `SystemTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Date` datetime NOT NULL,
+		  PRIMARY KEY (`ID`)
+		) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		-- --------------------------------------------------------
+
+		--
+		-- Table structure for table `TaxPayerProgramTable`
+		--
+
+		CREATE TABLE IF NOT EXISTS `TaxPayerProgramTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `TaxPayerID` int(11) NOT NULL,
+		  `TaxProgramID` int(11) NOT NULL,
+		  `YearsRequired` int(11) NOT NULL,
+		  `CalculatedTaxAmount` int(11) NOT NULL,
+		  `BenefitsAccumulated` text NOT NULL,
+		  `ConfirmedDate` date NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `TaxPayerID` (`TaxPayerID`),
+		  KEY `TaxProgramID` (`TaxProgramID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		-- --------------------------------------------------------
+
+		--
+		-- Table structure for table `TaxPayerTable`
+		--
+
+		CREATE TABLE IF NOT EXISTS `TaxPayerTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Name` text NOT NULL,
+		  `Code` text NOT NULL,
+		  `Income` int(11) NOT NULL,
+		  `ParentID` int(11) NOT NULL,
+		  `DateOfCreation` date NOT NULL,
+		  `Type` int(1) NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `ParentID` (`ParentID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		-- --------------------------------------------------------
+
+		--
+		-- Table structure for table `TaxProgramTable`
+		--
+
+		CREATE TABLE IF NOT EXISTS `TaxProgramTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Name` text NOT NULL,
+		  `PredictedBudget` int(11) NOT NULL,
+		  `PredictedUsers` int(11) NOT NULL,
+		  `InstitutionBudgetID` int(11) NOT NULL,
+		  `ExtendsProgramID` int(11) NOT NULL,
+		  `MinimumYears` int(11) NOT NULL,
+		  `BenefitsExpireInYears` int(11) NOT NULL,
+		  `BenefitsApplyTo` int(1) NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `InstitutionBudgetID` (`InstitutionBudgetID`),
+		  KEY `ExtendsProgramID` (`ExtendsProgramID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		-- --------------------------------------------------------
+
+		--
+		-- Table structure for table `TaxYearTable`
+		--
+
+		CREATE TABLE IF NOT EXISTS `TaxYearTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Year` year(4) NOT NULL,
+		  `SubmitDate` date NOT NULL,
+		  `StartDate` date NOT NULL,
+		  `EndDate` date NOT NULL,
+		  `State` int(1) NOT NULL,
+		  PRIMARY KEY (`ID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		--
+		-- Constraints for dumped tables
+		--
+
+		--
+		-- Constraints for table `InstitutionBudgetTable`
+		--
+		ALTER TABLE `InstitutionBudgetTable`
+		  ADD CONSTRAINT `InstitutionBudgetTable_ibfk_2` FOREIGN KEY (`InstitutionID`) REFERENCES `InstitutionTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+		  ADD CONSTRAINT `InstitutionBudgetTable_ibfk_1` FOREIGN KEY (`TaxYearID`) REFERENCES `TaxYearTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+		--
+		-- Constraints for table `TaxPayerProgramTable`
+		--
+		ALTER TABLE `TaxPayerProgramTable`
+		  ADD CONSTRAINT `TaxPayerProgramTable_ibfk_2` FOREIGN KEY (`TaxProgramID`) REFERENCES `TaxProgramTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+		  ADD CONSTRAINT `TaxPayerProgramTable_ibfk_1` FOREIGN KEY (`TaxPayerID`) REFERENCES `TaxPayerTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+		--
+		-- Constraints for table `TaxPayerTable`
+		--
+		ALTER TABLE `TaxPayerTable`
+		  ADD CONSTRAINT `TaxPayerTable_ibfk_1` FOREIGN KEY (`ParentID`) REFERENCES `TaxPayerTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+		--
+		-- Constraints for table `TaxProgramTable`
+		--
+		ALTER TABLE `TaxProgramTable`
+		  ADD CONSTRAINT `TaxProgramTable_ibfk_2` FOREIGN KEY (`ExtendsProgramID`) REFERENCES `TaxProgramTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+		  ADD CONSTRAINT `TaxProgramTable_ibfk_1` FOREIGN KEY (`InstitutionBudgetID`) REFERENCES `InstitutionBudgetTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+  
+22:30:05 (engine) [SQL]->Exec [Done]:
+22:30:05 (engine) [RESPONSE (Admin.ClearDatabase)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+22:30:31 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(47) "{\"action\":\"Admin.ClearDatabase\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1992494945.1334777532.1334777532.1334777532.1"
+  ["__utmz"]=>
+  string(70) "104595487.1334777532.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+22:30:31 (engine) [JSON (Admin.ClearDatabase)]->int(1)
+
+22:30:31 (engine) [SQL]->Connecting to database:
+22:30:31 (engine) [SQL]->Connection OK!
+22:30:31 (engine) test 
+22:30:31 (engine) [SQL]->Exec:DROP TABLE IF EXISTS `InstitutionBudgetTable` ,
+			`InstitutionTable` ,
+			`SystemTable` ,
+			`TaxPayerProgramTable` ,
+			`TaxPayerTable` ,
+			`TaxProgramTable` ,
+			`TaxYearTable` ;
+		
+22:30:31 (engine) [SQL]->Exec [Done]:1
+22:30:31 (engine) [SQL]->Exec:
+		-- Table structure for table `InstitutionBudgetTable`
+		--
+
+		CREATE TABLE IF NOT EXISTS `InstitutionBudgetTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `TaxYearID` int(11) NOT NULL,
+		  `InstitutionID` int(11) NOT NULL,
+		  `CinfirmedDate` date NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `TaxYearID` (`TaxYearID`),
+		  KEY `InstitutionID` (`InstitutionID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		-- --------------------------------------------------------
+
+		--
+		-- Table structure for table `InstitutionTable`
+		--
+
+		CREATE TABLE IF NOT EXISTS `InstitutionTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Name` text NOT NULL,
+		  `Code` text NOT NULL,
+		  PRIMARY KEY (`ID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		-- --------------------------------------------------------
+
+		--
+		-- Table structure for table `SystemTable`
+		--
+
+		CREATE TABLE IF NOT EXISTS `SystemTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Date` datetime NOT NULL,
+		  PRIMARY KEY (`ID`)
+		) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		-- --------------------------------------------------------
+
+		--
+		-- Table structure for table `TaxPayerProgramTable`
+		--
+
+		CREATE TABLE IF NOT EXISTS `TaxPayerProgramTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `TaxPayerID` int(11) NOT NULL,
+		  `TaxProgramID` int(11) NOT NULL,
+		  `YearsRequired` int(11) NOT NULL,
+		  `CalculatedTaxAmount` int(11) NOT NULL,
+		  `BenefitsAccumulated` text NOT NULL,
+		  `ConfirmedDate` date NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `TaxPayerID` (`TaxPayerID`),
+		  KEY `TaxProgramID` (`TaxProgramID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		-- --------------------------------------------------------
+
+		--
+		-- Table structure for table `TaxPayerTable`
+		--
+
+		CREATE TABLE IF NOT EXISTS `TaxPayerTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Name` text NOT NULL,
+		  `Code` text NOT NULL,
+		  `Income` int(11) NOT NULL,
+		  `ParentID` int(11) NOT NULL,
+		  `DateOfCreation` date NOT NULL,
+		  `Type` int(1) NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `ParentID` (`ParentID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		-- --------------------------------------------------------
+
+		--
+		-- Table structure for table `TaxProgramTable`
+		--
+
+		CREATE TABLE IF NOT EXISTS `TaxProgramTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Name` text NOT NULL,
+		  `PredictedBudget` int(11) NOT NULL,
+		  `PredictedUsers` int(11) NOT NULL,
+		  `InstitutionBudgetID` int(11) NOT NULL,
+		  `ExtendsProgramID` int(11) NOT NULL,
+		  `MinimumYears` int(11) NOT NULL,
+		  `BenefitsExpireInYears` int(11) NOT NULL,
+		  `BenefitsApplyTo` int(1) NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `InstitutionBudgetID` (`InstitutionBudgetID`),
+		  KEY `ExtendsProgramID` (`ExtendsProgramID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		-- --------------------------------------------------------
+
+		--
+		-- Table structure for table `TaxYearTable`
+		--
+
+		CREATE TABLE IF NOT EXISTS `TaxYearTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Year` year(4) NOT NULL,
+		  `SubmitDate` date NOT NULL,
+		  `StartDate` date NOT NULL,
+		  `EndDate` date NOT NULL,
+		  `State` int(1) NOT NULL,
+		  PRIMARY KEY (`ID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		--
+		-- Constraints for dumped tables
+		--
+
+		--
+		-- Constraints for table `InstitutionBudgetTable`
+		--
+		ALTER TABLE `InstitutionBudgetTable`
+		  ADD CONSTRAINT `InstitutionBudgetTable_ibfk_2` FOREIGN KEY (`InstitutionID`) REFERENCES `InstitutionTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+		  ADD CONSTRAINT `InstitutionBudgetTable_ibfk_1` FOREIGN KEY (`TaxYearID`) REFERENCES `TaxYearTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+		--
+		-- Constraints for table `TaxPayerProgramTable`
+		--
+		ALTER TABLE `TaxPayerProgramTable`
+		  ADD CONSTRAINT `TaxPayerProgramTable_ibfk_2` FOREIGN KEY (`TaxProgramID`) REFERENCES `TaxProgramTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+		  ADD CONSTRAINT `TaxPayerProgramTable_ibfk_1` FOREIGN KEY (`TaxPayerID`) REFERENCES `TaxPayerTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+		--
+		-- Constraints for table `TaxPayerTable`
+		--
+		ALTER TABLE `TaxPayerTable`
+		  ADD CONSTRAINT `TaxPayerTable_ibfk_1` FOREIGN KEY (`ParentID`) REFERENCES `TaxPayerTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+		--
+		-- Constraints for table `TaxProgramTable`
+		--
+		ALTER TABLE `TaxProgramTable`
+		  ADD CONSTRAINT `TaxProgramTable_ibfk_2` FOREIGN KEY (`ExtendsProgramID`) REFERENCES `TaxProgramTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+		  ADD CONSTRAINT `TaxProgramTable_ibfk_1` FOREIGN KEY (`InstitutionBudgetID`) REFERENCES `InstitutionBudgetTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+  
+22:30:31 (engine) [SQL]->Exec [Done]:
+22:30:31 (engine) [RESPONSE (Admin.ClearDatabase)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+22:34:24 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(47) "{\"action\":\"Admin.ClearDatabase\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1992494945.1334777532.1334777532.1334777532.1"
+  ["__utmz"]=>
+  string(70) "104595487.1334777532.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+22:34:24 (engine) [JSON (Admin.ClearDatabase)]->int(1)
+
+22:34:24 (engine) [SQL]->Connecting to database:
+22:34:24 (engine) [SQL]->Connection OK!
+22:34:24 (engine) test 
+22:34:24 (engine) [SQL]->Exec:DROP TABLE IF EXISTS `InstitutionBudgetTable` ,
+			`InstitutionTable` ,
+			`SystemTable` ,
+			`TaxPayerProgramTable` ,
+			`TaxPayerTable` ,
+			`TaxProgramTable` ,
+			`TaxYearTable` ;
+		
+22:34:24 (engine) [SQL]->Exec [Done]:1
+22:34:24 (engine) [SQL]->Exec:
+		-- Table structure for table `InstitutionBudgetTable`
+		--
+
+		CREATE TABLE IF NOT EXISTS `InstitutionBudgetTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `TaxYearID` int(11) NOT NULL,
+		  `InstitutionID` int(11) NOT NULL,
+		  `CinfirmedDate` date NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `TaxYearID` (`TaxYearID`),
+		  KEY `InstitutionID` (`InstitutionID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		-- --------------------------------------------------------
+
+		--
+		-- Table structure for table `InstitutionTable`
+		--
+
+		CREATE TABLE IF NOT EXISTS `InstitutionTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Name` text NOT NULL,
+		  `Code` text NOT NULL,
+		  PRIMARY KEY (`ID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		-- --------------------------------------------------------
+
+		--
+		-- Table structure for table `SystemTable`
+		--
+
+		CREATE TABLE IF NOT EXISTS `SystemTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Date` datetime NOT NULL,
+		  PRIMARY KEY (`ID`)
+		) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		-- --------------------------------------------------------
+
+		--
+		-- Table structure for table `TaxPayerProgramTable`
+		--
+
+		CREATE TABLE IF NOT EXISTS `TaxPayerProgramTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `TaxPayerID` int(11) NOT NULL,
+		  `TaxProgramID` int(11) NOT NULL,
+		  `YearsRequired` int(11) NOT NULL,
+		  `CalculatedTaxAmount` int(11) NOT NULL,
+		  `BenefitsAccumulated` text NOT NULL,
+		  `ConfirmedDate` date NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `TaxPayerID` (`TaxPayerID`),
+		  KEY `TaxProgramID` (`TaxProgramID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		-- --------------------------------------------------------
+
+		--
+		-- Table structure for table `TaxPayerTable`
+		--
+
+		CREATE TABLE IF NOT EXISTS `TaxPayerTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Name` text NOT NULL,
+		  `Code` text NOT NULL,
+		  `Income` int(11) NOT NULL,
+		  `ParentID` int(11) NOT NULL,
+		  `DateOfCreation` date NOT NULL,
+		  `Type` int(1) NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `ParentID` (`ParentID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		-- --------------------------------------------------------
+
+		--
+		-- Table structure for table `TaxProgramTable`
+		--
+
+		CREATE TABLE IF NOT EXISTS `TaxProgramTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Name` text NOT NULL,
+		  `PredictedBudget` int(11) NOT NULL,
+		  `PredictedUsers` int(11) NOT NULL,
+		  `InstitutionBudgetID` int(11) NOT NULL,
+		  `ExtendsProgramID` int(11) NOT NULL,
+		  `MinimumYears` int(11) NOT NULL,
+		  `BenefitsExpireInYears` int(11) NOT NULL,
+		  `BenefitsApplyTo` int(1) NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `InstitutionBudgetID` (`InstitutionBudgetID`),
+		  KEY `ExtendsProgramID` (`ExtendsProgramID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		-- --------------------------------------------------------
+
+		--
+		-- Table structure for table `TaxYearTable`
+		--
+
+		CREATE TABLE IF NOT EXISTS `TaxYearTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Year` year(4) NOT NULL,
+		  `SubmitDate` date NOT NULL,
+		  `StartDate` date NOT NULL,
+		  `EndDate` date NOT NULL,
+		  `State` int(1) NOT NULL,
+		  PRIMARY KEY (`ID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		--
+		-- Constraints for dumped tables
+		--
+
+		--
+		-- Constraints for table `InstitutionBudgetTable`
+		--
+		ALTER TABLE `InstitutionBudgetTable`
+		  ADD CONSTRAINT `InstitutionBudgetTable_ibfk_2` FOREIGN KEY (`InstitutionID`) REFERENCES `InstitutionTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+		  ADD CONSTRAINT `InstitutionBudgetTable_ibfk_1` FOREIGN KEY (`TaxYearID`) REFERENCES `TaxYearTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+		--
+		-- Constraints for table `TaxPayerProgramTable`
+		--
+		ALTER TABLE `TaxPayerProgramTable`
+		  ADD CONSTRAINT `TaxPayerProgramTable_ibfk_2` FOREIGN KEY (`TaxProgramID`) REFERENCES `TaxProgramTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+		  ADD CONSTRAINT `TaxPayerProgramTable_ibfk_1` FOREIGN KEY (`TaxPayerID`) REFERENCES `TaxPayerTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+		--
+		-- Constraints for table `TaxPayerTable`
+		--
+		ALTER TABLE `TaxPayerTable`
+		  ADD CONSTRAINT `TaxPayerTable_ibfk_1` FOREIGN KEY (`ParentID`) REFERENCES `TaxPayerTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+		--
+		-- Constraints for table `TaxProgramTable`
+		--
+		ALTER TABLE `TaxProgramTable`
+		  ADD CONSTRAINT `TaxProgramTable_ibfk_2` FOREIGN KEY (`ExtendsProgramID`) REFERENCES `TaxProgramTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+		  ADD CONSTRAINT `TaxProgramTable_ibfk_1` FOREIGN KEY (`InstitutionBudgetID`) REFERENCES `InstitutionBudgetTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+  
+22:34:24 (engine) [SQL]->Exec [Done]:
+22:34:24 (engine) [RESPONSE (Admin.ClearDatabase)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+22:36:26 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(47) "{\"action\":\"Admin.ClearDatabase\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1992494945.1334777532.1334777532.1334777532.1"
+  ["__utmz"]=>
+  string(70) "104595487.1334777532.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+22:36:26 (engine) [JSON (Admin.ClearDatabase)]->int(1)
+
+22:36:26 (engine) [SQL]->Connecting to database:
+22:36:26 (engine) [SQL]->Connection OK!
+22:36:26 (engine) test 
+22:36:26 (engine) [SQL]->Exec:DROP TABLE IF EXISTS `InstitutionBudgetTable` ,
+			`InstitutionTable` ,
+			`SystemTable` ,
+			`TaxPayerProgramTable` ,
+			`TaxPayerTable` ,
+			`TaxProgramTable` ,
+			`TaxYearTable` ;
+		
+22:36:26 (engine) [SQL]->Exec [Done]:1
+22:36:26 (engine) [SQL]->Exec:
+		CREATE TABLE IF NOT EXISTS `InstitutionBudgetTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `TaxYearID` int(11) NOT NULL,
+		  `InstitutionID` int(11) NOT NULL,
+		  `CinfirmedDate` date NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `TaxYearID` (`TaxYearID`),
+		  KEY `InstitutionID` (`InstitutionID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		CREATE TABLE IF NOT EXISTS `InstitutionTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Name` text NOT NULL,
+		  `Code` text NOT NULL,
+		  PRIMARY KEY (`ID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		CREATE TABLE IF NOT EXISTS `SystemTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Date` datetime NOT NULL,
+		  PRIMARY KEY (`ID`)
+		) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		CREATE TABLE IF NOT EXISTS `TaxPayerProgramTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `TaxPayerID` int(11) NOT NULL,
+		  `TaxProgramID` int(11) NOT NULL,
+		  `YearsRequired` int(11) NOT NULL,
+		  `CalculatedTaxAmount` int(11) NOT NULL,
+		  `BenefitsAccumulated` text NOT NULL,
+		  `ConfirmedDate` date NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `TaxPayerID` (`TaxPayerID`),
+		  KEY `TaxProgramID` (`TaxProgramID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		CREATE TABLE IF NOT EXISTS `TaxPayerTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Name` text NOT NULL,
+		  `Code` text NOT NULL,
+		  `Income` int(11) NOT NULL,
+		  `ParentID` int(11) NOT NULL,
+		  `DateOfCreation` date NOT NULL,
+		  `Type` int(1) NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `ParentID` (`ParentID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		CREATE TABLE IF NOT EXISTS `TaxProgramTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Name` text NOT NULL,
+		  `PredictedBudget` int(11) NOT NULL,
+		  `PredictedUsers` int(11) NOT NULL,
+		  `InstitutionBudgetID` int(11) NOT NULL,
+		  `ExtendsProgramID` int(11) NOT NULL,
+		  `MinimumYears` int(11) NOT NULL,
+		  `BenefitsExpireInYears` int(11) NOT NULL,
+		  `BenefitsApplyTo` int(1) NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `InstitutionBudgetID` (`InstitutionBudgetID`),
+		  KEY `ExtendsProgramID` (`ExtendsProgramID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		CREATE TABLE IF NOT EXISTS `TaxYearTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Year` year(4) NOT NULL,
+		  `SubmitDate` date NOT NULL,
+		  `StartDate` date NOT NULL,
+		  `EndDate` date NOT NULL,
+		  `State` int(1) NOT NULL,
+		  PRIMARY KEY (`ID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		ALTER TABLE `InstitutionBudgetTable`
+		  ADD CONSTRAINT `InstitutionBudgetTable_ibfk_2` FOREIGN KEY (`InstitutionID`) REFERENCES `InstitutionTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+		  ADD CONSTRAINT `InstitutionBudgetTable_ibfk_1` FOREIGN KEY (`TaxYearID`) REFERENCES `TaxYearTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+		ALTER TABLE `TaxPayerProgramTable`
+		  ADD CONSTRAINT `TaxPayerProgramTable_ibfk_2` FOREIGN KEY (`TaxProgramID`) REFERENCES `TaxProgramTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+		  ADD CONSTRAINT `TaxPayerProgramTable_ibfk_1` FOREIGN KEY (`TaxPayerID`) REFERENCES `TaxPayerTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+		ALTER TABLE `TaxPayerTable`
+		  ADD CONSTRAINT `TaxPayerTable_ibfk_1` FOREIGN KEY (`ParentID`) REFERENCES `TaxPayerTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+		ALTER TABLE `TaxProgramTable`
+		  ADD CONSTRAINT `TaxProgramTable_ibfk_2` FOREIGN KEY (`ExtendsProgramID`) REFERENCES `TaxProgramTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+		  ADD CONSTRAINT `TaxProgramTable_ibfk_1` FOREIGN KEY (`InstitutionBudgetID`) REFERENCES `InstitutionBudgetTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+  
+22:36:26 (engine) [SQL]->Exec [Done]:
+22:36:26 (engine) [RESPONSE (Admin.ClearDatabase)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+22:41:39 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(47) "{\"action\":\"Admin.ClearDatabase\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1992494945.1334777532.1334777532.1334777532.1"
+  ["__utmz"]=>
+  string(70) "104595487.1334777532.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+22:41:39 (engine) [JSON (Admin.ClearDatabase)]->int(1)
+
+22:41:39 (engine) [SQL]->Connecting to database:
+22:41:39 (engine) [SQL]->Connection OK!
+22:41:39 (engine) test 
+22:41:39 (engine) [SQL]->Exec:DROP TABLE IF EXISTS `InstitutionBudgetTable` ,
+			`InstitutionTable` ,
+			`SystemTable` ,
+			`TaxPayerProgramTable` ,
+			`TaxPayerTable` ,
+			`TaxProgramTable` ,
+			`TaxYearTable` ;
+		
+22:41:39 (engine) [SQL]->Exec [Done]:1
+22:41:39 (engine) [SQL]->Exec:
+		CREATE TABLE IF NOT EXISTS `InstitutionBudgetTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `TaxYearID` int(11) NOT NULL,
+		  `InstitutionID` int(11) NOT NULL,
+		  `CinfirmedDate` date NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `TaxYearID` (`TaxYearID`),
+		  KEY `InstitutionID` (`InstitutionID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		CREATE TABLE IF NOT EXISTS `InstitutionTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Name` text NOT NULL,
+		  `Code` text NOT NULL,
+		  PRIMARY KEY (`ID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		CREATE TABLE IF NOT EXISTS `SystemTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Date` datetime NOT NULL,
+		  PRIMARY KEY (`ID`)
+		) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		CREATE TABLE IF NOT EXISTS `TaxPayerProgramTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `TaxPayerID` int(11) NOT NULL,
+		  `TaxProgramID` int(11) NOT NULL,
+		  `YearsRequired` int(11) NOT NULL,
+		  `CalculatedTaxAmount` int(11) NOT NULL,
+		  `BenefitsAccumulated` text NOT NULL,
+		  `ConfirmedDate` date NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `TaxPayerID` (`TaxPayerID`),
+		  KEY `TaxProgramID` (`TaxProgramID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		CREATE TABLE IF NOT EXISTS `TaxPayerTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Name` text NOT NULL,
+		  `Code` text NOT NULL,
+		  `Income` int(11) NOT NULL,
+		  `ParentID` int(11) NOT NULL,
+		  `DateOfCreation` date NOT NULL,
+		  `Type` int(1) NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `ParentID` (`ParentID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		CREATE TABLE IF NOT EXISTS `TaxProgramTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Name` text NOT NULL,
+		  `PredictedBudget` int(11) NOT NULL,
+		  `PredictedUsers` int(11) NOT NULL,
+		  `InstitutionBudgetID` int(11) NOT NULL,
+		  `ExtendsProgramID` int(11) NOT NULL,
+		  `MinimumYears` int(11) NOT NULL,
+		  `BenefitsExpireInYears` int(11) NOT NULL,
+		  `BenefitsApplyTo` int(1) NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `InstitutionBudgetID` (`InstitutionBudgetID`),
+		  KEY `ExtendsProgramID` (`ExtendsProgramID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		CREATE TABLE IF NOT EXISTS `TaxYearTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Year` year(4) NOT NULL,
+		  `SubmitDate` date NOT NULL,
+		  `StartDate` date NOT NULL,
+		  `EndDate` date NOT NULL,
+		  `State` int(1) NOT NULL,
+		  PRIMARY KEY (`ID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		ALTER TABLE `InstitutionBudgetTable`
+		  ADD CONSTRAINT `InstitutionBudgetTable_ibfk_2` FOREIGN KEY (`InstitutionID`) REFERENCES `InstitutionTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+		  ADD CONSTRAINT `InstitutionBudgetTable_ibfk_1` FOREIGN KEY (`TaxYearID`) REFERENCES `TaxYearTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+		ALTER TABLE `TaxPayerProgramTable`
+		  ADD CONSTRAINT `TaxPayerProgramTable_ibfk_2` FOREIGN KEY (`TaxProgramID`) REFERENCES `TaxProgramTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+		  ADD CONSTRAINT `TaxPayerProgramTable_ibfk_1` FOREIGN KEY (`TaxPayerID`) REFERENCES `TaxPayerTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+		ALTER TABLE `TaxPayerTable`
+		  ADD CONSTRAINT `TaxPayerTable_ibfk_1` FOREIGN KEY (`ParentID`) REFERENCES `TaxPayerTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+		ALTER TABLE `TaxProgramTable`
+		  ADD CONSTRAINT `TaxProgramTable_ibfk_2` FOREIGN KEY (`ExtendsProgramID`) REFERENCES `TaxProgramTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+		  ADD CONSTRAINT `TaxProgramTable_ibfk_1` FOREIGN KEY (`InstitutionBudgetID`) REFERENCES `InstitutionBudgetTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+  
+22:41:39 (engine) [SQL]->Exec [Done]:
+22:41:39 (engine) [RESPONSE (Admin.ClearDatabase)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+22:44:03 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(47) "{\"action\":\"Admin.ClearDatabase\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1992494945.1334777532.1334777532.1334777532.1"
+  ["__utmz"]=>
+  string(70) "104595487.1334777532.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+22:44:03 (engine) [JSON (Admin.ClearDatabase)]->int(1)
+
+22:44:03 (engine) [SQL]->Connecting to database:
+22:44:03 (engine) [SQL]->Connection OK!
+22:44:03 (engine) test 
+22:44:03 (engine) [SQL]->Exec:DROP TABLE IF EXISTS `InstitutionBudgetTable` ,
+			`InstitutionTable` ,
+			`SystemTable` ,
+			`TaxPayerProgramTable` ,
+			`TaxPayerTable` ,
+			`TaxProgramTable` ,
+			`TaxYearTable` ;
+		
+22:44:03 (engine) [SQL]->Exec [Done]:
+22:44:03 (engine) [SQL]->Exec:
+		CREATE TABLE IF NOT EXISTS `InstitutionBudgetTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `TaxYearID` int(11) NOT NULL,
+		  `InstitutionID` int(11) NOT NULL,
+		  `CinfirmedDate` date NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `TaxYearID` (`TaxYearID`),
+		  KEY `InstitutionID` (`InstitutionID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		CREATE TABLE IF NOT EXISTS `InstitutionTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Name` text NOT NULL,
+		  `Code` text NOT NULL,
+		  PRIMARY KEY (`ID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		CREATE TABLE IF NOT EXISTS `SystemTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Date` datetime NOT NULL,
+		  PRIMARY KEY (`ID`)
+		) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		CREATE TABLE IF NOT EXISTS `TaxPayerProgramTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `TaxPayerID` int(11) NOT NULL,
+		  `TaxProgramID` int(11) NOT NULL,
+		  `YearsRequired` int(11) NOT NULL,
+		  `CalculatedTaxAmount` int(11) NOT NULL,
+		  `BenefitsAccumulated` text NOT NULL,
+		  `ConfirmedDate` date NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `TaxPayerID` (`TaxPayerID`),
+		  KEY `TaxProgramID` (`TaxProgramID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		CREATE TABLE IF NOT EXISTS `TaxPayerTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Name` text NOT NULL,
+		  `Code` text NOT NULL,
+		  `Income` int(11) NOT NULL,
+		  `ParentID` int(11) NOT NULL,
+		  `DateOfCreation` date NOT NULL,
+		  `Type` int(1) NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `ParentID` (`ParentID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		CREATE TABLE IF NOT EXISTS `TaxProgramTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Name` text NOT NULL,
+		  `PredictedBudget` int(11) NOT NULL,
+		  `PredictedUsers` int(11) NOT NULL,
+		  `InstitutionBudgetID` int(11) NOT NULL,
+		  `ExtendsProgramID` int(11) NOT NULL,
+		  `MinimumYears` int(11) NOT NULL,
+		  `BenefitsExpireInYears` int(11) NOT NULL,
+		  `BenefitsApplyTo` int(1) NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `InstitutionBudgetID` (`InstitutionBudgetID`),
+		  KEY `ExtendsProgramID` (`ExtendsProgramID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		CREATE TABLE IF NOT EXISTS `TaxYearTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Year` year(4) NOT NULL,
+		  `SubmitDate` date NOT NULL,
+		  `StartDate` date NOT NULL,
+		  `EndDate` date NOT NULL,
+		  `State` int(1) NOT NULL,
+		  PRIMARY KEY (`ID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		ALTER TABLE `InstitutionBudgetTable`
+		  ADD CONSTRAINT `InstitutionBudgetTable_ibfk_2` FOREIGN KEY (`InstitutionID`) REFERENCES `InstitutionTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+		  ADD CONSTRAINT `InstitutionBudgetTable_ibfk_1` FOREIGN KEY (`TaxYearID`) REFERENCES `TaxYearTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+		ALTER TABLE `TaxPayerProgramTable`
+		  ADD CONSTRAINT `TaxPayerProgramTable_ibfk_2` FOREIGN KEY (`TaxProgramID`) REFERENCES `TaxProgramTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+		  ADD CONSTRAINT `TaxPayerProgramTable_ibfk_1` FOREIGN KEY (`TaxPayerID`) REFERENCES `TaxPayerTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+		ALTER TABLE `TaxPayerTable`
+		  ADD CONSTRAINT `TaxPayerTable_ibfk_1` FOREIGN KEY (`ParentID`) REFERENCES `TaxPayerTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+		ALTER TABLE `TaxProgramTable`
+		  ADD CONSTRAINT `TaxProgramTable_ibfk_2` FOREIGN KEY (`ExtendsProgramID`) REFERENCES `TaxProgramTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+		  ADD CONSTRAINT `TaxProgramTable_ibfk_1` FOREIGN KEY (`InstitutionBudgetID`) REFERENCES `InstitutionBudgetTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+  
+22:44:03 (engine) [SQL]->Exec [Done]:
+22:44:03 (engine) [RESPONSE (Admin.ClearDatabase)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+22:44:14 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(47) "{\"action\":\"Admin.ClearDatabase\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1992494945.1334777532.1334777532.1334777532.1"
+  ["__utmz"]=>
+  string(70) "104595487.1334777532.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+22:44:14 (engine) [JSON (Admin.ClearDatabase)]->int(1)
+
+22:44:14 (engine) [SQL]->Connecting to database:
+22:44:14 (engine) [SQL]->Connection OK!
+22:44:14 (engine) test 
+22:44:14 (engine) [SQL]->Exec:DROP TABLE IF EXISTS `InstitutionBudgetTable` ,
+			`InstitutionTable` ,
+			`SystemTable` ,
+			`TaxPayerProgramTable` ,
+			`TaxPayerTable` ,
+			`TaxProgramTable` ,
+			`TaxYearTable` ;
+		
+22:44:14 (engine) [SQL]->Exec [Done]:1
+22:44:14 (engine) [SQL]->Exec:
+		CREATE TABLE IF NOT EXISTS `InstitutionBudgetTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `TaxYearID` int(11) NOT NULL,
+		  `InstitutionID` int(11) NOT NULL,
+		  `CinfirmedDate` date NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `TaxYearID` (`TaxYearID`),
+		  KEY `InstitutionID` (`InstitutionID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		CREATE TABLE IF NOT EXISTS `InstitutionTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Name` text NOT NULL,
+		  `Code` text NOT NULL,
+		  PRIMARY KEY (`ID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		CREATE TABLE IF NOT EXISTS `SystemTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Date` datetime NOT NULL,
+		  PRIMARY KEY (`ID`)
+		) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		CREATE TABLE IF NOT EXISTS `TaxPayerProgramTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `TaxPayerID` int(11) NOT NULL,
+		  `TaxProgramID` int(11) NOT NULL,
+		  `YearsRequired` int(11) NOT NULL,
+		  `CalculatedTaxAmount` int(11) NOT NULL,
+		  `BenefitsAccumulated` text NOT NULL,
+		  `ConfirmedDate` date NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `TaxPayerID` (`TaxPayerID`),
+		  KEY `TaxProgramID` (`TaxProgramID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		CREATE TABLE IF NOT EXISTS `TaxPayerTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Name` text NOT NULL,
+		  `Code` text NOT NULL,
+		  `Income` int(11) NOT NULL,
+		  `ParentID` int(11) NOT NULL,
+		  `DateOfCreation` date NOT NULL,
+		  `Type` int(1) NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `ParentID` (`ParentID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		CREATE TABLE IF NOT EXISTS `TaxProgramTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Name` text NOT NULL,
+		  `PredictedBudget` int(11) NOT NULL,
+		  `PredictedUsers` int(11) NOT NULL,
+		  `InstitutionBudgetID` int(11) NOT NULL,
+		  `ExtendsProgramID` int(11) NOT NULL,
+		  `MinimumYears` int(11) NOT NULL,
+		  `BenefitsExpireInYears` int(11) NOT NULL,
+		  `BenefitsApplyTo` int(1) NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `InstitutionBudgetID` (`InstitutionBudgetID`),
+		  KEY `ExtendsProgramID` (`ExtendsProgramID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		CREATE TABLE IF NOT EXISTS `TaxYearTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Year` year(4) NOT NULL,
+		  `SubmitDate` date NOT NULL,
+		  `StartDate` date NOT NULL,
+		  `EndDate` date NOT NULL,
+		  `State` int(1) NOT NULL,
+		  PRIMARY KEY (`ID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		ALTER TABLE `InstitutionBudgetTable`
+		  ADD CONSTRAINT `InstitutionBudgetTable_ibfk_2` FOREIGN KEY (`InstitutionID`) REFERENCES `InstitutionTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+		  ADD CONSTRAINT `InstitutionBudgetTable_ibfk_1` FOREIGN KEY (`TaxYearID`) REFERENCES `TaxYearTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+		ALTER TABLE `TaxPayerProgramTable`
+		  ADD CONSTRAINT `TaxPayerProgramTable_ibfk_2` FOREIGN KEY (`TaxProgramID`) REFERENCES `TaxProgramTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+		  ADD CONSTRAINT `TaxPayerProgramTable_ibfk_1` FOREIGN KEY (`TaxPayerID`) REFERENCES `TaxPayerTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+		ALTER TABLE `TaxPayerTable`
+		  ADD CONSTRAINT `TaxPayerTable_ibfk_1` FOREIGN KEY (`ParentID`) REFERENCES `TaxPayerTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+		ALTER TABLE `TaxProgramTable`
+		  ADD CONSTRAINT `TaxProgramTable_ibfk_2` FOREIGN KEY (`ExtendsProgramID`) REFERENCES `TaxProgramTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+		  ADD CONSTRAINT `TaxProgramTable_ibfk_1` FOREIGN KEY (`InstitutionBudgetID`) REFERENCES `InstitutionBudgetTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+  
+22:44:14 (engine) [SQL]->Exec [Done]:
+22:44:14 (engine) [RESPONSE (Admin.ClearDatabase)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+22:47:44 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(47) "{\"action\":\"Admin.ClearDatabase\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1992494945.1334777532.1334777532.1334777532.1"
+  ["__utmz"]=>
+  string(70) "104595487.1334777532.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+22:47:44 (engine) [JSON (Admin.ClearDatabase)]->int(1)
+
+22:47:44 (engine) [SQL]->Connecting to database:
+22:47:44 (engine) [SQL]->Connection OK!
+22:47:44 (engine) test 
+22:47:44 (engine) [SQL]->Exec:DROP TABLE IF EXISTS `InstitutionBudgetTable` ,
+			`InstitutionTable` ,
+			`SystemTable` ,
+			`TaxPayerProgramTable` ,
+			`TaxPayerTable` ,
+			`TaxProgramTable` ,
+			`TaxYearTable` ;
+22:47:44 (engine) [SQL]->Exec [Done]:1
+22:47:44 (engine) [SQL]->Exec:DROP TABLE IF EXISTS `InstitutionBudgetTable` ,
+			`InstitutionTable` ,
+			`SystemTable` ,
+			`TaxPayerProgramTable` ,
+			`TaxPayerTable` ,
+			`TaxProgramTable` ,
+			`TaxYearTable` ;
+22:47:44 (engine) [SQL]->Exec [Done]:1
+22:47:44 (engine) [SQL]->Exec:
+		CREATE TABLE IF NOT EXISTS `InstitutionBudgetTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `TaxYearID` int(11) NOT NULL,
+		  `InstitutionID` int(11) NOT NULL,
+		  `CinfirmedDate` date NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `TaxYearID` (`TaxYearID`),
+		  KEY `InstitutionID` (`InstitutionID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		CREATE TABLE IF NOT EXISTS `InstitutionTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Name` text NOT NULL,
+		  `Code` text NOT NULL,
+		  PRIMARY KEY (`ID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		CREATE TABLE IF NOT EXISTS `SystemTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Date` datetime NOT NULL,
+		  PRIMARY KEY (`ID`)
+		) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		CREATE TABLE IF NOT EXISTS `TaxPayerProgramTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `TaxPayerID` int(11) NOT NULL,
+		  `TaxProgramID` int(11) NOT NULL,
+		  `YearsRequired` int(11) NOT NULL,
+		  `CalculatedTaxAmount` int(11) NOT NULL,
+		  `BenefitsAccumulated` text NOT NULL,
+		  `ConfirmedDate` date NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `TaxPayerID` (`TaxPayerID`),
+		  KEY `TaxProgramID` (`TaxProgramID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		CREATE TABLE IF NOT EXISTS `TaxPayerTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Name` text NOT NULL,
+		  `Code` text NOT NULL,
+		  `Income` int(11) NOT NULL,
+		  `ParentID` int(11) NOT NULL,
+		  `DateOfCreation` date NOT NULL,
+		  `Type` int(1) NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `ParentID` (`ParentID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		CREATE TABLE IF NOT EXISTS `TaxProgramTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Name` text NOT NULL,
+		  `PredictedBudget` int(11) NOT NULL,
+		  `PredictedUsers` int(11) NOT NULL,
+		  `InstitutionBudgetID` int(11) NOT NULL,
+		  `ExtendsProgramID` int(11) NOT NULL,
+		  `MinimumYears` int(11) NOT NULL,
+		  `BenefitsExpireInYears` int(11) NOT NULL,
+		  `BenefitsApplyTo` int(1) NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `InstitutionBudgetID` (`InstitutionBudgetID`),
+		  KEY `ExtendsProgramID` (`ExtendsProgramID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		CREATE TABLE IF NOT EXISTS `TaxYearTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Year` year(4) NOT NULL,
+		  `SubmitDate` date NOT NULL,
+		  `StartDate` date NOT NULL,
+		  `EndDate` date NOT NULL,
+		  `State` int(1) NOT NULL,
+		  PRIMARY KEY (`ID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		ALTER TABLE `InstitutionBudgetTable`
+		  ADD CONSTRAINT `InstitutionBudgetTable_ibfk_2` FOREIGN KEY (`InstitutionID`) REFERENCES `InstitutionTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+		  ADD CONSTRAINT `InstitutionBudgetTable_ibfk_1` FOREIGN KEY (`TaxYearID`) REFERENCES `TaxYearTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+		ALTER TABLE `TaxPayerProgramTable`
+		  ADD CONSTRAINT `TaxPayerProgramTable_ibfk_2` FOREIGN KEY (`TaxProgramID`) REFERENCES `TaxProgramTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+		  ADD CONSTRAINT `TaxPayerProgramTable_ibfk_1` FOREIGN KEY (`TaxPayerID`) REFERENCES `TaxPayerTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+		ALTER TABLE `TaxPayerTable`
+		  ADD CONSTRAINT `TaxPayerTable_ibfk_1` FOREIGN KEY (`ParentID`) REFERENCES `TaxPayerTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+		ALTER TABLE `TaxProgramTable`
+		  ADD CONSTRAINT `TaxProgramTable_ibfk_2` FOREIGN KEY (`ExtendsProgramID`) REFERENCES `TaxProgramTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+		  ADD CONSTRAINT `TaxProgramTable_ibfk_1` FOREIGN KEY (`InstitutionBudgetID`) REFERENCES `InstitutionBudgetTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+  
+22:47:44 (engine) [SQL]->Exec [Done]:
+22:47:44 (engine) [RESPONSE (Admin.ClearDatabase)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+22:51:11 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(47) "{\"action\":\"Admin.ClearDatabase\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1992494945.1334777532.1334777532.1334777532.1"
+  ["__utmz"]=>
+  string(70) "104595487.1334777532.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+22:51:11 (engine) [JSON (Admin.ClearDatabase)]->int(1)
+
+22:51:11 (engine) [SQL]->Connecting to database:
+22:51:11 (engine) [SQL]->Connection OK!
+22:51:11 (engine) test 
+22:51:11 (engine) [SQL]->Exec:DROP TABLE IF EXISTS `InstitutionBudgetTable` ,
+			`InstitutionTable` ,
+			`SystemTable` ,
+			`TaxPayerProgramTable` ,
+			`TaxPayerTable` ,
+			`TaxProgramTable` ,
+			`TaxYearTable` ;
+22:51:11 (engine) [SQL]->Exec [Done]:1
+22:51:11 (engine) [SQL]->Exec:DROP TABLE IF EXISTS `InstitutionBudgetTable` ,
+			`InstitutionTable` ,
+			`SystemTable` ,
+			`TaxPayerProgramTable` ,
+			`TaxPayerTable` ,
+			`TaxProgramTable` ,
+			`TaxYearTable` ;
+22:51:11 (engine) [SQL]->Exec [Done]:1
+22:51:11 (engine) [SQL]->Exec:
+		CREATE TABLE IF NOT EXISTS `InstitutionBudgetTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `TaxYearID` int(11) NOT NULL,
+		  `InstitutionID` int(11) NOT NULL,
+		  `CinfirmedDate` date NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `TaxYearID` (`TaxYearID`),
+		  KEY `InstitutionID` (`InstitutionID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+22:51:11 (engine) [SQL]->Exec [Done]:1
+22:51:11 (engine) [SQL]->Exec:CREATE TABLE IF NOT EXISTS `InstitutionTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Name` text NOT NULL,
+		  `Code` text NOT NULL,
+		  PRIMARY KEY (`ID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+22:51:11 (engine) [SQL]->Exec [Done]:1
+22:51:11 (engine) [SQL]->Exec:CREATE TABLE IF NOT EXISTS `SystemTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Date` datetime NOT NULL,
+		  PRIMARY KEY (`ID`)
+		) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		CREATE TABLE IF NOT EXISTS `TaxPayerProgramTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `TaxPayerID` int(11) NOT NULL,
+		  `TaxProgramID` int(11) NOT NULL,
+		  `YearsRequired` int(11) NOT NULL,
+		  `CalculatedTaxAmount` int(11) NOT NULL,
+		  `BenefitsAccumulated` text NOT NULL,
+		  `ConfirmedDate` date NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `TaxPayerID` (`TaxPayerID`),
+		  KEY `TaxProgramID` (`TaxProgramID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		CREATE TABLE IF NOT EXISTS `TaxPayerTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Name` text NOT NULL,
+		  `Code` text NOT NULL,
+		  `Income` int(11) NOT NULL,
+		  `ParentID` int(11) NOT NULL,
+		  `DateOfCreation` date NOT NULL,
+		  `Type` int(1) NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `ParentID` (`ParentID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		CREATE TABLE IF NOT EXISTS `TaxProgramTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Name` text NOT NULL,
+		  `PredictedBudget` int(11) NOT NULL,
+		  `PredictedUsers` int(11) NOT NULL,
+		  `InstitutionBudgetID` int(11) NOT NULL,
+		  `ExtendsProgramID` int(11) NOT NULL,
+		  `MinimumYears` int(11) NOT NULL,
+		  `BenefitsExpireInYears` int(11) NOT NULL,
+		  `BenefitsApplyTo` int(1) NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `InstitutionBudgetID` (`InstitutionBudgetID`),
+		  KEY `ExtendsProgramID` (`ExtendsProgramID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		CREATE TABLE IF NOT EXISTS `TaxYearTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Year` year(4) NOT NULL,
+		  `SubmitDate` date NOT NULL,
+		  `StartDate` date NOT NULL,
+		  `EndDate` date NOT NULL,
+		  `State` int(1) NOT NULL,
+		  PRIMARY KEY (`ID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+		ALTER TABLE `InstitutionBudgetTable`
+		  ADD CONSTRAINT `InstitutionBudgetTable_ibfk_2` FOREIGN KEY (`InstitutionID`) REFERENCES `InstitutionTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+		  ADD CONSTRAINT `InstitutionBudgetTable_ibfk_1` FOREIGN KEY (`TaxYearID`) REFERENCES `TaxYearTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+		ALTER TABLE `TaxPayerProgramTable`
+		  ADD CONSTRAINT `TaxPayerProgramTable_ibfk_2` FOREIGN KEY (`TaxProgramID`) REFERENCES `TaxProgramTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+		  ADD CONSTRAINT `TaxPayerProgramTable_ibfk_1` FOREIGN KEY (`TaxPayerID`) REFERENCES `TaxPayerTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+		ALTER TABLE `TaxPayerTable`
+		  ADD CONSTRAINT `TaxPayerTable_ibfk_1` FOREIGN KEY (`ParentID`) REFERENCES `TaxPayerTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+		ALTER TABLE `TaxProgramTable`
+		  ADD CONSTRAINT `TaxProgramTable_ibfk_2` FOREIGN KEY (`ExtendsProgramID`) REFERENCES `TaxProgramTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+		  ADD CONSTRAINT `TaxProgramTable_ibfk_1` FOREIGN KEY (`InstitutionBudgetID`) REFERENCES `InstitutionBudgetTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+  
+22:51:11 (engine) [SQL]->Exec [Done]:
+22:51:11 (engine) [RESPONSE (Admin.ClearDatabase)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+22:53:13 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(47) "{\"action\":\"Admin.ClearDatabase\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1992494945.1334777532.1334777532.1334777532.1"
+  ["__utmz"]=>
+  string(70) "104595487.1334777532.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+22:53:13 (engine) [JSON (Admin.ClearDatabase)]->int(1)
+
+22:53:13 (engine) [SQL]->Connecting to database:
+22:53:13 (engine) [SQL]->Connection OK!
+22:53:13 (engine) test 
+22:53:13 (engine) [SQL]->Exec:DROP TABLE IF EXISTS `InstitutionBudgetTable` ,
+			`InstitutionTable` ,
+			`SystemTable` ,
+			`TaxPayerProgramTable` ,
+			`TaxPayerTable` ,
+			`TaxProgramTable` ,
+			`TaxYearTable` ;
+22:53:13 (engine) [SQL]->Exec [Done]:1
+22:53:13 (engine) [SQL]->Exec:DROP TABLE IF EXISTS `InstitutionBudgetTable` ,
+			`InstitutionTable` ,
+			`SystemTable` ,
+			`TaxPayerProgramTable` ,
+			`TaxPayerTable` ,
+			`TaxProgramTable` ,
+			`TaxYearTable` ;
+22:53:13 (engine) [SQL]->Exec [Done]:1
+22:53:13 (engine) [SQL]->Exec:
+		CREATE TABLE IF NOT EXISTS `InstitutionBudgetTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `TaxYearID` int(11) NOT NULL,
+		  `InstitutionID` int(11) NOT NULL,
+		  `CinfirmedDate` date NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `TaxYearID` (`TaxYearID`),
+		  KEY `InstitutionID` (`InstitutionID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+22:53:13 (engine) [SQL]->Exec [Done]:1
+22:53:13 (engine) [SQL]->Exec:CREATE TABLE IF NOT EXISTS `InstitutionTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Name` text NOT NULL,
+		  `Code` text NOT NULL,
+		  PRIMARY KEY (`ID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+22:53:13 (engine) [SQL]->Exec [Done]:1
+22:53:13 (engine) [SQL]->Exec:CREATE TABLE IF NOT EXISTS `SystemTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Date` datetime NOT NULL,
+		  PRIMARY KEY (`ID`)
+		) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+22:53:13 (engine) [SQL]->Exec [Done]:1
+22:53:13 (engine) [SQL]->Exec:CREATE TABLE IF NOT EXISTS `TaxPayerProgramTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `TaxPayerID` int(11) NOT NULL,
+		  `TaxProgramID` int(11) NOT NULL,
+		  `YearsRequired` int(11) NOT NULL,
+		  `CalculatedTaxAmount` int(11) NOT NULL,
+		  `BenefitsAccumulated` text NOT NULL,
+		  `ConfirmedDate` date NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `TaxPayerID` (`TaxPayerID`),
+		  KEY `TaxProgramID` (`TaxProgramID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+22:53:13 (engine) [SQL]->Exec [Done]:1
+22:53:13 (engine) [SQL]->Exec:CREATE TABLE IF NOT EXISTS `TaxPayerTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Name` text NOT NULL,
+		  `Code` text NOT NULL,
+		  `Income` int(11) NOT NULL,
+		  `ParentID` int(11) NOT NULL,
+		  `DateOfCreation` date NOT NULL,
+		  `Type` int(1) NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `ParentID` (`ParentID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+22:53:13 (engine) [SQL]->Exec [Done]:1
+22:53:13 (engine) [SQL]->Exec:CREATE TABLE IF NOT EXISTS `TaxProgramTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Name` text NOT NULL,
+		  `PredictedBudget` int(11) NOT NULL,
+		  `PredictedUsers` int(11) NOT NULL,
+		  `InstitutionBudgetID` int(11) NOT NULL,
+		  `ExtendsProgramID` int(11) NOT NULL,
+		  `MinimumYears` int(11) NOT NULL,
+		  `BenefitsExpireInYears` int(11) NOT NULL,
+		  `BenefitsApplyTo` int(1) NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `InstitutionBudgetID` (`InstitutionBudgetID`),
+		  KEY `ExtendsProgramID` (`ExtendsProgramID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+22:53:13 (engine) [SQL]->Exec [Done]:1
+22:53:13 (engine) [SQL]->Exec:CREATE TABLE IF NOT EXISTS `TaxYearTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Year` year(4) NOT NULL,
+		  `SubmitDate` date NOT NULL,
+		  `StartDate` date NOT NULL,
+		  `EndDate` date NOT NULL,
+		  `State` int(1) NOT NULL,
+		  PRIMARY KEY (`ID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+22:53:13 (engine) [SQL]->Exec [Done]:1
+22:53:13 (engine) [SQL]->Exec:ALTER TABLE `InstitutionBudgetTable`
+		  ADD CONSTRAINT `InstitutionBudgetTable_ibfk_2` FOREIGN KEY (`InstitutionID`) REFERENCES `InstitutionTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+		  ADD CONSTRAINT `InstitutionBudgetTable_ibfk_1` FOREIGN KEY (`TaxYearID`) REFERENCES `TaxYearTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+22:53:13 (engine) [SQL]->Exec [Done]:1
+22:53:13 (engine) [SQL]->Exec:ALTER TABLE `TaxPayerProgramTable`
+		  ADD CONSTRAINT `TaxPayerProgramTable_ibfk_2` FOREIGN KEY (`TaxProgramID`) REFERENCES `TaxProgramTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+		  ADD CONSTRAINT `TaxPayerProgramTable_ibfk_1` FOREIGN KEY (`TaxPayerID`) REFERENCES `TaxPayerTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+22:53:13 (engine) [SQL]->Exec [Done]:1
+22:53:13 (engine) [SQL]->Exec:ALTER TABLE `TaxPayerTable`
+		  ADD CONSTRAINT `TaxPayerTable_ibfk_1` FOREIGN KEY (`ParentID`) REFERENCES `TaxPayerTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+22:53:13 (engine) [SQL]->Exec [Done]:1
+22:53:13 (engine) [SQL]->Exec:ALTER TABLE `TaxProgramTable`
+		  ADD CONSTRAINT `TaxProgramTable_ibfk_2` FOREIGN KEY (`ExtendsProgramID`) REFERENCES `TaxProgramTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+		  ADD CONSTRAINT `TaxProgramTable_ibfk_1` FOREIGN KEY (`InstitutionBudgetID`) REFERENCES `InstitutionBudgetTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+			
+22:53:13 (engine) [SQL]->Exec [Done]:1
+22:53:13 (engine) [RESPONSE (Admin.ClearDatabase)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+

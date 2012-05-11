@@ -1,0 +1,331 @@
+<html>
+<head>
+<title>Instituion Panel</title>
+<!-- CSS files -->
+<link rel="stylesheet" type="text/css" href="style.css"> 
+<link rel="stylesheet" type="text/css" href="ext-3.4.0/resources/css/ext-all.css"> 
+<link rel="stylesheet" type="text/css" href="ext-3.4.0/resources/css/calendar.css" />
+<!-- Scripts -->   
+<script type="text/javascript" src="ext-3.4.0/adapter/ext/ext-base.js"></script>
+<script type="text/javascript" src="ext-3.4.0/ext-all.js"></script>
+<script type="text/javascript" src="ext-3.4.0/calendar-all.js"></script>
+<script type="text/javascript" src="js/json2.js"></script>
+<script type="text/javascript" src="js/rfc3339date.js"></script>
+<script type="text/javascript" src="utils.js"></script>
+</head>
+<body>
+<div id="mainArea"></div>
+<div id="tab1"></div>
+<div id="tab2"></div>
+<script>
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+
+
+
+//var institutionId = 4;
+var institutionId = getUrlVars()["id"];
+var budgetId = 0;
+
+var tabs = new Ext.TabPanel({
+    renderTo: 'mainArea',
+    activeTab: 0,
+    items:[
+        {contentEl:'tab1', title:'Info'},
+		{contentEl:'tab2', title:'Manage'}
+    ]
+});
+
+var tab1panel = new Ext.Panel({
+	layout: 'vbox',
+	border: false,
+	cls: 'tabPanel',
+	width: 1000,
+	height: 600,
+	renderTo: 'tab1'
+});
+var tab2panel = new Ext.Panel({
+	layout: 'vbox',
+	border: false,
+	cls: 'tabPanel',
+	width: 1000,
+	height: 600,
+	renderTo: 'tab2'
+});
+var infoPanel = new Ext.Panel({
+		layout: 'vbox',
+		border: false,
+		cls: 'marginLeft20',
+		width: 600,
+		height: 80
+	});
+var yearInfoPanel = new Ext.Panel({
+		layout: 'vbox',
+		border: false,
+		cls: 'marginLeft20',
+		width: 1000,
+		height: 100
+	});
+tab1panel.add(infoPanel);
+tab2panel.add(yearInfoPanel);
+tab2panel.doLayout();
+
+var createTaxPayerInfoPanel = function(data){
+	var jsonData = Ext.util.JSON.decode(data.responseText);
+	var idLabel = createLabel("ID: " + jsonData.data.ID);
+	var nameLabel = createLabel("Name: " + jsonData.data.Name);
+	var codeLabel = createLabel("Code: " + jsonData.data.Code);
+	
+	infoPanel.add(idLabel);
+	infoPanel.add(nameLabel);
+	infoPanel.add(codeLabel);
+	
+	tab1panel.doLayout();
+}
+
+sendAjaxRequest('Institution.GetInfo', {'ID': institutionId}, createTaxPayerInfoPanel);
+
+
+//Year grid
+var taxYearGridJsonKey = [
+	{name: 'ID'},
+	{name: 'Year'},
+	{name: 'ConfirmedDate'},
+	{name: 'State'}     
+];
+var taxYearGridColumns = [
+	{header: "ID", width: 30, dataIndex: 'ID', sortable: true},
+    {header: "Year", dataIndex: 'Year', sortable: true},
+    {header: "ConfirmedDate", dataIndex: 'ConfirmedDate', sortable: true},
+    {header: "State", width: 70,renderer: function(state){
+		if ( 0 == state) {
+			return 'Waiting for submition';
+		} else if (1 == state) {
+			return 'Submitted';
+		} else if (2 == state) {
+			return 'Activated';
+		} else if (3 == state) {
+			return 'Expired';
+		} else {
+			return 'Unknown';
+		}
+	}, dataIndex: 'State', sortable: true},
+	{header: "Delete", renderer: function(val, el, rowdata){
+		if (null == rowdata.data.ConfirmedDate) {
+			return "<a href='#' onclick=\"sendAjaxRequest('Institution.TaxYearBudgetDelete', {ID: " + rowdata.data.ID +"})\">delete</a>";
+		}
+	},sortable: true}
+];
+ 
+var taxYearIdLabel = createLabel("Institution ID: ");
+var budgetIdLabel = createLabel("Budget ID: ");
+var confirmedDateLabel = createLabel("Confirmed: ");
+yearInfoPanel.add(budgetIdLabel);
+yearInfoPanel.add(taxYearIdLabel);
+yearInfoPanel.add(confirmedDateLabel);
+ 
+//BIG METHOD FOR MANAGING YEAR!!!
+var idToUse = null;
+var manageYear = function(grid, idx){
+	var gridStore = grid.getStore();
+	var rec = gridStore.getAt(idx);
+	////ID TO USE
+	idToUse = parseInt(rec.data.ID);
+	if (rec.data.State == 3) {
+			/// STATS GRID
+			sendAjaxRequest('Institution.TaxProgramUsersGrid', idToUse, function(data){
+			var statisticWindow = new Ext.Window({
+						title: 'Statistics',
+						layout: 'vbox',
+						cls: 'modalWindow',
+						width: 900,
+						height: 400,
+						modal: true
+					});
+					
+			var statJsonKey = [
+				{name: 'ID'},
+				{name: 'Name'},
+				{name: 'Code'},
+				{name: 'Programs'},
+				{name: 'PredictedUsers'},
+				{name: 'BenefitsAccumulated'},
+				{name: 'TotalPayment'},
+			];
+			var statColumns = [
+				{header: "ID", width: 30, dataIndex: 'ID', sortable: true},
+				{header: "Name", dataIndex: 'Name', sortable: true},
+				{header: "Code", dataIndex: 'Code', sortable: true},
+				{header: "Programs", dataIndex: 'Programs', sortable: true, renderer: function(data){
+					return eval(data);
+				}},
+				{header: "Benefits Accumulated", dataIndex: 'BenefitsAccumulated', sortable: true},
+				{header: "TotalPayment", dataIndex: 'TotalPayment', sortable: true}
+			];
+
+			var gridTaxProgramsStat = createDataGrid('Institution.GetTaxProgramUsersGrid', statColumns, statJsonKey, null, true, null, null, function(){
+				return {ID: idToUse};
+			}, null);
+			statisticWindow.add(gridTaxProgramsStat[0]);
+			statisticWindow.show();
+			
+			requestData(gridTaxProgramsStat[1], 'Institution.GetTaxProgramUsersGrid', 0, 10, {
+				ID: idToUse
+			});
+		});
+	} 
+	else {
+		tabs.setActiveTab(1);
+		addProgramButton.enable();
+		addProgramFromPreviousYear.enable();
+		
+		
+		var createInfo = function(data){
+			var jsonData = Ext.util.JSON.decode(data.responseText);
+			
+			budgetId = jsonData.data.ID;
+			budgetIdLabel.setText("Budget ID:" + budgetId );
+			taxYearIdLabel.setText("Institution ID: " + jsonData.data.InstitutionID);
+			confirmedDateLabel.setText("Confirmed: " + jsonData.data.ConfirmedDate);
+		}
+		sendAjaxRequest('Institution.GetTaxYearBudgetInfo', {'ID': idToUse} , createInfo);
+		requestData(gridTaxPrograms[1], 'Institution.TaxProgramGrid', 0, 10, {
+			ID: idToUse
+		});
+	}
+}
+
+
+
+//add program
+var fnAdd = function(){
+	if (null != idToUse) {
+		var programAddWindow = new Ext.Window({
+			title: 'Add Program',
+			layout: 'vbox',
+			cls: 'modalWindow',
+			width: 500,
+			height: 300,
+			modal: true
+		});
+		var labelPrName = createLabel("Program name: ");
+		var prName = createTextInput("Name");
+		var labelPrPredictedUsers = createLabel("Predicted users: ");
+		var prPredictedUsers = createTextInput("Number of users");
+		var labelPrPredictedBudget = createLabel("Predicted budget: ");
+		var prPredictedBudget = createTextInput("euro");
+		var labelPrMinimumYears = createLabel("Mimum years");
+		var prMinimumYears = createTextInput("years");
+		var labelExpires = createLabel("Expires in");
+		var prExpiry = createTextInput("years");
+		
+		programAddWindow.add(labelPrName);
+		programAddWindow.add(prName);
+		programAddWindow.add(labelPrPredictedUsers);
+		programAddWindow.add(prPredictedUsers);
+		programAddWindow.add(labelPrPredictedBudget);
+		programAddWindow.add(prPredictedBudget);
+		programAddWindow.add(labelPrMinimumYears);
+		programAddWindow.add(prMinimumYears);
+		programAddWindow.add(labelExpires);
+		programAddWindow.add(prExpiry);
+		
+		var submitButton = createButton("Submit", function(){
+				sendAjaxRequest('Institution.TaxProgramChange', {
+					InstitutionBudgetTable: idToUse,
+					Name: prName.getValue(),
+					PredictedBudget: prPredictedBudget.getValue(),
+					PredictedUsers: prPredictedUsers.getValue(),
+					BenefitsExpireInYears: prExpiry.getValue(),
+					MinimumYears: prMinimumYears.getValue(),
+					BenefitsApplyTo: 0,
+					ExtendsProgramID: null
+				});
+				
+				programAddWindow.destroy();
+				requestData(gridTaxPrograms[1], 'Institution.TaxProgramGrid', 0, 10, {
+					ID: idToUse
+				});
+			}
+		);
+		programAddWindow.addButton(submitButton);
+		programAddWindow.show();
+		
+	}
+};
+
+var fnAddFromPrev = function(){
+	if (null != idToUse) {
+		sendAjaxRequest('Institution.TaxProgramGenerate', idToUse);
+	}
+};
+
+var addProgramButton = createButton("Add", fnAdd, null, {disabled: true});
+var addProgramFromPreviousYear = createButton("Add from previous year", fnAddFromPrev, null, {disabled: true});
+tab2panel.add(addProgramButton);
+tab2panel.add(addProgramFromPreviousYear);
+
+///
+var taxProgramGridJsonKey = [
+		{name: 'ID'},
+		{name: 'Name'},
+		{name: 'PredictedBudget'},
+		{name: 'PredictedUsers'},
+		{name: 'ExtendsProgramID'},
+		{name: 'MinimumYears'},
+		{name: 'BenefitsExpireInYears'},
+		{name: 'BenefitsApplyTo'}
+	];
+	var taxProgramGridColumns = [
+		{header: "ID", width: 30, dataIndex: 'ID', sortable: true},
+		{header: "Name", dataIndex: 'Name', sortable: true},
+		{header: "PredictedBudget", dataIndex: 'PredictedBudget', sortable: true},
+		{header: "PredictedUsers", dataIndex: 'PredictedUsers', sortable: true},
+		{header: "ExtendsProgramID", dataIndex: 'ExtendsProgramID', sortable: true},
+		{header: "MinimumYears", dataIndex: 'MinimumYears', sortable: true},
+		{header: "BenefitsExpireInYears", dataIndex: 'BenefitsExpireInYears', sortable: true},
+		{header: "BenefitsApplyTo", width: 70,renderer: function(state){
+			if ( 0 == state) {
+				return ' 0 ';
+			} else if (1 == state) {
+				return ' 1 ';
+			} else if (2 == state) {
+				return ' 2 ';
+			} else if (3 == state) {
+				return ' 3 ';
+			} else {
+				return 'Unknown';
+			}
+		}, dataIndex: 'BenefitsApplyTo', sortable: true}
+	];
+
+	var gridTaxPrograms = createDataGrid('Institution.TaxProgramGrid', taxProgramGridColumns, taxProgramGridJsonKey, null, true, null, null, function(){
+		return {ID: budgetId};
+	}, null);
+		
+tab2panel.add(gridTaxPrograms[0]);
+///
+
+var gridTaxPayerYear = createDataGrid('Institution.TaxYearBudgetGrid', taxYearGridColumns, taxYearGridJsonKey, null, null, null, null, function(){
+	return {instID: institutionId};
+}, manageYear);
+tab1panel.add(gridTaxPayerYear[0]);
+
+
+
+
+
+
+tab1panel.doLayout();
+tab2panel.doLayout();
+tabs.doLayout();
+tabs.setActiveTab(1);
+tabs.setActiveTab(0);
+</script>
+<body>
+</html>

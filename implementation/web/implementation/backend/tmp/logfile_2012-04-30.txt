@@ -1,0 +1,503 @@
+19:47:58 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(71) "{\"action\":\"Admin.ChangeDate\",\"data\":\"2013-01-21T21:59:59.000Z\"}"
+  ["__utma"]=>
+  string(54) "104595487.103898233.1334496497.1334496497.1334503090.2"
+  ["__utmz"]=>
+  string(70) "104595487.1334496497.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+19:47:58 (engine) [JSON (Admin.ChangeDate)]->string(24) "2013-01-21T21:59:59.000Z"
+
+19:47:58 (engine) [SQL]->Connecting to database:
+19:47:58 (engine) [SQL]->Connection OK!
+19:47:58 (engine) test 
+19:47:58 (engine) [SQL]->Exec:UPDATE SystemTable SET Date='2013-01-21 23:59:59' WHERE ID=1
+19:47:58 (engine) [SQL]->Exec [Done]:1
+19:47:58 (engine) [RESPONSE (Admin.ChangeDate)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+19:47:59 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(189) "{\"action\":\"Admin.TaxYearCreate\",\"data\":{\"Year\":2012,\"SubmitDate\":\"2013-01-21T21:59:59.000Z\",\"StartDate\":\"2011-01-31T22:00:00.000Z\",\"EndDate\":\"2013-01-21T21:59:59.000Z\"}}"
+  ["__utma"]=>
+  string(54) "104595487.103898233.1334496497.1334496497.1334503090.2"
+  ["__utmz"]=>
+  string(70) "104595487.1334496497.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+19:47:59 (engine) [JSON (Admin.TaxYearCreate)]->array(4) {
+  ["Year"]=>
+  int(2012)
+  ["SubmitDate"]=>
+  string(24) "2013-01-21T21:59:59.000Z"
+  ["StartDate"]=>
+  string(24) "2011-01-31T22:00:00.000Z"
+  ["EndDate"]=>
+  string(24) "2013-01-21T21:59:59.000Z"
+}
+
+19:47:59 (engine) [SQL]->Connecting to database:
+19:47:59 (engine) [SQL]->Connection OK!
+19:47:59 (engine) test 
+19:47:59 (engine) [SQL]->Exec:SELECT Count( 1 ) FROM TaxYearTable WHERE Year = 2012
+19:47:59 (engine) [SQL]->Exec [Done]:Resource id #15
+19:49:00 (engine) [REQUEST]<-array(2) {
+  ["json"]=>
+  string(189) "{\"action\":\"Admin.TaxYearCreate\",\"data\":{\"Year\":2012,\"SubmitDate\":\"2013-01-21T21:59:59.000Z\",\"StartDate\":\"2011-01-31T22:00:00.000Z\",\"EndDate\":\"2013-01-21T21:59:59.000Z\"}}"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+19:49:00 (engine) [JSON (Admin.TaxYearCreate)]->array(4) {
+  ["Year"]=>
+  int(2012)
+  ["SubmitDate"]=>
+  string(24) "2013-01-21T21:59:59.000Z"
+  ["StartDate"]=>
+  string(24) "2011-01-31T22:00:00.000Z"
+  ["EndDate"]=>
+  string(24) "2013-01-21T21:59:59.000Z"
+}
+
+19:49:00 (engine) [SQL]->Connecting to database:
+19:49:00 (engine) [SQL]->Connection OK!
+19:49:00 (engine) test 
+19:49:00 (engine) [SQL]->Exec:SELECT Count( 1 ) FROM TaxYearTable WHERE Year = 2012
+19:49:00 (engine) [SQL]->Exec [Done]:Resource id #15
+19:50:40 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(83) "{\"action\":\"Admin.TaxYearGrid\",\"data\":{\"ItemsPerPage\":10,\"ItemsOffset\":0}}"
+  ["__utma"]=>
+  string(54) "104595487.103898233.1334496497.1334496497.1334503090.2"
+  ["__utmz"]=>
+  string(70) "104595487.1334496497.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+19:50:40 (engine) [JSON (Admin.TaxYearGrid)]->array(2) {
+  ["ItemsPerPage"]=>
+  int(10)
+  ["ItemsOffset"]=>
+  int(0)
+}
+
+19:50:40 (engine) [SQL]->Connecting to database:
+19:50:40 (engine) [SQL]->Connection OK!
+19:50:40 (engine) test 
+19:50:40 (engine) [SQL]->Exec:SELECT * FROM `TaxYearTable` LIMIT 0 , 10
+19:50:40 (engine) [SQL]->Exec [Done]:Resource id #15
+19:50:40 (engine) [RESPONSE (Admin.TaxYearGrid)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(10) {
+    [0]=>
+    array(6) {
+      ["ID"]=>
+      string(1) "1"
+      ["Year"]=>
+      string(4) "1921"
+      ["SubmitDate"]=>
+      string(10) "1921-04-26"
+      ["StartDate"]=>
+      string(10) "1921-04-21"
+      ["EndDate"]=>
+      string(10) "1921-02-21"
+      ["State"]=>
+      string(1) "1"
+    }
+    [1]=>
+    array(6) {
+      ["ID"]=>
+      string(1) "2"
+      ["Year"]=>
+      string(4) "1922"
+      ["SubmitDate"]=>
+      string(10) "1922-04-26"
+      ["StartDate"]=>
+      string(10) "1922-04-21"
+      ["EndDate"]=>
+      string(10) "1922-02-21"
+      ["State"]=>
+      string(1) "1"
+    }
+    [2]=>
+    array(6) {
+      ["ID"]=>
+      string(1) "3"
+      ["Year"]=>
+      string(4) "1923"
+      ["SubmitDate"]=>
+      string(10) "1923-04-26"
+      ["StartDate"]=>
+      string(10) "1923-04-21"
+      ["EndDate"]=>
+      string(10) "1923-02-21"
+      ["State"]=>
+      string(1) "2"
+    }
+    [3]=>
+    array(6) {
+      ["ID"]=>
+      string(1) "4"
+      ["Year"]=>
+      string(4) "1924"
+      ["SubmitDate"]=>
+      string(10) "1924-04-26"
+      ["StartDate"]=>
+      string(10) "1924-04-21"
+      ["EndDate"]=>
+      string(10) "1924-02-21"
+      ["State"]=>
+      string(1) "0"
+    }
+    [4]=>
+    array(6) {
+      ["ID"]=>
+      string(1) "5"
+      ["Year"]=>
+      string(4) "1925"
+      ["SubmitDate"]=>
+      string(10) "1925-04-26"
+      ["StartDate"]=>
+      string(10) "1925-04-21"
+      ["EndDate"]=>
+      string(10) "1925-02-21"
+      ["State"]=>
+      string(1) "3"
+    }
+    [5]=>
+    array(6) {
+      ["ID"]=>
+      string(1) "6"
+      ["Year"]=>
+      string(4) "1926"
+      ["SubmitDate"]=>
+      string(10) "1926-04-26"
+      ["StartDate"]=>
+      string(10) "1926-04-21"
+      ["EndDate"]=>
+      string(10) "1926-02-21"
+      ["State"]=>
+      string(1) "4"
+    }
+    [6]=>
+    array(6) {
+      ["ID"]=>
+      string(1) "7"
+      ["Year"]=>
+      string(4) "1927"
+      ["SubmitDate"]=>
+      string(10) "1927-04-26"
+      ["StartDate"]=>
+      string(10) "1927-04-21"
+      ["EndDate"]=>
+      string(10) "1927-02-21"
+      ["State"]=>
+      string(1) "0"
+    }
+    [7]=>
+    array(6) {
+      ["ID"]=>
+      string(1) "8"
+      ["Year"]=>
+      string(4) "1928"
+      ["SubmitDate"]=>
+      string(10) "1928-04-26"
+      ["StartDate"]=>
+      string(10) "1928-04-21"
+      ["EndDate"]=>
+      string(10) "1928-02-21"
+      ["State"]=>
+      string(1) "4"
+    }
+    [8]=>
+    array(6) {
+      ["ID"]=>
+      string(1) "9"
+      ["Year"]=>
+      string(4) "1929"
+      ["SubmitDate"]=>
+      string(10) "1929-04-26"
+      ["StartDate"]=>
+      string(10) "1929-04-21"
+      ["EndDate"]=>
+      string(10) "1929-02-21"
+      ["State"]=>
+      string(1) "3"
+    }
+    [9]=>
+    array(6) {
+      ["ID"]=>
+      string(2) "10"
+      ["Year"]=>
+      string(4) "1930"
+      ["SubmitDate"]=>
+      string(10) "1930-04-26"
+      ["StartDate"]=>
+      string(10) "1930-04-21"
+      ["EndDate"]=>
+      string(10) "1930-02-21"
+      ["State"]=>
+      string(1) "4"
+    }
+  }
+}
+
+19:50:49 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(300) "{\"action\":\"Admin.TestJSON\",\"data\":{\"number\":12345,\"text\":\"Text\",\"bool\":true,\"date\":\"2013-10-12T20:59:59.000Z\",\"array\":[\"value1\",\"value2\",\"value3\"],\"objArray\":[{\"name\":\"Frank\",\"age\":57,\"relation\":\"father\"},{\"name\":\"Tina\",\"age\":26,\"relation\":\"sister\"}]}}"
+  ["__utma"]=>
+  string(54) "104595487.103898233.1334496497.1334496497.1334503090.2"
+  ["__utmz"]=>
+  string(70) "104595487.1334496497.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+19:50:49 (engine) [JSON (Admin.TestJSON)]->array(6) {
+  ["number"]=>
+  int(12345)
+  ["text"]=>
+  string(4) "Text"
+  ["bool"]=>
+  bool(true)
+  ["date"]=>
+  string(24) "2013-10-12T20:59:59.000Z"
+  ["array"]=>
+  array(3) {
+    [0]=>
+    string(6) "value1"
+    [1]=>
+    string(6) "value2"
+    [2]=>
+    string(6) "value3"
+  }
+  ["objArray"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["name"]=>
+      string(5) "Frank"
+      ["age"]=>
+      int(57)
+      ["relation"]=>
+      string(6) "father"
+    }
+    [1]=>
+    array(3) {
+      ["name"]=>
+      string(4) "Tina"
+      ["age"]=>
+      int(26)
+      ["relation"]=>
+      string(6) "sister"
+    }
+  }
+}
+
+19:50:49 (engine) [RESPONSE (Admin.TestJSON)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["number"]=>
+    int(12345)
+    ["text"]=>
+    string(4) "Text"
+    ["bool"]=>
+    bool(true)
+    ["date"]=>
+    string(20) "2013-10-12T20:59:59Z"
+    ["array"]=>
+    array(3) {
+      [0]=>
+      string(6) "value1"
+      [1]=>
+      string(6) "value2"
+      [2]=>
+      string(6) "value3"
+    }
+    ["objArray"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["name"]=>
+        string(5) "Frank"
+        ["age"]=>
+        int(57)
+        ["relation"]=>
+        string(6) "father"
+      }
+      [1]=>
+      array(3) {
+        ["name"]=>
+        string(4) "Tina"
+        ["age"]=>
+        int(26)
+        ["relation"]=>
+        string(6) "sister"
+      }
+    }
+  }
+}
+
+22:10:23 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(71) "{\"action\":\"Admin.ChangeDate\",\"data\":\"2013-01-21T21:59:59.000Z\"}"
+  ["__utma"]=>
+  string(55) "104595487.1992494945.1334777532.1334777532.1334777532.1"
+  ["__utmz"]=>
+  string(70) "104595487.1334777532.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+22:10:23 (engine) [JSON (Admin.ChangeDate)]->string(24) "2013-01-21T21:59:59.000Z"
+
+22:10:23 (engine) [SQL]->Connecting to database:
+22:10:23 (engine) [SQL]->Connection OK!
+22:10:23 (engine) test 
+22:10:23 (engine) [SQL]->Exec:UPDATE SystemTable SET Date='2013-01-21 23:59:59' WHERE ID=1
+22:10:23 (engine) [SQL]->Exec [Done]:1
+22:10:23 (engine) [RESPONSE (Admin.ChangeDate)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+22:10:29 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(189) "{\"action\":\"Admin.TaxYearCreate\",\"data\":{\"Year\":2012,\"SubmitDate\":\"2013-01-21T21:59:59.000Z\",\"StartDate\":\"2011-01-31T22:00:00.000Z\",\"EndDate\":\"2013-01-21T21:59:59.000Z\"}}"
+  ["__utma"]=>
+  string(55) "104595487.1992494945.1334777532.1334777532.1334777532.1"
+  ["__utmz"]=>
+  string(70) "104595487.1334777532.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+22:10:29 (engine) [JSON (Admin.TaxYearCreate)]->array(4) {
+  ["Year"]=>
+  int(2012)
+  ["SubmitDate"]=>
+  string(24) "2013-01-21T21:59:59.000Z"
+  ["StartDate"]=>
+  string(24) "2011-01-31T22:00:00.000Z"
+  ["EndDate"]=>
+  string(24) "2013-01-21T21:59:59.000Z"
+}
+
+22:10:29 (engine) [SQL]->Connecting to database:
+22:10:29 (engine) [SQL]->Connection OK!
+22:10:29 (engine) test 
+22:10:29 (engine) [SQL]->Exec:SELECT Count( 1 ) FROM TaxYearTable WHERE Year = 2012
+22:10:29 (engine) [SQL]->Exec [Done]:Resource id #15
+22:35:08 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(47) "{\"action\":\"Institution.GetInfo\",\"data\":3}"
+  ["__utma"]=>
+  string(55) "104595487.1992494945.1334777532.1334777532.1334777532.1"
+  ["__utmz"]=>
+  string(70) "104595487.1334777532.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+22:35:08 (engine) [JSON (Institution.GetInfo)]->int(3)
+
+22:35:08 (engine) [SQL]->Connecting to database:
+22:35:08 (engine) [SQL]->Connection OK!
+22:35:08 (engine) test 
+22:35:08 (engine) [SQL]->Exec:SELECT * FROM `InstitutionTable` WHERE ID=3
+22:35:08 (engine) [SQL]->Exec [Done]:Resource id #15
+22:35:08 (engine) [RESPONSE (Institution.GetInfo)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(3) {
+    ["ID"]=>
+    string(1) "3"
+    ["Name"]=>
+    string(23) "Ministry of the defence"
+    ["Code"]=>
+    string(6) "I00003"
+  }
+}
+
+22:37:32 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(49) "{\"action\":\"Institution.GetInfo\",\"data\":300}"
+  ["__utma"]=>
+  string(55) "104595487.1992494945.1334777532.1334777532.1334777532.1"
+  ["__utmz"]=>
+  string(70) "104595487.1334777532.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+22:37:32 (engine) [JSON (Institution.GetInfo)]->int(300)
+
+22:37:32 (engine) [SQL]->Connecting to database:
+22:37:32 (engine) [SQL]->Connection OK!
+22:37:32 (engine) test 
+22:37:32 (engine) [SQL]->Exec:SELECT * FROM `InstitutionTable` WHERE ID=300
+22:37:32 (engine) [SQL]->Exec [Done]:Resource id #15
+22:37:32 (engine) [RESPONSE (Institution.GetInfo)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  bool(false)
+}
+
+23:05:35 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(93) "{\"action\":\"Institution.TaxYearBudgetCreate\",\"data\":{\"Year\":2012,\"InstitutionID\":3}}"
+  ["__utma"]=>
+  string(55) "104595487.1992494945.1334777532.1334777532.1334777532.1"
+  ["__utmz"]=>
+  string(70) "104595487.1334777532.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+23:05:35 (engine) [JSON (Institution.TaxYearBudgetCreate)]->array(2) {
+  ["Year"]=>
+  int(2012)
+  ["InstitutionID"]=>
+  int(3)
+}
+
+23:05:35 (engine) [SQL]->Connecting to database:
+23:05:35 (engine) [SQL]->Connection OK!
+23:05:35 (engine) test 
+23:05:35 (engine) [SQL]->Exec:INSERT INTO `InstitutionBudgetTable` (TaxYearID, InstitutionID, ConfirmedDate) VALUES (2012,3,(SELECT Date from SystemTable where ID = 1))
+23:05:35 (engine) [SQL]->Exec [Done]:
+23:05:35 (engine) [RESPONSE (Institution.TaxYearBudgetCreate)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  int(1)
+}
+
+23:11:34 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(93) "{\"action\":\"Institution.TaxYearBudgetCreate\",\"data\":{\"Year\":2012,\"InstitutionID\":3}}"
+  ["__utma"]=>
+  string(55) "104595487.1992494945.1334777532.1334777532.1334777532.1"
+  ["__utmz"]=>
+  string(70) "104595487.1334777532.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+23:11:34 (engine) [JSON (Institution.TaxYearBudgetCreate)]->array(2) {
+  ["Year"]=>
+  int(2012)
+  ["InstitutionID"]=>
+  int(3)
+}
+
+23:11:34 (engine) [SQL]->Connecting to database:
+23:11:34 (engine) [SQL]->Connection OK!
+23:11:34 (engine) test 
+23:11:34 (engine) [SQL]->Exec:INSERT INTO `InstitutionBudgetTable` (TaxYearID, InstitutionID, ConfirmedDate) VALUES ((SELECT ID from TaxYearTable where Year=2012),3,(SELECT Date from SystemTable where ID = 1))
+23:11:34 (engine) [SQL]->Exec [Done]:1
+23:11:34 (engine) [RESPONSE (Institution.TaxYearBudgetCreate)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  int(1)
+}
+

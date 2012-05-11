@@ -1,0 +1,4 @@
+INDEX VERSION 1.126+/Users/dmitrikuznetsov/Documents/workspaces/semestr4/taxagent/implementation/android/.metadata/.plugins/org.eclipse.jdt.core
+1403380744.index
+2180327577.index
+3361575883.index

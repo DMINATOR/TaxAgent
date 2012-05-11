@@ -1,0 +1,31 @@
+22:43:18 (engine) [REQUEST]<-array(1) {
+  ["action"]=>
+  string(6) "dbtest"
+}
+
+22:43:18 (engine) test 
+22:43:28 (engine) [REQUEST]<-array(3) {
+  ["action"]=>
+  string(8) "jsontest"
+  ["object"]=>
+  string(11) "some action"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+22:43:30 (engine) [REQUEST]<-array(2) {
+  ["action"]=>
+  string(4) "test"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+
+22:44:51 (engine) [REQUEST]<-array(3) {
+  ["action"]=>
+  string(8) "jsontest"
+  ["object"]=>
+  string(11) "some action"
+  ["__utma"]=>
+  string(55) "104595487.1066155361.1306016171.1307135115.1307721798.5"
+}
+

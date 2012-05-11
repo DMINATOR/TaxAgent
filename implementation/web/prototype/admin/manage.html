@@ -1,0 +1,110 @@
+<p>Tax Year : Manage</p>
+<p>(These parts are shown only depending on specific status of the TaxYear)</p>
+<p><strong>[Admin.TaxYearShow]</strong></p>
+<table width="672" height="779" border="1">
+  <tr>
+    <td width="85" height="40">state</td>
+    <td width="571">Contents to show to the user</td>
+  </tr>
+  <tr>
+    <td height="192">0 - Waiting for submition start</td>
+    <td><p>(because it is newly created TaxYear, we need to fill initial data, this can be changed )</p>
+      <table width="468" border="1">
+        <tr>
+          <td width="105">Year</td>
+          <td width="347"><label>
+            <input name="tbYear" type="text" id="tbYear" value="2013" />
+            <strong>[Admin.TaxYearShow.Year] </strong></label></td>
+        </tr>
+        <tr>
+          <td height="71">Submit Date</td>
+          <td><label>
+            <input name="tbSubmitDate" type="text" id="tbSubmitDate" value="01.01.2013" />
+          (<strong>[Admin.TaxYearShow.submitDate] </strong>- date when users start submitting their tax requests. Show as DateTimePicker control)</label></td>
+        </tr>
+        <tr>
+          <td height="71">Start Date</td>
+          <td><input name="tbSubmitDate2" type="text" id="tbSubmitDate2" value="01.02.2013" />
+( &lt;-<strong>[Admin.TaxYearShow.startDate] </strong>- date when tax year is locked and taxation period starts)</td>
+        </tr>
+        <tr>
+          <td height="71">End Date</td>
+          <td><input name="tbSubmitDate3" type="text" id="tbSubmitDate3" value="01.02.2014" />
+( &lt;-<strong>[Admin.TaxYearShow.endDate]</strong>- date when taxation period is stopped, and another tax year should be created by that time to continue)</td>
+        </tr>
+        <tr>
+          <td height="22">&nbsp;</td>
+          <td><label>
+            <input type="submit" name="btnOK" id="btnOK" value="Submit" />
+          (When submit is called the tax year is saved and state changed to Submitted<strong> [Admin.TaxYearCreate]</strong>)</label></td>
+        </tr>
+      </table>
+    <p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td height="208">1- Submitted</td>
+    <td><p>(Once it is submitted, you can no longer change  the details, they are read only, because this is used by agents to calculate the tax rate)</p>
+      <table width="468" border="1">
+        <tr>
+          <td width="105">Year</td>
+          <td width="347"><label>
+2013          <strong>[Admin.TaxYearShow.Year] </strong></label></td>
+        </tr>
+        <tr>
+          <td height="71">Submit Date</td>
+          <td><label>
+01.01.2013          ( &lt;-<strong>[Admin.TaxYearShow.submitDate] </strong>)</label></td>
+        </tr>
+        <tr>
+          <td height="71">Start Date</td>
+          <td>01.02.2013
+            ( &lt;-<strong>[Admin.TaxYearShow.startDate]</strong>)</td>
+        </tr>
+        <tr>
+          <td height="71">End Date</td>
+          <td>01.02.2014            ( &lt;-<strong>[Admin.TaxYearShow.endDate]</strong>)</td>
+        </tr>
+        <tr>
+          <td height="71">State</td>
+          <td>Expired  (&lt;-<strong>[Admin.TaxYearShow.State]</strong>- Show the state now)</td>
+        </tr>
+      </table>
+    <p></p></td>
+  </tr>
+  <tr>
+    <td height="257">2 - Activated</td>
+    <td><p>(Almost the same)</p>
+      <table width="468" border="1">
+        <tr>
+          <td width="105">Year</td>
+          <td width="347"><label> 2013          <strong>[Admin.TaxYearShow.Year] </strong></label></td>
+        </tr>
+        <tr>
+          <td height="71">Submit Date</td>
+          <td><label> 01.01.2013          ( &lt;-<strong>[Admin.TaxYearShow.submitDate] </strong>)</label></td>
+        </tr>
+        <tr>
+          <td height="71">Start Date</td>
+          <td>01.02.2013
+          ( &lt;-<strong>[Admin.TaxYearShow.startDate]</strong>)</td>
+        </tr>
+        <tr>
+          <td height="71">End Date</td>
+          <td>01.02.2014            ( &lt;-<strong>[Admin.TaxYearShow.endDate]</strong>)</td>
+        </tr>
+        <tr>
+          <td height="71">State</td>
+          <td>Expired  (&lt;-<strong>[Admin.TaxYearShow.State]</strong>- Show the state now)</td>
+        </tr>
+      </table>
+      <p></p>
+    <p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td height="68">3 - Expired</td>
+    <td> !Error, the stats page should be shown instead!</td>
+  </tr>
+</table>
+<p>View <a href="stats.html">stats</a> (This is only visible after the year has been saved)</p>
+<p><a href="index.html"> Back </a></p>
+<p>&nbsp;</p>

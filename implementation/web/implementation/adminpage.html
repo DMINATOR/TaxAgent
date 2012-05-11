@@ -1,0 +1,182 @@
+<html>
+<head>
+<title>Examples</title>
+<!-- CSS files -->
+<link rel="stylesheet" type="text/css" href="style.css"> 
+<link rel="stylesheet" type="text/css" href="ext-3.4.0/resources/css/ext-all.css"> 
+<link rel="stylesheet" type="text/css" href="ext-3.4.0/resources/css/calendar.css" />
+<!-- Scripts -->   
+<script type="text/javascript" src="ext-3.4.0/adapter/ext/ext-base.js"></script>
+<script type="text/javascript" src="ext-3.4.0/ext-all.js"></script>
+<script type="text/javascript" src="ext-3.4.0/calendar-all.js"></script>
+<script type="text/javascript" src="js/json2.js"></script>
+<script type="text/javascript" src="js/rfc3339date.js"></script>
+<script type="text/javascript" src="utils.js"></script>
+</head>
+<body>
+<div id="mainArea"></div>
+<script>
+var connectionTest = function() {
+	var callback = function(response) {
+		alert(response.responseText);
+	};
+	var testConJSON1 = {
+		number: 12345,
+		text: 'Text',
+		bool: true,
+		date : new Date(2012,21,12,23,59,59,0) , //ms not supported!
+		array: ['value1', 'value2', 'value3' ],
+		objArray: [ {name: "Frank", age: 57, relation: "father"},
+					{name: "Tina", age: 26, relation: "sister"}]
+	}
+	sendAjaxRequest('Admin.TestJSON', testConJSON1, callback);
+};
+function clearDatabase(){
+	sendAjaxRequest('Admin.ClearDatabase', 1 );
+}
+
+function createWorld(){
+	sendAjaxRequest('Admin.CreateWorld', 1 );
+}
+
+function addTestData(){
+	sendAjaxRequest('Admin.CreateTestData', 1 );
+}
+function changeDate(){
+	var selectedDate = dateField.getRawValue();
+	if (dateField.isValid() && !Ext.isEmpty(selectedDate)) {
+		var submitDate = selectedDate.replace(/\//g,'-') + 'T21:59:59.000Z';
+		sendAjaxRequest('Admin.ChangeDate', submitDate, function(){
+			dateField.setValue(null);
+		});
+	} else {
+		Ext.Msg.show({
+			title:'Error',
+			msg: 'Please select valid date',
+			icon: Ext.MessageBox.ERROR,
+			buttons: Ext.Msg.OK,
+		});
+	}
+}
+var mainPanel = new Ext.Panel({
+	renderTo: "mainArea",
+	width: 900,
+	height: 900,
+	cls: 'buttonsPanel'
+});
+var connectionTestButton = createButton("Test connection", connectionTest, 'adminPanelItemLeft', {
+	width: 150,
+	disabled: true
+});
+var createWorldButton = createButton("Create world", createWorld, 'adminPanelItemLeft', {
+	width: 150
+});
+var clearDatabaseButton = createButton("Clear database", clearDatabase, 'adminPanelItemLeft', {
+	width: 150
+});
+var addTestDataButton = createButton("Add test data", addTestData, 'adminPanelItemLeft', {
+	width: 150
+});
+
+mainPanel.add(connectionTestButton);
+mainPanel.add(createWorldButton);
+mainPanel.add(clearDatabaseButton);
+mainPanel.add(addTestDataButton);
+
+var datePanel = new Ext.Panel({
+	layout: 'hbox',
+	border: false,
+	width: 300,
+	cls: 'adminPanelItemLeft'
+});
+var changeDateButton = createButton("Change date", changeDate, 'marginLeft10', {
+	width: 100
+});
+var dateField = createDateSelector();
+
+datePanel.add(dateField);
+datePanel.add(changeDateButton);
+mainPanel.add(datePanel);
+
+//grid control for tax year
+var taxYearGridJsonKey = [
+	{name: 'ID'},
+	{name: 'Year'},
+	{name: 'SubmitDate'},
+	{name: 'StartDate'},
+	{name: 'EndDate'},
+	{name: 'State'}     
+];
+var taxYearGridColumns = [
+	{header: "ID", width: 30, dataIndex: 'ID', sortable: true},
+    {header: "Year", dataIndex: 'Year', sortable: true},
+    {header: "SubmitDate", dataIndex: 'SubmitDate', sortable: true},
+    {header: "StartDate", dataIndex: 'StartDate', sortable: true},
+    {header: "EndDate", dataIndex: 'EndDate', sortable: true},
+    {header: "State", width: 30, dataIndex: 'State', sortable: true}
+];
+var gridTaxYear = createDataGrid('Admin.TaxYearGrid', taxYearGridColumns, taxYearGridJsonKey);
+mainPanel.add(gridTaxYear[0]);
+
+//search grid
+var searchButtonsPanel = new Ext.Panel({
+	layout: 'hbox',
+	border: false,
+	width: 400,
+	height: 'auto'
+});
+var nameInput = createTextInput('Name');
+var typeInput = createComboBox('Type', null, {
+	allowBlank: false,
+	editable: false,
+	triggerAction: 'all',
+	typeAhead: false,
+	mode: 'local',
+	width:120,
+	listWidth: 120,
+	hiddenName: 'my_dropdown',
+	store: [['0', 'All'], ['1', 'Individual'], ['2', 'Business'], ['3', 'Institution']],
+	readOnly: false
+});
+var searchTaxPayer = function(){
+		requestData(taxPayerStore, 'Admin.SearchGrid', 0, 10, {
+		Name: nameInput.getValue(),
+		Type: typeInput.getValue()
+	});
+};
+var searchTaxPayerButton = createButton('Search', searchTaxPayer, 'marginLeft10');
+searchButtonsPanel.add(nameInput);
+searchButtonsPanel.add(typeInput);
+searchButtonsPanel.add(searchTaxPayerButton);
+
+var taxPayerGridJsonKey = [
+	{name: 'ID'},
+	{name: 'Name'},
+	{name: 'Code'},
+	{name: 'ParentID'},
+	{name: 'Type'},
+	{name: 'Children'}     
+];
+var taxPayerGridColumns = [
+	{header: "ID", width: 30, dataIndex: 'ID', sortable: true},
+    {header: "Name", dataIndex: 'Name', sortable: true},
+    {header: "Code", dataIndex: 'Code', sortable: true},
+    {header: "ParentID", dataIndex: 'ParentID', sortable: true},
+    {header: "Type", dataIndex: 'Type', sortable: true},
+    {header: "Children", dataIndex: 'Children', sortable: true}
+];
+var getSearchAdditionalParams = function() {
+	return {Name: nameInput.getValue(),
+			Type: typeInput.getValue()};
+};
+var gridTaxPayer = createDataGrid('Admin.SearchGrid', taxPayerGridColumns, taxPayerGridJsonKey, null, true, searchButtonsPanel, 2, getSearchAdditionalParams);
+var taxPayerStore = gridTaxPayer[1];
+mainPanel.add(gridTaxPayer[0]);
+
+
+
+mainPanel.doLayout();
+
+</script>
+<body>
+</html>

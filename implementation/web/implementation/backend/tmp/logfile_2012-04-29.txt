@@ -1,0 +1,829 @@
+16:04:36 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(48) "{\"action\":\"Admin.TaxYearShow\",\"data\":2012}"
+  ["__utma"]=>
+  string(54) "104595487.103898233.1334496497.1334496497.1334503090.2"
+  ["__utmz"]=>
+  string(70) "104595487.1334496497.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+16:04:36 (engine) [JSON (Admin.TaxYearShow)]->int(2012)
+
+16:04:36 (engine) [SQL]->Connecting to database:
+16:04:36 (engine) [SQL]->Connection OK!
+16:04:36 (engine) test 
+16:04:36 (engine) [SQL]->Exec:SELECT * FROM `TaxYearTable` WHERE Year=2012
+16:04:36 (engine) [SQL]->Exec [Done]:Resource id #15
+16:04:36 (engine) [RESPONSE (Admin.TaxYearShow)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(6) {
+    ["ID"]=>
+    string(2) "92"
+    ["Year"]=>
+    string(4) "2012"
+    ["SubmitDate"]=>
+    string(10) "2012-04-26"
+    ["StartDate"]=>
+    string(10) "2012-04-21"
+    ["EndDate"]=>
+    string(10) "2012-02-21"
+    ["State"]=>
+    string(1) "3"
+  }
+}
+
+21:37:56 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(71) "{\"action\":\"Admin.ChangeDate\",\"data\":\"2013-01-21T21:59:59.000Z\"}"
+  ["__utma"]=>
+  string(54) "104595487.103898233.1334496497.1334496497.1334503090.2"
+  ["__utmz"]=>
+  string(70) "104595487.1334496497.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+21:37:56 (engine) [JSON (Admin.ChangeDate)]->string(24) "2013-01-21T21:59:59.000Z"
+
+21:37:56 (engine) [SQL]->Connecting to database:
+21:37:56 (engine) [SQL]->Connection OK!
+21:37:56 (engine) test 
+21:37:56 (engine) [SQL]->Exec:UPDATE SystemTable SET Date='2013-01-21 23:59:59' WHERE ID=1
+21:37:56 (engine) [SQL]->Exec [Done]:1
+21:37:56 (engine) [RESPONSE (Admin.ChangeDate)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+21:46:12 (engine) [REQUEST]<-array(1) {
+  ["json"]=>
+  string(71) "{\"action\":\"Admin.ChangeDate\",\"data\":\"2013-01-21T21:59:59.000Z\"}"
+}
+
+21:46:12 (engine) [JSON (Admin.ChangeDate)]->string(24) "2013-01-21T21:59:59.000Z"
+
+21:46:12 (engine) [SQL]->Connecting to database:
+21:46:12 (engine) [SQL]->Connection OK!
+21:46:12 (engine) test 
+21:46:12 (engine) [SQL]->Exec:UPDATE SystemTable SET Date='2013-01-21 23:59:59' WHERE ID=1
+21:46:12 (engine) [SQL]->Exec [Done]:1
+21:46:12 (engine) [RESPONSE (Admin.ChangeDate)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+22:33:51 (engine) [REQUEST]<-array(1) {
+  ["json"]=>
+  string(71) "{\"action\":\"Admin.ChangeDate\",\"data\":\"2013-01-21T21:59:59.000Z\"}"
+}
+
+22:33:51 (engine) [JSON (Admin.ChangeDate)]->string(24) "2013-01-21T21:59:59.000Z"
+
+22:33:51 (engine) [SQL]->Connecting to database:
+22:33:51 (engine) [SQL]->Connection OK!
+22:33:51 (engine) test 
+22:33:51 (engine) [SQL]->Exec:UPDATE SystemTable SET Date='2013-01-21 23:59:59' WHERE ID=1
+22:33:51 (engine) [SQL]->Exec [Done]:1
+22:33:51 (engine) [RESPONSE (Admin.ChangeDate)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+22:43:11 (engine) [REQUEST]<-array(1) {
+  ["json"]=>
+  string(71) "{\"action\":\"Admin.ChangeDate\",\"data\":\"04-10-2012T21:59:59.000Z\"}"
+}
+
+22:43:11 (engine) [JSON (Admin.ChangeDate)]->string(24) "04-10-2012T21:59:59.000Z"
+
+22:43:11 (engine) [SQL]->Connecting to database:
+22:43:11 (engine) [SQL]->Connection OK!
+22:43:11 (engine) test 
+22:43:11 (engine) [SQL]->Exec:UPDATE SystemTable SET Date='2012-10-05 00:59:59' WHERE ID=1
+22:43:11 (engine) [SQL]->Exec [Done]:1
+22:43:11 (engine) [RESPONSE (Admin.ChangeDate)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+22:43:21 (engine) [REQUEST]<-array(1) {
+  ["json"]=>
+  string(71) "{\"action\":\"Admin.ChangeDate\",\"data\":\"04-03-2012T21:59:59.000Z\"}"
+}
+
+22:43:21 (engine) [JSON (Admin.ChangeDate)]->string(24) "04-03-2012T21:59:59.000Z"
+
+22:43:21 (engine) [SQL]->Connecting to database:
+22:43:21 (engine) [SQL]->Connection OK!
+22:43:21 (engine) test 
+22:43:21 (engine) [SQL]->Exec:UPDATE SystemTable SET Date='2012-03-04 23:59:59' WHERE ID=1
+22:43:21 (engine) [SQL]->Exec [Done]:1
+22:43:21 (engine) [RESPONSE (Admin.ChangeDate)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+22:43:49 (engine) [REQUEST]<-array(1) {
+  ["json"]=>
+  string(71) "{\"action\":\"Admin.ChangeDate\",\"data\":\"04-24-2012T21:59:59.000Z\"}"
+}
+
+22:43:49 (engine) [JSON (Admin.ChangeDate)]->string(24) "04-24-2012T21:59:59.000Z"
+
+22:43:49 (engine) [SQL]->Connecting to database:
+22:43:49 (engine) [SQL]->Connection OK!
+22:43:49 (engine) test 
+22:43:49 (engine) [SQL]->Exec:UPDATE SystemTable SET Date='1970-01-01 02:00:00' WHERE ID=1
+22:43:49 (engine) [SQL]->Exec [Done]:1
+22:43:49 (engine) [RESPONSE (Admin.ChangeDate)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+22:46:02 (engine) [REQUEST]<-array(1) {
+  ["json"]=>
+  string(71) "{\"action\":\"Admin.ChangeDate\",\"data\":\"25-04-2012T21:59:59.000Z\"}"
+}
+
+22:46:02 (engine) [JSON (Admin.ChangeDate)]->string(24) "25-04-2012T21:59:59.000Z"
+
+22:46:02 (engine) [SQL]->Connecting to database:
+22:46:02 (engine) [SQL]->Connection OK!
+22:46:02 (engine) test 
+22:46:02 (engine) [SQL]->Exec:UPDATE SystemTable SET Date='2012-04-26 00:59:59' WHERE ID=1
+22:46:02 (engine) [SQL]->Exec [Done]:1
+22:46:02 (engine) [RESPONSE (Admin.ChangeDate)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+22:46:12 (engine) [REQUEST]<-array(1) {
+  ["json"]=>
+  string(71) "{\"action\":\"Admin.ChangeDate\",\"data\":\"2013-01-21T21:59:59.000Z\"}"
+}
+
+22:46:12 (engine) [JSON (Admin.ChangeDate)]->string(24) "2013-01-21T21:59:59.000Z"
+
+22:46:12 (engine) [SQL]->Connecting to database:
+22:46:12 (engine) [SQL]->Connection OK!
+22:46:12 (engine) test 
+22:46:12 (engine) [SQL]->Exec:UPDATE SystemTable SET Date='2013-01-21 23:59:59' WHERE ID=1
+22:46:12 (engine) [SQL]->Exec [Done]:1
+22:46:12 (engine) [RESPONSE (Admin.ChangeDate)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+22:46:45 (engine) [REQUEST]<-array(1) {
+  ["json"]=>
+  string(71) "{\"action\":\"Admin.ChangeDate\",\"data\":\"2012-04-17T21:59:59.000Z\"}"
+}
+
+22:46:45 (engine) [JSON (Admin.ChangeDate)]->string(24) "2012-04-17T21:59:59.000Z"
+
+22:46:45 (engine) [SQL]->Connecting to database:
+22:46:45 (engine) [SQL]->Connection OK!
+22:46:45 (engine) test 
+22:46:45 (engine) [SQL]->Exec:UPDATE SystemTable SET Date='2012-04-18 00:59:59' WHERE ID=1
+22:46:45 (engine) [SQL]->Exec [Done]:1
+22:46:45 (engine) [RESPONSE (Admin.ChangeDate)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+22:48:25 (engine) [REQUEST]<-array(1) {
+  ["json"]=>
+  string(71) "{\"action\":\"Admin.ChangeDate\",\"data\":\"2012-04-18T21:59:59.000Z\"}"
+}
+
+22:48:25 (engine) [JSON (Admin.ChangeDate)]->string(24) "2012-04-18T21:59:59.000Z"
+
+22:48:25 (engine) [SQL]->Connecting to database:
+22:48:25 (engine) [SQL]->Connection OK!
+22:48:25 (engine) test 
+22:48:25 (engine) [SQL]->Exec:UPDATE SystemTable SET Date='2012-04-19 00:59:59' WHERE ID=1
+22:48:25 (engine) [SQL]->Exec [Done]:1
+22:48:25 (engine) [RESPONSE (Admin.ChangeDate)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+22:48:34 (engine) [REQUEST]<-array(1) {
+  ["json"]=>
+  string(189) "{\"action\":\"Admin.TaxYearCreate\",\"data\":{\"Year\":2012,\"SubmitDate\":\"2013-01-21T21:59:59.000Z\",\"StartDate\":\"2011-01-31T22:00:00.000Z\",\"EndDate\":\"2013-01-21T21:59:59.000Z\"}}"
+}
+
+22:48:34 (engine) [JSON (Admin.TaxYearCreate)]->array(4) {
+  ["Year"]=>
+  int(2012)
+  ["SubmitDate"]=>
+  string(24) "2013-01-21T21:59:59.000Z"
+  ["StartDate"]=>
+  string(24) "2011-01-31T22:00:00.000Z"
+  ["EndDate"]=>
+  string(24) "2013-01-21T21:59:59.000Z"
+}
+
+22:48:34 (engine) [SQL]->Connecting to database:
+22:48:34 (engine) [SQL]->Connection OK!
+22:48:34 (engine) test 
+22:48:34 (engine) [SQL]->Exec:SELECT Count( 1 ) FROM TaxYearTable WHERE Year = 2012
+22:48:34 (engine) [SQL]->Exec [Done]:Resource id #15
+22:49:06 (engine) [REQUEST]<-array(1) {
+  ["json"]=>
+  string(71) "{\"action\":\"Admin.ChangeDate\",\"data\":\"2012-04-19T21:59:59.000Z\"}"
+}
+
+22:49:06 (engine) [JSON (Admin.ChangeDate)]->string(24) "2012-04-19T21:59:59.000Z"
+
+22:49:06 (engine) [SQL]->Connecting to database:
+22:49:06 (engine) [SQL]->Connection OK!
+22:49:06 (engine) test 
+22:49:06 (engine) [SQL]->Exec:UPDATE SystemTable SET Date='2012-04-20 00:59:59' WHERE ID=1
+22:49:06 (engine) [SQL]->Exec [Done]:1
+22:49:06 (engine) [RESPONSE (Admin.ChangeDate)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+22:53:46 (engine) [REQUEST]<-array(1) {
+  ["json"]=>
+  string(71) "{\"action\":\"Admin.ChangeDate\",\"data\":\"2012-04-03T21:59:59.000Z\"}"
+}
+
+22:53:46 (engine) [JSON (Admin.ChangeDate)]->string(24) "2012-04-03T21:59:59.000Z"
+
+22:53:46 (engine) [SQL]->Connecting to database:
+22:53:46 (engine) [SQL]->Connection OK!
+22:53:46 (engine) test 
+22:53:46 (engine) [SQL]->Exec:UPDATE SystemTable SET Date='2012-04-04 00:59:59' WHERE ID=1
+22:53:46 (engine) [SQL]->Exec [Done]:1
+22:53:46 (engine) [RESPONSE (Admin.ChangeDate)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+22:53:52 (engine) [REQUEST]<-array(1) {
+  ["json"]=>
+  string(71) "{\"action\":\"Admin.ChangeDate\",\"data\":\"2012-04-25T21:59:59.000Z\"}"
+}
+
+22:53:52 (engine) [JSON (Admin.ChangeDate)]->string(24) "2012-04-25T21:59:59.000Z"
+
+22:53:52 (engine) [SQL]->Connecting to database:
+22:53:52 (engine) [SQL]->Connection OK!
+22:53:52 (engine) test 
+22:53:52 (engine) [SQL]->Exec:UPDATE SystemTable SET Date='2012-04-26 00:59:59' WHERE ID=1
+22:53:52 (engine) [SQL]->Exec [Done]:1
+22:53:52 (engine) [RESPONSE (Admin.ChangeDate)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+22:53:55 (engine) [REQUEST]<-array(1) {
+  ["json"]=>
+  string(71) "{\"action\":\"Admin.ChangeDate\",\"data\":\"2012-04-03T21:59:59.000Z\"}"
+}
+
+22:53:55 (engine) [JSON (Admin.ChangeDate)]->string(24) "2012-04-03T21:59:59.000Z"
+
+22:53:55 (engine) [SQL]->Connecting to database:
+22:53:55 (engine) [SQL]->Connection OK!
+22:53:55 (engine) test 
+22:53:55 (engine) [SQL]->Exec:UPDATE SystemTable SET Date='2012-04-04 00:59:59' WHERE ID=1
+22:53:55 (engine) [SQL]->Exec [Done]:1
+22:53:55 (engine) [RESPONSE (Admin.ChangeDate)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+22:56:26 (engine) [REQUEST]<-array(1) {
+  ["json"]=>
+  string(71) "{\"action\":\"Admin.ChangeDate\",\"data\":\"2012-04-12T21:59:59.000Z\"}"
+}
+
+22:56:26 (engine) [JSON (Admin.ChangeDate)]->string(24) "2012-04-12T21:59:59.000Z"
+
+22:56:26 (engine) [SQL]->Connecting to database:
+22:56:26 (engine) [SQL]->Connection OK!
+22:56:26 (engine) test 
+22:56:26 (engine) [SQL]->Exec:UPDATE SystemTable SET Date='2012-04-13 00:59:59' WHERE ID=1
+22:56:26 (engine) [SQL]->Exec [Done]:1
+22:56:26 (engine) [RESPONSE (Admin.ChangeDate)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+22:56:30 (engine) [REQUEST]<-array(1) {
+  ["json"]=>
+  string(71) "{\"action\":\"Admin.ChangeDate\",\"data\":\"2012-04-10T21:59:59.000Z\"}"
+}
+
+22:56:30 (engine) [JSON (Admin.ChangeDate)]->string(24) "2012-04-10T21:59:59.000Z"
+
+22:56:30 (engine) [SQL]->Connecting to database:
+22:56:30 (engine) [SQL]->Connection OK!
+22:56:30 (engine) test 
+22:56:30 (engine) [SQL]->Exec:UPDATE SystemTable SET Date='2012-04-11 00:59:59' WHERE ID=1
+22:56:30 (engine) [SQL]->Exec [Done]:1
+22:56:30 (engine) [RESPONSE (Admin.ChangeDate)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+22:56:52 (engine) [REQUEST]<-array(1) {
+  ["json"]=>
+  string(71) "{\"action\":\"Admin.ChangeDate\",\"data\":\"2012-04-09T21:59:59.000Z\"}"
+}
+
+22:56:52 (engine) [JSON (Admin.ChangeDate)]->string(24) "2012-04-09T21:59:59.000Z"
+
+22:56:52 (engine) [SQL]->Connecting to database:
+22:56:52 (engine) [SQL]->Connection OK!
+22:56:52 (engine) test 
+22:56:52 (engine) [SQL]->Exec:UPDATE SystemTable SET Date='2012-04-10 00:59:59' WHERE ID=1
+22:56:52 (engine) [SQL]->Exec [Done]:1
+22:56:52 (engine) [RESPONSE (Admin.ChangeDate)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+22:58:13 (engine) [REQUEST]<-array(1) {
+  ["json"]=>
+  string(71) "{\"action\":\"Admin.ChangeDate\",\"data\":\"2012-04-10T21:59:59.000Z\"}"
+}
+
+22:58:13 (engine) [JSON (Admin.ChangeDate)]->string(24) "2012-04-10T21:59:59.000Z"
+
+22:58:13 (engine) [SQL]->Connecting to database:
+22:58:13 (engine) [SQL]->Connection OK!
+22:58:13 (engine) test 
+22:58:13 (engine) [SQL]->Exec:UPDATE SystemTable SET Date='2012-04-11 00:59:59' WHERE ID=1
+22:58:13 (engine) [SQL]->Exec [Done]:1
+22:58:13 (engine) [RESPONSE (Admin.ChangeDate)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+22:59:07 (engine) [REQUEST]<-array(1) {
+  ["json"]=>
+  string(71) "{\"action\":\"Admin.ChangeDate\",\"data\":\"2012-04-04T21:59:59.000Z\"}"
+}
+
+22:59:07 (engine) [JSON (Admin.ChangeDate)]->string(24) "2012-04-04T21:59:59.000Z"
+
+22:59:07 (engine) [SQL]->Connecting to database:
+22:59:07 (engine) [SQL]->Connection OK!
+22:59:07 (engine) test 
+22:59:07 (engine) [SQL]->Exec:UPDATE SystemTable SET Date='2012-04-05 00:59:59' WHERE ID=1
+22:59:07 (engine) [SQL]->Exec [Done]:1
+22:59:07 (engine) [RESPONSE (Admin.ChangeDate)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+23:02:38 (engine) [REQUEST]<-array(1) {
+  ["json"]=>
+  string(71) "{\"action\":\"Admin.ChangeDate\",\"data\":\"2012-04-04T21:59:59.000Z\"}"
+}
+
+23:02:38 (engine) [JSON (Admin.ChangeDate)]->string(24) "2012-04-04T21:59:59.000Z"
+
+23:02:38 (engine) [SQL]->Connecting to database:
+23:02:38 (engine) [SQL]->Connection OK!
+23:02:38 (engine) test 
+23:02:38 (engine) [SQL]->Exec:UPDATE SystemTable SET Date='2012-04-05 00:59:59' WHERE ID=1
+23:02:38 (engine) [SQL]->Exec [Done]:1
+23:02:38 (engine) [RESPONSE (Admin.ChangeDate)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+23:06:20 (engine) [REQUEST]<-array(1) {
+  ["json"]=>
+  string(71) "{\"action\":\"Admin.ChangeDate\",\"data\":\"2012-04-11T21:59:59.000Z\"}"
+}
+
+23:06:20 (engine) [JSON (Admin.ChangeDate)]->string(24) "2012-04-11T21:59:59.000Z"
+
+23:06:20 (engine) [SQL]->Connecting to database:
+23:06:20 (engine) [SQL]->Connection OK!
+23:06:20 (engine) test 
+23:06:20 (engine) [SQL]->Exec:UPDATE SystemTable SET Date='2012-04-12 00:59:59' WHERE ID=1
+23:06:20 (engine) [SQL]->Exec [Done]:1
+23:06:20 (engine) [RESPONSE (Admin.ChangeDate)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+23:07:21 (engine) [REQUEST]<-array(1) {
+  ["json"]=>
+  string(83) "{\"action\":\"Admin.TaxYearGrid\",\"data\":{\"ItemsPerPage\":10,\"ItemsOffset\":0}}"
+}
+
+23:07:21 (engine) [JSON (Admin.TaxYearGrid)]->array(2) {
+  ["ItemsPerPage"]=>
+  int(10)
+  ["ItemsOffset"]=>
+  int(0)
+}
+
+23:07:21 (engine) [SQL]->Connecting to database:
+23:07:21 (engine) [SQL]->Connection OK!
+23:07:21 (engine) test 
+23:07:21 (engine) [SQL]->Exec:SELECT * FROM `TaxYearTable` LIMIT 0 , 10
+23:07:21 (engine) [SQL]->Exec [Done]:Resource id #15
+23:07:21 (engine) [RESPONSE (Admin.TaxYearGrid)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(10) {
+    [0]=>
+    array(6) {
+      ["ID"]=>
+      string(1) "1"
+      ["Year"]=>
+      string(4) "1921"
+      ["SubmitDate"]=>
+      string(10) "1921-04-26"
+      ["StartDate"]=>
+      string(10) "1921-04-21"
+      ["EndDate"]=>
+      string(10) "1921-02-21"
+      ["State"]=>
+      string(1) "1"
+    }
+    [1]=>
+    array(6) {
+      ["ID"]=>
+      string(1) "2"
+      ["Year"]=>
+      string(4) "1922"
+      ["SubmitDate"]=>
+      string(10) "1922-04-26"
+      ["StartDate"]=>
+      string(10) "1922-04-21"
+      ["EndDate"]=>
+      string(10) "1922-02-21"
+      ["State"]=>
+      string(1) "1"
+    }
+    [2]=>
+    array(6) {
+      ["ID"]=>
+      string(1) "3"
+      ["Year"]=>
+      string(4) "1923"
+      ["SubmitDate"]=>
+      string(10) "1923-04-26"
+      ["StartDate"]=>
+      string(10) "1923-04-21"
+      ["EndDate"]=>
+      string(10) "1923-02-21"
+      ["State"]=>
+      string(1) "2"
+    }
+    [3]=>
+    array(6) {
+      ["ID"]=>
+      string(1) "4"
+      ["Year"]=>
+      string(4) "1924"
+      ["SubmitDate"]=>
+      string(10) "1924-04-26"
+      ["StartDate"]=>
+      string(10) "1924-04-21"
+      ["EndDate"]=>
+      string(10) "1924-02-21"
+      ["State"]=>
+      string(1) "0"
+    }
+    [4]=>
+    array(6) {
+      ["ID"]=>
+      string(1) "5"
+      ["Year"]=>
+      string(4) "1925"
+      ["SubmitDate"]=>
+      string(10) "1925-04-26"
+      ["StartDate"]=>
+      string(10) "1925-04-21"
+      ["EndDate"]=>
+      string(10) "1925-02-21"
+      ["State"]=>
+      string(1) "3"
+    }
+    [5]=>
+    array(6) {
+      ["ID"]=>
+      string(1) "6"
+      ["Year"]=>
+      string(4) "1926"
+      ["SubmitDate"]=>
+      string(10) "1926-04-26"
+      ["StartDate"]=>
+      string(10) "1926-04-21"
+      ["EndDate"]=>
+      string(10) "1926-02-21"
+      ["State"]=>
+      string(1) "4"
+    }
+    [6]=>
+    array(6) {
+      ["ID"]=>
+      string(1) "7"
+      ["Year"]=>
+      string(4) "1927"
+      ["SubmitDate"]=>
+      string(10) "1927-04-26"
+      ["StartDate"]=>
+      string(10) "1927-04-21"
+      ["EndDate"]=>
+      string(10) "1927-02-21"
+      ["State"]=>
+      string(1) "0"
+    }
+    [7]=>
+    array(6) {
+      ["ID"]=>
+      string(1) "8"
+      ["Year"]=>
+      string(4) "1928"
+      ["SubmitDate"]=>
+      string(10) "1928-04-26"
+      ["StartDate"]=>
+      string(10) "1928-04-21"
+      ["EndDate"]=>
+      string(10) "1928-02-21"
+      ["State"]=>
+      string(1) "4"
+    }
+    [8]=>
+    array(6) {
+      ["ID"]=>
+      string(1) "9"
+      ["Year"]=>
+      string(4) "1929"
+      ["SubmitDate"]=>
+      string(10) "1929-04-26"
+      ["StartDate"]=>
+      string(10) "1929-04-21"
+      ["EndDate"]=>
+      string(10) "1929-02-21"
+      ["State"]=>
+      string(1) "3"
+    }
+    [9]=>
+    array(6) {
+      ["ID"]=>
+      string(2) "10"
+      ["Year"]=>
+      string(4) "1930"
+      ["SubmitDate"]=>
+      string(10) "1930-04-26"
+      ["StartDate"]=>
+      string(10) "1930-04-21"
+      ["EndDate"]=>
+      string(10) "1930-02-21"
+      ["State"]=>
+      string(1) "4"
+    }
+  }
+}
+
+23:07:27 (engine) [REQUEST]<-array(1) {
+  ["json"]=>
+  string(83) "{\"action\":\"Admin.TaxYearGrid\",\"data\":{\"ItemsPerPage\":10,\"ItemsOffset\":0}}"
+}
+
+23:07:27 (engine) [JSON (Admin.TaxYearGrid)]->array(2) {
+  ["ItemsPerPage"]=>
+  int(10)
+  ["ItemsOffset"]=>
+  int(0)
+}
+
+23:07:27 (engine) [SQL]->Connecting to database:
+23:07:27 (engine) [SQL]->Connection OK!
+23:07:27 (engine) test 
+23:07:27 (engine) [SQL]->Exec:SELECT * FROM `TaxYearTable` LIMIT 0 , 10
+23:07:27 (engine) [SQL]->Exec [Done]:Resource id #15
+23:07:27 (engine) [RESPONSE (Admin.TaxYearGrid)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(10) {
+    [0]=>
+    array(6) {
+      ["ID"]=>
+      string(1) "1"
+      ["Year"]=>
+      string(4) "1921"
+      ["SubmitDate"]=>
+      string(10) "1921-04-26"
+      ["StartDate"]=>
+      string(10) "1921-04-21"
+      ["EndDate"]=>
+      string(10) "1921-02-21"
+      ["State"]=>
+      string(1) "1"
+    }
+    [1]=>
+    array(6) {
+      ["ID"]=>
+      string(1) "2"
+      ["Year"]=>
+      string(4) "1922"
+      ["SubmitDate"]=>
+      string(10) "1922-04-26"
+      ["StartDate"]=>
+      string(10) "1922-04-21"
+      ["EndDate"]=>
+      string(10) "1922-02-21"
+      ["State"]=>
+      string(1) "1"
+    }
+    [2]=>
+    array(6) {
+      ["ID"]=>
+      string(1) "3"
+      ["Year"]=>
+      string(4) "1923"
+      ["SubmitDate"]=>
+      string(10) "1923-04-26"
+      ["StartDate"]=>
+      string(10) "1923-04-21"
+      ["EndDate"]=>
+      string(10) "1923-02-21"
+      ["State"]=>
+      string(1) "2"
+    }
+    [3]=>
+    array(6) {
+      ["ID"]=>
+      string(1) "4"
+      ["Year"]=>
+      string(4) "1924"
+      ["SubmitDate"]=>
+      string(10) "1924-04-26"
+      ["StartDate"]=>
+      string(10) "1924-04-21"
+      ["EndDate"]=>
+      string(10) "1924-02-21"
+      ["State"]=>
+      string(1) "0"
+    }
+    [4]=>
+    array(6) {
+      ["ID"]=>
+      string(1) "5"
+      ["Year"]=>
+      string(4) "1925"
+      ["SubmitDate"]=>
+      string(10) "1925-04-26"
+      ["StartDate"]=>
+      string(10) "1925-04-21"
+      ["EndDate"]=>
+      string(10) "1925-02-21"
+      ["State"]=>
+      string(1) "3"
+    }
+    [5]=>
+    array(6) {
+      ["ID"]=>
+      string(1) "6"
+      ["Year"]=>
+      string(4) "1926"
+      ["SubmitDate"]=>
+      string(10) "1926-04-26"
+      ["StartDate"]=>
+      string(10) "1926-04-21"
+      ["EndDate"]=>
+      string(10) "1926-02-21"
+      ["State"]=>
+      string(1) "4"
+    }
+    [6]=>
+    array(6) {
+      ["ID"]=>
+      string(1) "7"
+      ["Year"]=>
+      string(4) "1927"
+      ["SubmitDate"]=>
+      string(10) "1927-04-26"
+      ["StartDate"]=>
+      string(10) "1927-04-21"
+      ["EndDate"]=>
+      string(10) "1927-02-21"
+      ["State"]=>
+      string(1) "0"
+    }
+    [7]=>
+    array(6) {
+      ["ID"]=>
+      string(1) "8"
+      ["Year"]=>
+      string(4) "1928"
+      ["SubmitDate"]=>
+      string(10) "1928-04-26"
+      ["StartDate"]=>
+      string(10) "1928-04-21"
+      ["EndDate"]=>
+      string(10) "1928-02-21"
+      ["State"]=>
+      string(1) "4"
+    }
+    [8]=>
+    array(6) {
+      ["ID"]=>
+      string(1) "9"
+      ["Year"]=>
+      string(4) "1929"
+      ["SubmitDate"]=>
+      string(10) "1929-04-26"
+      ["StartDate"]=>
+      string(10) "1929-04-21"
+      ["EndDate"]=>
+      string(10) "1929-02-21"
+      ["State"]=>
+      string(1) "3"
+    }
+    [9]=>
+    array(6) {
+      ["ID"]=>
+      string(2) "10"
+      ["Year"]=>
+      string(4) "1930"
+      ["SubmitDate"]=>
+      string(10) "1930-04-26"
+      ["StartDate"]=>
+      string(10) "1930-04-21"
+      ["EndDate"]=>
+      string(10) "1930-02-21"
+      ["State"]=>
+      string(1) "4"
+    }
+  }
+}
+
+23:10:33 (engine) [REQUEST]<-array(1) {
+  ["json"]=>
+  string(71) "{\"action\":\"Admin.ChangeDate\",\"data\":\"2012-04-21T21:59:59.000Z\"}"
+}
+
+23:10:33 (engine) [JSON (Admin.ChangeDate)]->string(24) "2012-04-21T21:59:59.000Z"
+
+23:10:33 (engine) [SQL]->Connecting to database:
+23:10:33 (engine) [SQL]->Connection OK!
+23:10:33 (engine) test 
+23:10:33 (engine) [SQL]->Exec:UPDATE SystemTable SET Date='2012-04-22 00:59:59' WHERE ID=1
+23:10:33 (engine) [SQL]->Exec [Done]:1
+23:10:33 (engine) [RESPONSE (Admin.ChangeDate)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+

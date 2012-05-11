@@ -1,0 +1,323 @@
+00:04:14 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(45) "{\"action\":\"Admin.CreateWorld\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1992494945.1334777532.1334777532.1334777532.1"
+  ["__utmz"]=>
+  string(70) "104595487.1334777532.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+00:04:14 (engine) [JSON (Admin.CreateWorld)]->int(1)
+
+00:04:14 (engine) [SQL]->Connecting to database:
+00:04:14 (engine) [SQL]->Connection OK!
+00:04:14 (engine) test 
+00:04:14 (engine) [SQL]->Exec:insert into SystemTable (ID, Date) Values
+			(1, STR_TO_DATE('Jan/01/2012', '%M/%d/%Y'));
+00:04:14 (engine) [SQL]->Exec [Done]:
+00:04:14 (engine) [RESPONSE (Admin.CreateWorld)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+00:04:45 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(45) "{\"action\":\"Admin.CreateWorld\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1992494945.1334777532.1334777532.1334777532.1"
+  ["__utmz"]=>
+  string(70) "104595487.1334777532.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+00:04:45 (engine) [JSON (Admin.CreateWorld)]->int(1)
+
+00:04:45 (engine) [SQL]->Connecting to database:
+00:04:45 (engine) [SQL]->Connection OK!
+00:04:45 (engine) test 
+00:04:45 (engine) [SQL]->Exec:insert into SystemTable (ID, Date) Values
+			(1, STR_TO_DATE('Jan/01/2012', '%M/%d/%Y'));
+00:04:45 (engine) [SQL]->Exec [Done]:
+00:04:45 (engine) [RESPONSE (Admin.CreateWorld)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+00:12:36 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(45) "{\"action\":\"Admin.CreateWorld\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1992494945.1334777532.1334777532.1334777532.1"
+  ["__utmz"]=>
+  string(70) "104595487.1334777532.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+00:12:36 (engine) [JSON (Admin.CreateWorld)]->int(1)
+
+00:12:36 (engine) [SQL]->Connecting to database:
+00:12:36 (engine) [SQL]->Connection OK!
+00:12:36 (engine) test 
+00:12:36 (engine) [SQL]->Exec:insert into SystemTable (ID, Date) Values
+			(1, STR_TO_DATE('Jan/01/2012', '%M/%d/%Y'));
+00:12:36 (engine) [SQL]->Exec [Done]:
+00:12:36 (engine) [SQL]->Exec:insert into InstitutionTable (Name, Code) VALUES ('Ministry of education', 'I00001');
+			insert into InstitutionTable (Name, Code) VALUES ('Social Ministry', 'I00002');
+			insert into InstitutionTable (Name, Code) VALUES ('Ministry of the defence', 'I00003');
+			insert into InstitutionTable (Name, Code) VALUES ('Ministry of the interior', 'I00004'); 
+00:12:36 (engine) [SQL]->Exec [Done]:
+00:12:36 (engine) [RESPONSE (Admin.CreateWorld)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+00:15:29 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(45) "{\"action\":\"Admin.CreateWorld\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1992494945.1334777532.1334777532.1334777532.1"
+  ["__utmz"]=>
+  string(70) "104595487.1334777532.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+00:15:29 (engine) [JSON (Admin.CreateWorld)]->int(1)
+
+00:15:29 (engine) [SQL]->Connecting to database:
+00:15:29 (engine) [SQL]->Connection OK!
+00:15:29 (engine) test 
+00:15:29 (engine) [SQL]->Exec:insert into SystemTable (ID, Date) Values
+			(1, STR_TO_DATE('Jan/01/2012', '%M/%d/%Y'));
+00:15:29 (engine) [SQL]->Exec [Done]:
+00:15:29 (engine) [SQL]->Exec:insert into InstitutionTable (Name, Code) VALUES ('Ministry of education', 'I00001');
+			insert into InstitutionTable (Name, Code) VALUES ('Social Ministry', 'I00002');
+			insert into InstitutionTable (Name, Code) VALUES ('Ministry of the defence', 'I00003');
+			insert into InstitutionTable (Name, Code) VALUES ('Ministry of the interior', 'I00004'); 
+00:15:29 (engine) [SQL]->Exec [Done]:
+00:15:29 (engine) [RESPONSE (Admin.CreateWorld)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+00:16:46 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(45) "{\"action\":\"Admin.CreateWorld\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1992494945.1334777532.1334777532.1334777532.1"
+  ["__utmz"]=>
+  string(70) "104595487.1334777532.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+00:16:46 (engine) [JSON (Admin.CreateWorld)]->int(1)
+
+00:16:46 (engine) [SQL]->Connecting to database:
+00:16:46 (engine) [SQL]->Connection OK!
+00:16:46 (engine) test 
+00:16:46 (engine) [SQL]->Exec:insert into SystemTable (ID, Date) Values
+			(1, STR_TO_DATE('Jan/01/2012', '%M/%d/%Y'));
+00:16:46 (engine) [SQL]->Exec [Done]:
+00:16:46 (engine) [SQL]->Exec:insert into InstitutionTable (Name, Code) VALUES ('Ministry of education', 'I00001');
+00:16:48 (engine) [SQL]->Exec [Done]:1
+00:16:48 (engine) [RESPONSE (Admin.CreateWorld)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+00:19:15 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(45) "{\"action\":\"Admin.CreateWorld\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1992494945.1334777532.1334777532.1334777532.1"
+  ["__utmz"]=>
+  string(70) "104595487.1334777532.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+00:19:15 (engine) [JSON (Admin.CreateWorld)]->int(1)
+
+00:19:15 (engine) [SQL]->Connecting to database:
+00:19:15 (engine) [SQL]->Connection OK!
+00:19:15 (engine) test 
+00:19:15 (engine) [SQL]->Exec:insert into SystemTable (ID, Date) Values
+			(1, STR_TO_DATE('Jan/01/2012', '%M/%d/%Y'));
+00:19:15 (engine) [SQL]->Exec [Done]:
+00:19:15 (engine) [SQL]->Exec:insert into InstitutionTable (Name, Code) VALUES ('Ministry of education', 'I00001');
+00:19:15 (engine) [SQL]->Exec [Done]:1
+00:19:15 (engine) [SQL]->Exec:insert into InstitutionTable (Name, Code) VALUES ('Social Ministry', 'I00002');
+00:19:15 (engine) [SQL]->Exec [Done]:1
+00:19:15 (engine) [SQL]->Exec:insert into InstitutionTable (Name, Code) VALUES ('Ministry of the defence', 'I00003');
+00:19:15 (engine) [SQL]->Exec [Done]:1
+00:19:15 (engine) [SQL]->Exec:insert into InstitutionTable (Name, Code) VALUES ('Ministry of the interior', 'I00004');
+00:19:15 (engine) [SQL]->Exec [Done]:1
+00:19:15 (engine) [RESPONSE (Admin.CreateWorld)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+00:19:26 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(47) "{\"action\":\"Admin.ClearDatabase\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1992494945.1334777532.1334777532.1334777532.1"
+  ["__utmz"]=>
+  string(70) "104595487.1334777532.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+00:19:26 (engine) [JSON (Admin.ClearDatabase)]->int(1)
+
+00:19:26 (engine) [SQL]->Connecting to database:
+00:19:26 (engine) [SQL]->Connection OK!
+00:19:26 (engine) test 
+00:19:26 (engine) [SQL]->Exec:DROP TABLE IF EXISTS `InstitutionBudgetTable` ,
+			`InstitutionTable` ,
+			`SystemTable` ,
+			`TaxPayerProgramTable` ,
+			`TaxPayerTable` ,
+			`TaxProgramTable` ,
+			`TaxYearTable` ;
+00:19:26 (engine) [SQL]->Exec [Done]:
+00:19:26 (engine) [SQL]->Exec:DROP TABLE IF EXISTS `InstitutionBudgetTable` ,
+			`InstitutionTable` ,
+			`SystemTable` ,
+			`TaxPayerProgramTable` ,
+			`TaxPayerTable` ,
+			`TaxProgramTable` ,
+			`TaxYearTable` ;
+00:19:26 (engine) [SQL]->Exec [Done]:1
+00:19:26 (engine) [SQL]->Exec:
+		CREATE TABLE IF NOT EXISTS `InstitutionBudgetTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `TaxYearID` int(11) NOT NULL,
+		  `InstitutionID` int(11) NOT NULL,
+		  `CinfirmedDate` date NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `TaxYearID` (`TaxYearID`),
+		  KEY `InstitutionID` (`InstitutionID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+00:19:26 (engine) [SQL]->Exec [Done]:1
+00:19:26 (engine) [SQL]->Exec:CREATE TABLE IF NOT EXISTS `InstitutionTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Name` text NOT NULL,
+		  `Code` text NOT NULL,
+		  PRIMARY KEY (`ID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+00:19:26 (engine) [SQL]->Exec [Done]:1
+00:19:26 (engine) [SQL]->Exec:CREATE TABLE IF NOT EXISTS `SystemTable` (
+		  `ID` int(11) NOT NULL,
+		  `Date` datetime NOT NULL,
+		  PRIMARY KEY (`ID`)
+		) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+00:19:26 (engine) [SQL]->Exec [Done]:1
+00:19:26 (engine) [SQL]->Exec:CREATE TABLE IF NOT EXISTS `TaxPayerProgramTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `TaxPayerID` int(11) NOT NULL,
+		  `TaxProgramID` int(11) NOT NULL,
+		  `YearsRequired` int(11) NOT NULL,
+		  `CalculatedTaxAmount` int(11) NOT NULL,
+		  `BenefitsAccumulated` text NOT NULL,
+		  `ConfirmedDate` date NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `TaxPayerID` (`TaxPayerID`),
+		  KEY `TaxProgramID` (`TaxProgramID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+00:19:26 (engine) [SQL]->Exec [Done]:1
+00:19:26 (engine) [SQL]->Exec:CREATE TABLE IF NOT EXISTS `TaxPayerTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Name` text NOT NULL,
+		  `Code` text NOT NULL,
+		  `Income` int(11) NOT NULL,
+		  `ParentID` int(11) NOT NULL,
+		  `DateOfCreation` date NOT NULL,
+		  `Type` int(1) NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `ParentID` (`ParentID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+00:19:26 (engine) [SQL]->Exec [Done]:1
+00:19:26 (engine) [SQL]->Exec:CREATE TABLE IF NOT EXISTS `TaxProgramTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Name` text NOT NULL,
+		  `PredictedBudget` int(11) NOT NULL,
+		  `PredictedUsers` int(11) NOT NULL,
+		  `InstitutionBudgetID` int(11) NOT NULL,
+		  `ExtendsProgramID` int(11) NOT NULL,
+		  `MinimumYears` int(11) NOT NULL,
+		  `BenefitsExpireInYears` int(11) NOT NULL,
+		  `BenefitsApplyTo` int(1) NOT NULL,
+		  PRIMARY KEY (`ID`),
+		  KEY `InstitutionBudgetID` (`InstitutionBudgetID`),
+		  KEY `ExtendsProgramID` (`ExtendsProgramID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+00:19:26 (engine) [SQL]->Exec [Done]:1
+00:19:26 (engine) [SQL]->Exec:CREATE TABLE IF NOT EXISTS `TaxYearTable` (
+		  `ID` int(11) NOT NULL AUTO_INCREMENT,
+		  `Year` year(4) NOT NULL,
+		  `SubmitDate` date NOT NULL,
+		  `StartDate` date NOT NULL,
+		  `EndDate` date NOT NULL,
+		  `State` int(1) NOT NULL,
+		  PRIMARY KEY (`ID`)
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+00:19:26 (engine) [SQL]->Exec [Done]:1
+00:19:26 (engine) [SQL]->Exec:ALTER TABLE `InstitutionBudgetTable`
+		  ADD CONSTRAINT `InstitutionBudgetTable_ibfk_2` FOREIGN KEY (`InstitutionID`) REFERENCES `InstitutionTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+		  ADD CONSTRAINT `InstitutionBudgetTable_ibfk_1` FOREIGN KEY (`TaxYearID`) REFERENCES `TaxYearTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+00:19:26 (engine) [SQL]->Exec [Done]:1
+00:19:26 (engine) [SQL]->Exec:ALTER TABLE `TaxPayerProgramTable`
+		  ADD CONSTRAINT `TaxPayerProgramTable_ibfk_2` FOREIGN KEY (`TaxProgramID`) REFERENCES `TaxProgramTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+		  ADD CONSTRAINT `TaxPayerProgramTable_ibfk_1` FOREIGN KEY (`TaxPayerID`) REFERENCES `TaxPayerTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+00:19:26 (engine) [SQL]->Exec [Done]:1
+00:19:26 (engine) [SQL]->Exec:ALTER TABLE `TaxPayerTable`
+		  ADD CONSTRAINT `TaxPayerTable_ibfk_1` FOREIGN KEY (`ParentID`) REFERENCES `TaxPayerTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+00:19:26 (engine) [SQL]->Exec [Done]:1
+00:19:26 (engine) [SQL]->Exec:ALTER TABLE `TaxProgramTable`
+		  ADD CONSTRAINT `TaxProgramTable_ibfk_2` FOREIGN KEY (`ExtendsProgramID`) REFERENCES `TaxProgramTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+		  ADD CONSTRAINT `TaxProgramTable_ibfk_1` FOREIGN KEY (`InstitutionBudgetID`) REFERENCES `InstitutionBudgetTable` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+			
+00:19:26 (engine) [SQL]->Exec [Done]:1
+00:19:26 (engine) [RESPONSE (Admin.ClearDatabase)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+
+00:19:56 (engine) [REQUEST]<-array(3) {
+  ["json"]=>
+  string(45) "{\"action\":\"Admin.CreateWorld\",\"data\":1}"
+  ["__utma"]=>
+  string(55) "104595487.1992494945.1334777532.1334777532.1334777532.1"
+  ["__utmz"]=>
+  string(70) "104595487.1334777532.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+}
+
+00:19:56 (engine) [JSON (Admin.CreateWorld)]->int(1)
+
+00:19:56 (engine) [SQL]->Connecting to database:
+00:19:56 (engine) [SQL]->Connection OK!
+00:19:56 (engine) test 
+00:19:56 (engine) [SQL]->Exec:insert into SystemTable (ID, Date) Values
+			(1, STR_TO_DATE('Jan/01/2012', '%M/%d/%Y'));
+00:19:56 (engine) [SQL]->Exec [Done]:1
+00:19:56 (engine) [SQL]->Exec:insert into InstitutionTable (Name, Code) VALUES ('Ministry of education', 'I00001');
+00:19:56 (engine) [SQL]->Exec [Done]:1
+00:19:56 (engine) [SQL]->Exec:insert into InstitutionTable (Name, Code) VALUES ('Social Ministry', 'I00002');
+00:19:56 (engine) [SQL]->Exec [Done]:1
+00:19:56 (engine) [SQL]->Exec:insert into InstitutionTable (Name, Code) VALUES ('Ministry of the defence', 'I00003');
+00:19:56 (engine) [SQL]->Exec [Done]:1
+00:19:56 (engine) [SQL]->Exec:insert into InstitutionTable (Name, Code) VALUES ('Ministry of the interior', 'I00004');
+00:19:56 (engine) [SQL]->Exec [Done]:1
+00:19:56 (engine) [RESPONSE (Admin.CreateWorld)]->array(2) {
+  ["result"]=>
+  string(2) "OK"
+  ["data"]=>
+  NULL
+}
+

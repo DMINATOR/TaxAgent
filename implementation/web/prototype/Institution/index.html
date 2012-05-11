@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<p>Institution <a href="Institution/index.html">code I12345</a> sample page
+( call <strong>[Institution.GetInfo]</strong> To get institution info)</p>
+<p>(Every year instituion needs to fill out new budget plan, the year will appear and ask the institution to fill it)</p>
+<p>Institution budget details (Shows a grid of years that institution has created <strong>[Institution.TaxYearBudgetGrid]</strong> )</p>
+<table width="1062" border="1">
+  <tr>
+    <td width="349">&nbsp;</td>
+    <td width="32">Year</td>
+    <td width="659">&nbsp;</td>
+  </tr>
+  <tr>
+    <td><p><a href="void">X</a> (delete  <strong>Institution.TaxYearBudgetDelete</strong>)</p>
+    <p>- Only visible if tax year budget is not confirmed yet <strong>( (Institution.TaxYearBudgetGrid[].ID!= NULL) &amp;&amp; (Institution.TaxYearBudgetGrid[].ConfirmedDate== NULL))</strong></p></td>
+    <td>2013</td>
+    <td>     <p><a href="manage.html">manage </a>&lt;- Manage is shown if this is currently active year and it is not activated yet <strong>(Institution.TaxYearBudgetGrid[].State &lt; Expired)</strong></p>
+      <p>or</p>
+<p><a href="manage.html">manage</a> (&lt;- Show manage and create new Budget it <strong>(Institution.TaxYearBudgetGrid[].ID == NULL)</strong> <strong>[Institution.TaxYearBudgetCreate]</strong></p></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>2012</td>
+    <td><a href="stats.html">stats</a> &lt;- Shows &quot;stats&quot; of previous year <strong>(Institution.TaxYearBudgetGrid[].State &gt;= Expired)</strong></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>2011</td>
+    <td><a href="stats.html">stats</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>2010</td>
+    <td><a href="stats.html">stats</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>2009</td>
+    <td><a href="stats.html">stats</a></td>
+  </tr>
+</table>
+</body>
+</html>

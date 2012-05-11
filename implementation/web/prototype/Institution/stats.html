@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+<script src="../SpryAssets/SpryTabbedPanels.js" type="text/javascript"></script>
+<link href="../SpryAssets/SpryTabbedPanels.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<p>Institution budget year 2013 plan stats <strong>[Institution.GetTaxYearBudgetInfo]</strong></p>
+<p>General detail:</p>
+<table width="627" border="1">
+  <tr>
+    <td width="145">Confirmed</td>
+    <td width="466">01.01.2012 (&lt;- <strong>[Institution.GetTaxYearBudgetInfo]</strong>.ConfirmedDate)</td>
+  </tr>
+  <tr>
+    <td>Budget:</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Total budget of programs</td>
+    <td>630 000 (&lt;- <strong>[Institution.GetTaxYearBudgetStats].ProgramsBudget</strong> )</td>
+  </tr>
+  <tr>
+    <td>Total income approved</td>
+    <td>610 000 (&lt;- <strong>[Institution.GetTaxYearBudgetStats].IncomeApproved</strong> )</td>
+  </tr>
+</table>
+<p>Stats:</p>
+<div id="TabbedPanels1" class="TabbedPanels">
+  <ul class="TabbedPanelsTabGroup">
+    <li class="TabbedPanelsTab" tabindex="0">Programs</li>
+    <li class="TabbedPanelsTab" tabindex="0">Individuals</li>
+    <li class="TabbedPanelsTab" tabindex="0">Businesses</li>
+  </ul>
+  <div class="TabbedPanelsContentGroup">
+  	<div class="TabbedPanelsContent">
+  	  <p>Programs used for this tax year budget: ( take results from <strong>[Institution.TaxProgramGrid] </strong>)</p>
+  	  <table width="819" border="1">
+  	    <tr>
+  	      <th width="43" scope="col">ID</th>
+  	      <th width="138" scope="col">Name</th>
+  	      <th width="176" scope="col">Predicted budget (&#8364;)</th>
+  	      <th width="214" scope="col">Confirmed budget (&#8364;)</th>
+        </tr>
+  	    <tr>
+  	      <td>2</td>
+  	      <td>Free basic education</td>
+  	      <td>120 000</td>
+  	      <td>135 00</td>
+        </tr>
+  	    <tr>
+  	      <td>3</td>
+  	      <td>Free higher education</td>
+  	      <td>230 000</td>
+  	      <td>210 000</td>
+        </tr>
+  	    <tr>
+  	      <td>4</td>
+  	      <td>Free car driving course</td>
+  	      <td>430 000</td>
+  	      <td>410 000</td>
+        </tr>
+      </table>
+<p>&nbsp;</p>
+</div>
+    <div class="TabbedPanelsContent">
+      <p>(Shows a full list of individuals subscribed to this year institution programs and their contribution amount)</p>
+      <p>(Grid with paging - because there might be many of them <strong>[Institution.TaxProgramUsersGrid]</strong> with Type = 0 )</p>
+      <table width="948" border="1">
+        <tr>
+          <th width="39" scope="col">ID</th>
+          <th width="129" scope="col">Name</th>
+          <th width="127" scope="col">Code</th>
+          <th width="337" scope="col">Programs selected</th>
+          <th width="138" scope="col">Benefits accumulated  (&#8364;)</th>
+          <th width="138" scope="col"> Total payment (&#8364;)</th>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Vasilij Vasiljevich</td>
+          <td>T12345</td>
+          <td> [Free basic education] [Free higher education]</td>
+          <td>130</td>
+          <td>135</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Free higher education</td>
+          <td>T12346</td>
+          <td>[Free driving course]</td>
+          <td>200</td>
+          <td>213</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Free car driving course</td>
+          <td>T12347</td>
+          <td>[Free higher education]</td>
+          <td>120</td>
+          <td>412</td>
+        </tr>
+      </table>
+      <p>&lt;&lt; First , Last &gt;&gt; 0 , 1 , 2 , 3</p>
+      <p>&nbsp;</p>
+    </div>
+    <div class="TabbedPanelsContent">
+      <p>(Shows a full list of businesses subscribed for benefits for their eployees)</p>
+      <p>(Grid with paging - because there might be many of them <strong>[Institution.TaxProgramUsersGrid]</strong> with Type = 1)</p>
+      <table width="948" border="1">
+        <tr>
+          <th width="39" scope="col">ID</th>
+          <th width="129" scope="col">Name</th>
+          <th width="127" scope="col">Code</th>
+          <th width="337" scope="col">Programs selected</th>
+          <th width="138" scope="col">Benefits accumulated  (&#8364;)</th>
+          <th width="138" scope="col"> Total payment (&#8364;)</th>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Coca-Cola OY</td>
+          <td>B12345</td>
+          <td> [Free basic education] [Free higher education]</td>
+          <td>1200</td>
+          <td>1350</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Apple Inc.</td>
+          <td>B12346</td>
+          <td>[Free driving course]</td>
+          <td>2000</td>
+          <td>2132</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Microsoft AS</td>
+          <td>B12347</td>
+          <td>[Free higher education]</td>
+          <td>1500</td>
+          <td>4121</td>
+        </tr>
+      </table>
+      <p>&lt;&lt; First , Last &gt;&gt; 0 , 1 , 2 , 3      </p>
+      <p>&nbsp;</p>
+    </div>
+  </div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp; </p>
+<p>&nbsp;</p>
+<p>&nbsp; </p>
+<a href="index.html">Back</a>
+
+
+
+<script type="text/javascript">
+<!--
+var TabbedPanels1 = new Spry.Widget.TabbedPanels("TabbedPanels1");
+//-->
+</script></body>
+</html>

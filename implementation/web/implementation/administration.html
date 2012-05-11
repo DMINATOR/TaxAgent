@@ -1,0 +1,457 @@
+<html>
+<head>
+<title>Administration Panel</title>
+<!-- CSS files -->
+<link rel="stylesheet" type="text/css" href="style.css"> 
+<link rel="stylesheet" type="text/css" href="ext-3.4.0/resources/css/ext-all.css"> 
+<link rel="stylesheet" type="text/css" href="ext-3.4.0/resources/css/calendar.css" />
+<!-- Scripts -->   
+<script type="text/javascript" src="ext-3.4.0/adapter/ext/ext-base.js"></script>
+<script type="text/javascript" src="ext-3.4.0/ext-all.js"></script>
+<script type="text/javascript" src="ext-3.4.0/calendar-all.js"></script>
+<script type="text/javascript" src="js/json2.js"></script>
+<script type="text/javascript" src="js/rfc3339date.js"></script>
+<script type="text/javascript" src="utils.js"></script>
+</head>
+<body>
+<div id="mainArea"></div>
+<div id="tab1"></div>
+<div id="tab2"></div>
+<div id="tab3"></div>
+<script>
+var tabs = new Ext.TabPanel({
+    renderTo: 'mainArea',
+    activeTab: 0,
+    items:[
+        {contentEl:'tab1', title:'General'},
+        {contentEl:'tab2', title:'Search'},
+		{contentEl:'tab3', title:'Additional admin actions'}
+    ]
+});
+
+var tab1panel = new Ext.Panel({
+	layout: 'vbox',
+	border: false,
+	cls: 'tabPanel',
+	width: 1000,
+	height: 600,
+	renderTo: 'tab1'
+});
+var tab2panel = new Ext.Panel({
+	layout: 'vbox',
+	border: false,
+	cls: 'tabPanel',
+	width: 1000,
+	height: 600,
+	renderTo: 'tab2'
+});
+var tab3panel = new Ext.Panel({
+	border: false,
+	cls: 'tabPanel',
+	width: 1000,
+	height: 600,
+	renderTo: 'tab3'
+});
+var searchButtonsPanel = new Ext.Panel({
+	layout: 'hbox',
+	border: false,
+	width: 400,
+	height: 'auto'
+});
+
+///-----------------search grid----------------
+var nameInput = createTextInput('Name');
+var typeInput = createComboBox('Type', null, {
+	allowBlank: false,
+	editable: false,
+	triggerAction: 'all',
+	typeAhead: false,
+	mode: 'local',
+	width:120,
+	listWidth: 120,
+	store: [['0', 'All'], ['1', 'Individual'], ['2', 'Business'], ['3', 'Institution']],
+	readOnly: false
+});
+var searchTaxPayer = function(){
+		requestData(taxPayerStore, 'Admin.SearchGrid', 0, 10, {
+		Name: nameInput.getValue(),
+		Type: typeInput.getValue()
+	});
+};
+var searchTaxPayerButton = createButton('Search', searchTaxPayer, 'marginLeft10');
+searchButtonsPanel.add(nameInput);
+searchButtonsPanel.add(typeInput);
+searchButtonsPanel.add(searchTaxPayerButton);
+
+var taxPayerGridJsonKey = [
+	{name: 'ID'},
+	{name: 'Name'},
+	{name: 'Code'},
+	{name: 'ParentID'},
+	{name: 'Type'},
+	{name: 'Children'}     
+];
+var taxPayerGridColumns = [
+	{header: "ID", width: 30, dataIndex: 'ID', sortable: true},
+    {header: "Name", dataIndex: 'Name', sortable: true},
+    {header: "Code", dataIndex: 'Code', sortable: true},
+    {header: "ParentID", dataIndex: 'ParentID', sortable: true},
+    {header: "Type", dataIndex: 'Type', renderer: function(type){
+		if ( 1 == type) {
+			return 'Individual';
+		} else if (2 == type) {
+			return 'Business';
+		} else if (3 == type) {
+			return 'Institution';
+		} else {
+			return 'Unknown';
+		}
+	}, sortable: true},
+    {header: "Children", dataIndex: 'Children', renderer: function(array){
+		var ret = '';
+		if (array.length > 0){
+			for (var i = 0; i<array.length; i++) {
+				ret += array[i].Name + " (" + array[0].ID + ") ";
+				if (i>0) {
+					ret += "and ";
+				}
+			}
+		}
+		return ret;
+	}, sortable: true}
+];
+var getSearchAdditionalParams = function() {
+	return {Name: nameInput.getValue(),
+			Type: typeInput.getValue()};
+};
+var gridTaxPayer = createDataGrid('Admin.SearchGrid', taxPayerGridColumns, taxPayerGridJsonKey, {width: 800}, true, searchButtonsPanel, 2, getSearchAdditionalParams);
+var taxPayerStore = gridTaxPayer[1];
+tab2panel.add(gridTaxPayer[0]);
+///---------------------------------
+
+///-----------Additional admin actions----------------------
+
+var connectionTest = function() {
+	showload();
+	var callback = function(response) {
+		hideload();
+		Ext.Msg.show({
+		   title:'Connection test',
+		   msg: response.responseText,
+		   buttons: Ext.Msg.OK,
+		   animEl: 'elId',
+		   icon: Ext.MessageBox.INFO
+		});
+	};
+	var testConJSON1 = {
+		number: 12345,
+		text: 'Text',
+		bool: true,
+		date : new Date(2012,21,12,23,59,59,0) , //ms not supported!
+		array: ['value1', 'value2', 'value3' ],
+		objArray: [ {name: "Frank", age: 57, relation: "father"},
+					{name: "Tina", age: 26, relation: "sister"}]
+	}
+	sendAjaxRequest('Admin.TestJSON', testConJSON1, callback);
+};
+function clearDatabase(){
+	showload();
+	var callback = function(response) {
+		hideload();
+		Ext.Msg.show({
+		   title:'Clear database',
+		   msg: response.responseText,
+		   buttons: Ext.Msg.OK,
+		   animEl: 'elId',
+		   icon: Ext.MessageBox.INFO
+		});
+	};
+	sendAjaxRequest('Admin.ClearDatabase', 1, callback );
+}
+
+function createWorld(){
+	showload();
+	var callback = function(response) {
+		hideload();
+		Ext.Msg.show({
+		   title:'Create world',
+		   msg: response.responseText,
+		   buttons: Ext.Msg.OK,
+		   animEl: 'elId',
+		   icon: Ext.MessageBox.INFO
+		});
+	};
+	sendAjaxRequest('Admin.CreateWorld', 1, callback );
+}
+
+function addTestData(){
+	showload();
+	var callback = function(response) {
+		hideload();
+		Ext.Msg.show({
+		   title:'Add test data',
+		   msg: response.responseText,
+		   buttons: Ext.Msg.OK,
+		   animEl: 'elId',
+		   icon: Ext.MessageBox.INFO
+		});
+	};
+	sendAjaxRequest('Admin.CreateTestData', 1, callback );
+}
+
+var connectionTestButton = createButton("Test connection", connectionTest, 'adminPanelItemLeft', {
+	width: 150
+});
+var createWorldButton = createButton("Create world", createWorld, 'adminPanelItemLeft', {
+	width: 150
+});
+var clearDatabaseButton = createButton("Clear database", clearDatabase, 'adminPanelItemLeft', {
+	width: 150
+});
+var addTestDataButton = createButton("Add test data", addTestData, 'adminPanelItemLeft', {
+	width: 150
+});
+
+tab3panel.add(connectionTestButton);
+tab3panel.add(createWorldButton);
+tab3panel.add(clearDatabaseButton);
+tab3panel.add(addTestDataButton);
+
+///---------------------------------
+
+
+///-------------Change date--------------------
+
+function changeDate(){
+	var selectedDate = dateField.getRawValue();
+	if (dateField.isValid() && !Ext.isEmpty(selectedDate)) {
+		var submitDate = selectedDate + 'T21:59:59.000Z';
+		sendAjaxRequest('Admin.ChangeDate', submitDate, function(){
+			dateField.setValue(null);
+			updateDate();
+		});
+	} else {
+		Ext.Msg.show({
+			title:'Error',
+			msg: 'Please select valid date',
+			icon: Ext.MessageBox.ERROR,
+			buttons: Ext.Msg.OK,
+		});
+	}
+}
+
+var datePanel = new Ext.Panel({
+	layout: 'hbox',
+	border: false,
+	width: 400,
+	cls: 'adminPanelItemLeft'
+});
+var changeDateButton = createButton("Change date", changeDate, 'marginLeft10', {
+	width: 100
+});
+var dateField = createDateSelector();
+
+var dateLabel = createLabel('Current date is: ...', 'adminPanelItemLeft');
+
+var updateDate = function(){
+	sendAjaxRequest('Admin.GetDate','1', function(response){
+		dateLabel.setText('Current date is: ' + response.responseText.substring(23,33));
+	});
+}
+updateDate();
+datePanel.add(dateField);
+datePanel.add(changeDateButton);
+tab1panel.add(dateLabel);
+tab1panel.add(datePanel);
+
+///---------------------------------
+
+
+///-------------Years grid--------------------
+var taxYearGridJsonKey = [
+	{name: 'ID'},
+	{name: 'Year'},
+	{name: 'SubmitDate'},
+	{name: 'StartDate'},
+	{name: 'EndDate'},
+	{name: 'State'}     
+];
+var taxYearGridColumns = [
+	{header: "ID", width: 30, dataIndex: 'ID', sortable: true},
+    {header: "Year", dataIndex: 'Year', sortable: true},
+    {header: "SubmitDate", dataIndex: 'SubmitDate', sortable: true},
+    {header: "StartDate", dataIndex: 'StartDate', sortable: true},
+    {header: "EndDate", dataIndex: 'EndDate', sortable: true},
+    {header: "State", width: 70,renderer: function(state){
+		if ( 0 == state) {
+			return 'Waiting for submition';
+		} else if (1 == state) {
+			return 'Submitted';
+		} else if (2 == state) {
+			return 'Activated';
+		} else if (3 == state) {
+			return 'Expired';
+		} else {
+			return 'Unknown';
+		}
+	}, dataIndex: 'State', sortable: true}
+];
+var drawDetailsPanel = function(data){
+	var jsonData = Ext.util.JSON.decode(data.responseText);
+	var yearDetailsWindow = new Ext.Window({
+		title: 'Year information',
+		layout: 'vbox',
+		cls: 'modalWindow',
+		width: 500,
+		height: 300,
+		modal: true
+	});
+	if (0 == jsonData.data.State){
+		var yearLabel = createLabel(jsonData.data.Year);
+		var submitDateLabel = createLabel("Submit Date: ");
+		var submitDateField = createDateSelector();
+		var startDateLabel = createLabel("Start Date: ");
+		var startDateField = createDateSelector();
+		var endDateLabel = createLabel("End Date: ");
+		var endDateField = createDateSelector();
+		yearDetailsWindow.add(yearLabel);
+		yearDetailsWindow.add(submitDateLabel);
+		yearDetailsWindow.add(submitDateField);
+		yearDetailsWindow.add(startDateLabel);
+		yearDetailsWindow.add(startDateField);
+		yearDetailsWindow.add(endDateLabel);
+		yearDetailsWindow.add(endDateField);
+		var submitButton = createButton("Submit", function(){
+			if (submitDateField.validate() && !Ext.isEmpty(submitDateField.getRawValue()) &&
+			startDateField.validate() && !Ext.isEmpty(startDateField.getRawValue()) &&
+			endDateField.validate() && !Ext.isEmpty(endDateField.getRawValue())){
+				sendAjaxRequest('Admin.TaxYearCreate', {"Year":jsonData.data.Year,
+				"SubmitDate": submitDateField.getRawValue() + "T21:59:59.000Z",
+				"StartDate": startDateField.getRawValue() + "T22:00:00.000Z",
+				"EndDate": endDateField.getRawValue() + "T21:59:59.000Z"}, function(response){
+					yearDetailsWindow.close();
+						Ext.Msg.show({
+						   title:'Submit Year',
+						   msg: response.responseText,
+						   buttons: Ext.Msg.OK,
+						   animEl: 'elId',
+						   icon: Ext.MessageBox.INFO
+						});
+					});
+			}
+		});
+		yearDetailsWindow.addButton(submitButton);
+
+	}
+	if (1 == jsonData.data.State){
+		var yearLabel = createLabel(jsonData.data.Year);
+		var idLabel = createLabel("ID: " + jsonData.data.ID);
+		var startDateLabel = createLabel("Start Date: " + jsonData.data.StartDate);
+		var endDateLabel = createLabel("End Date: " + jsonData.data.EndDate);
+		var submitDateLabel = createLabel("Submit Date: " + jsonData.data.SubmitDate);
+		var statusLabel = createLabel("SUBMITED");
+		yearDetailsWindow.add(yearLabel);
+		yearDetailsWindow.add(idLabel);
+		yearDetailsWindow.add(startDateLabel);
+		yearDetailsWindow.add(endDateLabel);
+		yearDetailsWindow.add(submitDateLabel);
+		yearDetailsWindow.add(statusLabel);
+		var deleteButton = createButton("Delete", function(){
+			sendAjaxRequest("Admin.TaxYearDelete", jsonData.data.ID);
+			yearDetailsWindow.close();
+		});
+		yearDetailsWindow.addButton(deleteButton);
+	}
+	if (2 == jsonData.data.State){
+		var yearLabel = createLabel(jsonData.data.Year);
+		var idLabel = createLabel("ID: " + jsonData.data.ID);
+		var startDateLabel = createLabel("Start Date: " + jsonData.data.StartDate);
+		var endDateLabel = createLabel("End Date: " + jsonData.data.EndDate);
+		var submitDateLabel = createLabel("Submit Date: " + jsonData.data.SubmitDate);
+		var statusLabel = createLabel("ACTIVATED");
+		yearDetailsWindow.add(yearLabel);
+		yearDetailsWindow.add(idLabel);
+		yearDetailsWindow.add(startDateLabel);
+		yearDetailsWindow.add(endDateLabel);
+		yearDetailsWindow.add(submitDateLabel);
+		yearDetailsWindow.add(statusLabel);
+	}
+	if (3 == jsonData.data.State){
+		var yearLabel = createLabel(jsonData.data.Year);
+		var statusLabel = createLabel("EXPIRED");
+		yearDetailsWindow.add(yearLabel);
+		yearDetailsWindow.add(statusLabel);
+	}
+	yearDetailsWindow.show();
+};
+var yearManage = function(grid, idx){
+	var gridStore = grid.getStore();
+	var rec = gridStore.getAt(idx);
+	sendAjaxRequest('Admin.TaxYearShow', rec.data.Year, drawDetailsPanel);
+};
+
+var gridTaxYear = createDataGrid('Admin.TaxYearGrid', taxYearGridColumns, taxYearGridJsonKey, null, null, null, null, null, yearManage);
+
+var createNewYearButton = createButton("Create new year", function(){
+var createYearWindow = new Ext.Window({
+		title: 'Year information',
+		layout: 'vbox',
+		cls: 'modalWindow',
+		width: 500,
+		height: 300,
+		modal: true
+	});
+	var yearInput = createTextInput("Year");
+	var submitDateLabel = createLabel("Submit Date: ");
+	var submitDateField = createDateSelector();
+	var startDateLabel = createLabel("Start Date: ");
+	var startDateField = createDateSelector();
+	var endDateLabel = createLabel("End Date: ");
+	var endDateField = createDateSelector();
+	createYearWindow.add(yearInput);
+	createYearWindow.add(submitDateLabel);
+	createYearWindow.add(submitDateField);
+	createYearWindow.add(startDateLabel);
+	createYearWindow.add(startDateField);
+	createYearWindow.add(endDateLabel);
+	createYearWindow.add(endDateField);
+	var submitYearButton = createButton("Submit", function(){
+		if (yearInput.validate() && !Ext.isEmpty(yearInput.getValue()) &&
+		submitDateField.validate() && !Ext.isEmpty(submitDateField.getRawValue()) &&
+		startDateField.validate() && !Ext.isEmpty(startDateField.getRawValue()) &&
+		endDateField.validate() && !Ext.isEmpty(endDateField.getRawValue())){
+			sendAjaxRequest('Admin.TaxYearCreate', {"Year":yearInput.getValue(),
+			"SubmitDate": submitDateField.getRawValue() + "T21:59:59.000Z",
+			"StartDate": startDateField.getRawValue() + "T22:00:00.000Z",
+			"EndDate": endDateField.getRawValue() + "T21:59:59.000Z"}, function(response){
+				createYearWindow.close();
+					Ext.Msg.show({
+					   title:'Submit Year',
+					   msg: response.responseText,
+					   buttons: Ext.Msg.OK,
+					   animEl: 'elId',
+					   icon: Ext.MessageBox.INFO
+					});
+				});
+		}
+	});
+	createYearWindow.addButton(submitYearButton);
+	createYearWindow.show();
+}, 'marginLeft20');
+datePanel.add(createNewYearButton);
+
+
+tab1panel.add(gridTaxYear[0]);
+///---------------------------------
+tab1panel.doLayout();
+tab2panel.doLayout();
+tab3panel.doLayout();
+
+tabs.doLayout();
+tabs.setActiveTab(1);
+tabs.setActiveTab(2);
+tabs.setActiveTab(0);
+
+</script>
+<body>
+</html>

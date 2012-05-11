@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Shows the Application title and version -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/default_activity_title_layout"
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:paddingRight="10px">
+    
+    <TextView android:id="@+id/debug_file_manager_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="left"
+ 		android:textAppearance="?android:attr/textAppearanceLarge"
+ 		
+ 		android:paddingTop="5px"
+ 		android:paddingBottom="5px"
+        android:layout_alignParentBottom="true"/>
+        
+    <TextView android:id="@+id/debug_file_manager_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="right"
+        android:textAppearance="?android:attr/textAppearanceSmall" 
+        android:paddingTop="5px"
+ 		android:paddingBottom="5px"
+        android:layout_alignParentBottom="true"/>
+        
+</RelativeLayout>
